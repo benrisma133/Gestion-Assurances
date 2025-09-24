@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace GestionAssurances
 {
-    public partial class Form1 : Form
+    public partial class frmListOfAssurances : Form
     {
-        public Form1()
+        public frmListOfAssurances()
         {
             InitializeComponent();
         }
@@ -105,14 +105,9 @@ namespace GestionAssurances
                 dgvAllAssurances.Columns["IsCurrent"].Width = 60;
                 dgvAllAssurances.Columns["IsCurrent"].HeaderText = "Actuel";
 
-
-
-
-
             }
 
             lblRecord.Text = $" # {dgvAllAssurances.Rows.Count.ToString()}";
-
         }
 
         private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
