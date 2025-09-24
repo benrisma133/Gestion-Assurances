@@ -117,7 +117,9 @@ namespace GestionAssurances
 
         private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmAddEditRenewAssurance frmAddEditRenewAssurance = new frmAddEditRenewAssurance();
+            frmAddEditRenewAssurance.ShowDialog();
+            Form1_Load(null, null);
         }
 
         private void gunaAdvenceButton1_Click(object sender, EventArgs e)
@@ -133,6 +135,32 @@ namespace GestionAssurances
             frmAddEditRenewAssurance frmAddEditRenewAssurance = new frmAddEditRenewAssurance(AssuranceID);
             frmAddEditRenewAssurance.ShowDialog();
             Form1_Load(null, null);
+        }
+
+        private void renevoulerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int AssuranceID = Convert.ToInt32(dgvAllAssurances.CurrentRow.Cells[0].Value);
+            frmAddEditRenewAssurance frmAddEditRenewAssurance = new frmAddEditRenewAssurance(AssuranceID ,true);
+            frmAddEditRenewAssurance.ShowDialog();
+            Form1_Load(null, null);
+        }
+
+        private void suprimerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int AssuranceID = Convert.ToInt32(dgvAllAssurances.CurrentRow.Cells[0].Value);
+
+            if (MessageBox.Show("Voulez-vous vraiment supprimer cette assurance ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (clsAssurance.Delete(AssuranceID))
+                {
+                    MessageBox.Show("Assurance supprimée avec succès.", "Succès", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Form1_Load(null, null);
+                }
+                else
+                {
+                    MessageBox.Show("Échec de la suppression de l'assurance.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

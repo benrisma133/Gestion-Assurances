@@ -20,7 +20,7 @@ namespace GestionAssurances
 
         private void voituresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form1 frm = new Form1();
+            frmListOfAssurances frm = new frmListOfAssurances();
             frm.ShowDialog();
         }
 

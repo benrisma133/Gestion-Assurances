@@ -213,7 +213,7 @@
             this.trouverToolStripMenuItem,
             this.suprimerToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(207, 184);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(249, 217);
             // 
             // gunaAdvenceButton1
             // 
@@ -256,7 +256,7 @@
             this.ajouterToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.main_add_24_green;
             this.ajouterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
             this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
             // 
@@ -266,7 +266,7 @@
             this.editerToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.edit_green_24;
             this.editerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.editerToolStripMenuItem.Name = "editerToolStripMenuItem";
-            this.editerToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
+            this.editerToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
             this.editerToolStripMenuItem.Text = "Editer";
             this.editerToolStripMenuItem.Click += new System.EventHandler(this.editerToolStripMenuItem_Click);
             // 
@@ -276,7 +276,7 @@
             this.trouverToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.find_green_24;
             this.trouverToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.trouverToolStripMenuItem.Name = "trouverToolStripMenuItem";
-            this.trouverToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
+            this.trouverToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
             this.trouverToolStripMenuItem.Text = "Trouver";
             // 
             // suprimerToolStripMenuItem
@@ -285,16 +285,18 @@
             this.suprimerToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.delete_red_24;
             this.suprimerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.suprimerToolStripMenuItem.Name = "suprimerToolStripMenuItem";
-            this.suprimerToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
+            this.suprimerToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
             this.suprimerToolStripMenuItem.Text = "Suprimer";
+            this.suprimerToolStripMenuItem.Click += new System.EventHandler(this.suprimerToolStripMenuItem_Click);
             // 
             // renevoulerToolStripMenuItem
             // 
             this.renevoulerToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.renevoulerToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.renew_green_24;
             this.renevoulerToolStripMenuItem.Name = "renevoulerToolStripMenuItem";
-            this.renevoulerToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
+            this.renevoulerToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
             this.renevoulerToolStripMenuItem.Text = "Renevouler";
+            this.renevoulerToolStripMenuItem.Click += new System.EventHandler(this.renevoulerToolStripMenuItem_Click);
             // 
             // Form1
             // 
