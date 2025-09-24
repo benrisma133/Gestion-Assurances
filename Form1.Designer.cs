@@ -38,15 +38,16 @@
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaComboBox1 = new Guna.UI.WinForms.GunaComboBox();
             this.dgvAllAssurances = new Guna.UI.WinForms.GunaDataGridView();
-            this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.lblRecord = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.trouverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.renevoulerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllAssurances)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -126,6 +127,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAllAssurances.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAllAssurances.ColumnHeadersHeight = 17;
+            this.dgvAllAssurances.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -168,6 +170,51 @@
             this.dgvAllAssurances.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
             this.dgvAllAssurances.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // gunaLabel3
+            // 
+            this.gunaLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.gunaLabel3.Location = new System.Drawing.Point(12, 855);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(431, 64);
+            this.gunaLabel3.TabIndex = 7;
+            this.gunaLabel3.Text = "Nombre d\'enregistrements : ";
+            this.gunaLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblRecord
+            // 
+            this.lblRecord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.lblRecord.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecord.ForeColor = System.Drawing.Color.White;
+            this.lblRecord.Location = new System.Drawing.Point(450, 854);
+            this.lblRecord.Name = "lblRecord";
+            this.lblRecord.Size = new System.Drawing.Size(310, 64);
+            this.lblRecord.TabIndex = 8;
+            this.lblRecord.Text = "# 0";
+            this.lblRecord.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // gunaLabel4
+            // 
+            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel4.Location = new System.Drawing.Point(816, 901);
+            this.gunaLabel4.Name = "gunaLabel4";
+            this.gunaLabel4.Size = new System.Drawing.Size(133, 41);
+            this.gunaLabel4.TabIndex = 9;
+            this.gunaLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterToolStripMenuItem,
+            this.editerToolStripMenuItem,
+            this.renevoulerToolStripMenuItem,
+            this.trouverToolStripMenuItem,
+            this.suprimerToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(207, 184);
+            // 
             // gunaAdvenceButton1
             // 
             this.gunaAdvenceButton1.Animated = true;
@@ -203,57 +250,13 @@
             this.gunaAdvenceButton1.TabIndex = 5;
             this.gunaAdvenceButton1.Click += new System.EventHandler(this.gunaAdvenceButton1_Click);
             // 
-            // gunaLabel3
-            // 
-            this.gunaLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
-            this.gunaLabel3.Location = new System.Drawing.Point(12, 855);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(431, 64);
-            this.gunaLabel3.TabIndex = 7;
-            this.gunaLabel3.Text = "Nombre d\'enregistrements : ";
-            this.gunaLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblRecord
-            // 
-            this.lblRecord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
-            this.lblRecord.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecord.ForeColor = System.Drawing.Color.White;
-            this.lblRecord.Location = new System.Drawing.Point(449, 854);
-            this.lblRecord.Name = "lblRecord";
-            this.lblRecord.Size = new System.Drawing.Size(310, 64);
-            this.lblRecord.TabIndex = 8;
-            this.lblRecord.Text = "# 0";
-            this.lblRecord.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // gunaLabel4
-            // 
-            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(816, 901);
-            this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(133, 41);
-            this.gunaLabel4.TabIndex = 9;
-            this.gunaLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ajouterToolStripMenuItem,
-            this.editerToolStripMenuItem,
-            this.trouverToolStripMenuItem,
-            this.suprimerToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 148);
-            // 
             // ajouterToolStripMenuItem
             // 
             this.ajouterToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ajouterToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.main_add_24_green;
             this.ajouterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(184, 36);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
             this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
             // 
@@ -263,8 +266,9 @@
             this.editerToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.edit_green_24;
             this.editerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.editerToolStripMenuItem.Name = "editerToolStripMenuItem";
-            this.editerToolStripMenuItem.Size = new System.Drawing.Size(184, 36);
+            this.editerToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
             this.editerToolStripMenuItem.Text = "Editer";
+            this.editerToolStripMenuItem.Click += new System.EventHandler(this.editerToolStripMenuItem_Click);
             // 
             // trouverToolStripMenuItem
             // 
@@ -272,7 +276,7 @@
             this.trouverToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.find_green_24;
             this.trouverToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.trouverToolStripMenuItem.Name = "trouverToolStripMenuItem";
-            this.trouverToolStripMenuItem.Size = new System.Drawing.Size(184, 36);
+            this.trouverToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
             this.trouverToolStripMenuItem.Text = "Trouver";
             // 
             // suprimerToolStripMenuItem
@@ -281,8 +285,16 @@
             this.suprimerToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.delete_red_24;
             this.suprimerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.suprimerToolStripMenuItem.Name = "suprimerToolStripMenuItem";
-            this.suprimerToolStripMenuItem.Size = new System.Drawing.Size(184, 36);
+            this.suprimerToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
             this.suprimerToolStripMenuItem.Text = "Suprimer";
+            // 
+            // renevoulerToolStripMenuItem
+            // 
+            this.renevoulerToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.renevoulerToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.renew_green_24;
+            this.renevoulerToolStripMenuItem.Name = "renevoulerToolStripMenuItem";
+            this.renevoulerToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
+            this.renevoulerToolStripMenuItem.Text = "Renevouler";
             // 
             // Form1
             // 
@@ -326,6 +338,7 @@
         private System.Windows.Forms.ToolStripMenuItem editerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem trouverToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem suprimerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem renevoulerToolStripMenuItem;
     }
 }
 

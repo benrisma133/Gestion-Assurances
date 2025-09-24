@@ -126,5 +126,13 @@ namespace GestionAssurances
             frmAddEditRenewAssurance.ShowDialog();
             Form1_Load(null, null);
         }
+
+        private void editerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int AssuranceID = Convert.ToInt32(dgvAllAssurances.CurrentRow.Cells[0].Value);
+            frmAddEditRenewAssurance frmAddEditRenewAssurance = new frmAddEditRenewAssurance(AssuranceID);
+            frmAddEditRenewAssurance.ShowDialog();
+            Form1_Load(null, null);
+        }
     }
 }
