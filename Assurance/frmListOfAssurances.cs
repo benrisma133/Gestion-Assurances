@@ -111,8 +111,7 @@ namespace GestionAssurances
             FillYears(cbAnnee);
             FillMonths(cbMois);
 
-            cbAnnee.SelectedIndex = 0;
-            cbMois.SelectedIndex = 0;
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -129,6 +128,9 @@ namespace GestionAssurances
             cbFilterBy.SelectedIndex = 0;
 
             _LoadDataToDataTable();
+
+            cbAnnee.SelectedIndex = 0;
+            cbMois.SelectedIndex = 0;
 
         }
 
@@ -214,19 +216,19 @@ namespace GestionAssurances
                     break;
 
                 case "Marque":
-                    FilterColumn = "VoitureMarque";
+                    FilterColumn = "Marque";
                     break;
 
                 case "Modèle":
-                    FilterColumn = "VoitureModel";
+                    FilterColumn = "Model";
                     break;
 
                 case "Matricule":
-                    FilterColumn = "VoitureMatricule";
+                    FilterColumn = "Matricule";
                     break;
 
                 case "Durée":
-                    FilterColumn = "DurationMonths";
+                    FilterColumn = "Dure";
                     break;
 
                 case "Commercial":
@@ -252,11 +254,23 @@ namespace GestionAssurances
 
             if (txtFilterByValue.Text.Trim() == string.Empty || FilterColumn == "Aucun")
             {
-                _LoadDataToDataTable();
+                if (_IsYearSelected() || _IsMonthSelected())
+                    _FilterData();
+                else
+                    _LoadDataToDataTable();
                 return;
             }
 
-            _dtAllAssurances.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", FilterColumn, txtFilterByValue.Text.Trim());
+            if(_IsMonthSelected() || _IsYearSelected())
+            {
+                _dtAllAssurances.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", FilterColumn, txtFilterByValue.Text.Trim());
+                _FilterData();
+            }
+            else{
+                _dtAllAssurances.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", FilterColumn, txtFilterByValue.Text.Trim());
+                
+            }
+
 
             dgvAllAssurances.DataSource = _dtAllAssurances;
 
