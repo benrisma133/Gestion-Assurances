@@ -48,6 +48,11 @@
             this.lblRecord = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.lblMessage = new Guna.UI.WinForms.GunaLabel();
+            this.cbAnnee = new Guna.UI.WinForms.GunaComboBox();
+            this.cbMois = new Guna.UI.WinForms.GunaComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblDebut = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllAssurances)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +84,7 @@
             this.txtFilterByValue.SelectedText = "";
             this.txtFilterByValue.Size = new System.Drawing.Size(400, 37);
             this.txtFilterByValue.TabIndex = 1;
+            this.txtFilterByValue.TextChanged += new System.EventHandler(this.txtFilterByValue_TextChanged);
             // 
             // gunaLabel2
             // 
@@ -105,10 +111,12 @@
             this.cbFilterBy.Items.AddRange(new object[] {
             "Aucun",
             "Client",
-            "Telephone",
+            "Téléphone",
+            "Email",
             "Marque",
-            "Model",
-            "Dure",
+            "Modèle",
+            "Matricule",
+            "Durée",
             "Comercial"});
             this.cbFilterBy.Location = new System.Drawing.Point(143, 159);
             this.cbFilterBy.Name = "cbFilterBy";
@@ -308,6 +316,78 @@
             this.gunaAdvenceButton1.TabIndex = 5;
             this.gunaAdvenceButton1.Click += new System.EventHandler(this.gunaAdvenceButton1_Click);
             // 
+            // lblMessage
+            // 
+            this.lblMessage.BackColor = System.Drawing.Color.Transparent;
+            this.lblMessage.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.lblMessage.Location = new System.Drawing.Point(766, 854);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(394, 64);
+            this.lblMessage.TabIndex = 10;
+            this.lblMessage.Text = "Assurances.";
+            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cbAnnee
+            // 
+            this.cbAnnee.BackColor = System.Drawing.Color.Transparent;
+            this.cbAnnee.BaseColor = System.Drawing.Color.White;
+            this.cbAnnee.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.cbAnnee.BorderSize = 1;
+            this.cbAnnee.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbAnnee.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAnnee.FocusedColor = System.Drawing.Color.Empty;
+            this.cbAnnee.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbAnnee.ForeColor = System.Drawing.Color.Black;
+            this.cbAnnee.FormattingEnabled = true;
+            this.cbAnnee.Location = new System.Drawing.Point(787, 159);
+            this.cbAnnee.Name = "cbAnnee";
+            this.cbAnnee.OnHoverItemBaseColor = System.Drawing.Color.MediumSeaGreen;
+            this.cbAnnee.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cbAnnee.Size = new System.Drawing.Size(198, 35);
+            this.cbAnnee.TabIndex = 11;
+            this.cbAnnee.SelectedIndexChanged += new System.EventHandler(this.cbAnnee_SelectedIndexChanged);
+            // 
+            // cbMois
+            // 
+            this.cbMois.BackColor = System.Drawing.Color.Transparent;
+            this.cbMois.BaseColor = System.Drawing.Color.White;
+            this.cbMois.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.cbMois.BorderSize = 1;
+            this.cbMois.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbMois.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMois.FocusedColor = System.Drawing.Color.Empty;
+            this.cbMois.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbMois.ForeColor = System.Drawing.Color.Black;
+            this.cbMois.FormattingEnabled = true;
+            this.cbMois.Location = new System.Drawing.Point(1010, 159);
+            this.cbMois.Name = "cbMois";
+            this.cbMois.OnHoverItemBaseColor = System.Drawing.Color.MediumSeaGreen;
+            this.cbMois.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.cbMois.Size = new System.Drawing.Size(198, 35);
+            this.cbMois.TabIndex = 12;
+            this.cbMois.SelectedIndexChanged += new System.EventHandler(this.cbMois_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1005, 120);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 29);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Mois :";
+            // 
+            // lblDebut
+            // 
+            this.lblDebut.AutoSize = true;
+            this.lblDebut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDebut.Location = new System.Drawing.Point(782, 120);
+            this.lblDebut.Name = "lblDebut";
+            this.lblDebut.Size = new System.Drawing.Size(94, 29);
+            this.lblDebut.TabIndex = 40;
+            this.lblDebut.Text = "Annee :";
+            // 
             // frmListOfAssurances
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -315,6 +395,11 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1885, 928);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblDebut);
+            this.Controls.Add(this.cbMois);
+            this.Controls.Add(this.cbAnnee);
+            this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.gunaLabel4);
             this.Controls.Add(this.lblRecord);
             this.Controls.Add(this.gunaLabel3);
@@ -331,6 +416,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllAssurances)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -351,6 +437,11 @@
         private System.Windows.Forms.ToolStripMenuItem trouverToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem suprimerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem renevoulerToolStripMenuItem;
+        private Guna.UI.WinForms.GunaLabel lblMessage;
+        private Guna.UI.WinForms.GunaComboBox cbAnnee;
+        private Guna.UI.WinForms.GunaComboBox cbMois;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDebut;
     }
 }
 
