@@ -4,7 +4,6 @@ C:\MyProjects\APIs Projects\GestionAssurances\obj\Debug\GestionAssurances.Comerc
 C:\MyProjects\APIs Projects\GestionAssurances\obj\Debug\GestionAssurances.Comercial.Forms.frmComercialInfo.resources
 C:\MyProjects\APIs Projects\GestionAssurances\obj\Debug\GestionAssurances.Comercial.Forms.frmListOfComercials.resources
 C:\MyProjects\APIs Projects\GestionAssurances\obj\Debug\GestionAssurances.Controls.ctrlTextBox.resources
-C:\MyProjects\APIs Projects\GestionAssurances\obj\Debug\GestionAssurances.Form1.resources
 C:\MyProjects\APIs Projects\GestionAssurances\obj\Debug\GestionAssurances.frmMain.resources
 C:\MyProjects\APIs Projects\GestionAssurances\obj\Debug\GestionAssurances.Properties.Resources.resources
 C:\MyProjects\APIs Projects\GestionAssurances\obj\Debug\GestionAssurances.csproj.GenerateResource.cache
@@ -63,3 +62,4 @@ C:\MyProjects\APIs Projects\GestionAssurances\obj\Debug\GestionAssurances.Assura
 C:\MyProjects\APIs Projects\GestionAssurances\obj\Debug\GestionAssurances.Assurance.frmAddEditRenewAssurance.resources
 C:\MyProjects\APIs Projects\GestionAssurances\obj\Debug\GestionAssurances.frmTest.resources
 C:\MyProjects\APIs Projects\GestionAssurances\obj\Debug\GestionAssurances.Controls.ctrlComboBox.resources
+C:\MyProjects\APIs Projects\GestionAssurances\obj\Debug\GestionAssurances.frmListOfAssurances.resources

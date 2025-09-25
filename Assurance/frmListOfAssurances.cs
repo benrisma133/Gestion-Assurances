@@ -30,6 +30,8 @@ namespace GestionAssurances
 
             //dgvAllAssurances.DataSource = clsAssurance.GetAllAssurances();
 
+            cbFilterBy.SelectedIndex = 0;
+
             _LoadData();
 
         }
@@ -155,6 +157,17 @@ namespace GestionAssurances
                 {
                     MessageBox.Show("Échec de la suppression de l'assurance.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void cbFilterBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtFilterByValue.Visible = (cbFilterBy.Text != "Aucun");
+
+            if (txtFilterByValue.Visible)
+            {
+                txtFilterByValue.Focus();
+                txtFilterByValue.Text = string.Empty;
             }
         }
     }
