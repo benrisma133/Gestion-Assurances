@@ -180,11 +180,11 @@
     <Compile Include="Controls\ctrlTextBox.Designer.cs">
       <DependentUpon>ctrlTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Assurance\frmListOfAssurances.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Assurance\frmListOfAssurances.Designer.cs">
+      <DependentUpon>frmListOfAssurances.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -239,8 +239,8 @@
     <EmbeddedResource Include="Controls\ctrlTextBox.resx">
       <DependentUpon>ctrlTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Assurance\frmListOfAssurances.resx">
+      <DependentUpon>frmListOfAssurances.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
