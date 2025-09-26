@@ -15,6 +15,8 @@ namespace GestionAssurances
     public partial class frmListOfAssurances : Form
     {
         DataTable _dtAllAssurances;
+        private DataTable _dtAllAssurancesMaster; // نسخة أصلية محفوظة
+
 
         public frmListOfAssurances()
         {
@@ -105,17 +107,19 @@ namespace GestionAssurances
         void _LoadDataToDataTable()
         {
             _dtAllAssurances = clsAssurance.GetAllAssurances();
+            _dtAllAssurancesMaster = _dtAllAssurances.Copy(); // حفظ نسخة أصلية
             dgvAllAssurances.DataSource = _dtAllAssurances;
             _LoadData();
 
-            FillYears(cbAnnee);
-            FillMonths(cbMois);
+            
 
             
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
+
             dgvAllAssurances.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
 
             dgvAllAssurances.ColumnHeadersHeight = 40; // change 40 to whatever height you want
@@ -128,6 +132,9 @@ namespace GestionAssurances
             cbFilterBy.SelectedIndex = 0;
 
             _LoadDataToDataTable();
+
+            FillYears(cbAnnee);
+            FillMonths(cbMois);
 
             cbAnnee.SelectedIndex = 0;
             cbMois.SelectedIndex = 0;
@@ -191,92 +198,79 @@ namespace GestionAssurances
                 txtFilterByValue.Focus();
                 txtFilterByValue.Text = string.Empty;
             }
+            else
+            {
+                txtFilterByValue.Text = string.Empty;
+            }
         }
 
-        private void txtFilterByValue_TextChanged(object sender, EventArgs e)
+        private string GetFilterColumn()
         {
-            string FilterColumn = string.Empty;
-
             switch (cbFilterBy.Text)
             {
-                case "Aucun":
-                    FilterColumn = string.Empty;
-                    break;
-
-                case "Client":
-                    FilterColumn = "ClientFullName";
-                    break;
-
-                case "Téléphone":
-                    FilterColumn = "ClientPhone";
-                    break;
-
-                case "Email":
-                    FilterColumn = "ClientEmail";
-                    break;
-
-                case "Marque":
-                    FilterColumn = "Marque";
-                    break;
-
-                case "Modèle":
-                    FilterColumn = "Model";
-                    break;
-
-                case "Matricule":
-                    FilterColumn = "Matricule";
-                    break;
-
-                case "Durée":
-                    FilterColumn = "Dure";
-                    break;
-
-                case "Commercial":
-                    FilterColumn = "ComercialUsername";
-                    break;
-
-                case "Statut":
-                    FilterColumn = "Status";
-                    break;
-
-                case "Version":
-                    FilterColumn = "Version";
-                    break;
-
-                case "Actuel":
-                    FilterColumn = "IsCurrent";
-                    break;
-
-                default:
-                    FilterColumn = "Aucun";
-                    break;
+                case "Aucun": return "Aucun";
+                case "Client": return "ClientFullName";
+                case "Téléphone": return "ClientPhone";
+                case "Email": return "ClientEmail";
+                case "Marque": return "Marque";
+                case "Modèle": return "Model";
+                case "Matricule": return "Matricule";
+                case "Durée": return "Dure";
+                case "Commercial": return "ComercialUsername";
+                case "Statut": return "Status";
+                case "Version": return "Version";
+                case "Actuel": return "IsCurrent";
+                default: return "Aucun";
             }
+        }
 
-            if (txtFilterByValue.Text.Trim() == string.Empty || FilterColumn == "Aucun")
+        private void ApplyFilters()
+        {
+            if (_dtAllAssurancesMaster == null || _dtAllAssurancesMaster.Rows.Count == 0)
             {
-                if (_IsYearSelected() || _IsMonthSelected())
-                    _FilterData();
-                else
-                    _LoadDataToDataTable();
+                dgvAllAssurances.DataSource = null;
+                _LoadRecordsCount();
                 return;
             }
 
-            if(_IsMonthSelected() || _IsYearSelected())
+            IEnumerable<DataRow> rows = _dtAllAssurancesMaster.AsEnumerable();
+
+            // Year filter
+            if (_IsYearSelected())
             {
-                _dtAllAssurances.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", FilterColumn, txtFilterByValue.Text.Trim());
-                _FilterData();
-            }
-            else{
-                _dtAllAssurances.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", FilterColumn, txtFilterByValue.Text.Trim());
-                
+                int targetYear = Convert.ToInt32(cbAnnee.Text.Trim());
+                rows = rows.Where(r => r.Field<DateTime>("Debut").Year == targetYear);
             }
 
+            // Month filter
+            if (_IsMonthSelected() && int.TryParse(cbMois.Text.Trim(), out int targetMonth))
+            {
+                rows = rows.Where(r => r.Field<DateTime>("Debut").Month == targetMonth);
+            }
 
-            dgvAllAssurances.DataSource = _dtAllAssurances;
+            // Text filter
+            string filterColumn = GetFilterColumn();
+            string search = txtFilterByValue.Text.Trim();
 
+            if (!string.IsNullOrEmpty(search) && filterColumn != "Aucun")
+            {
+                rows = rows.Where(r =>
+                {
+                    var val = r[filterColumn];
+                    if (val == null || val == DBNull.Value) return false;
+                    return val.ToString().StartsWith(search, StringComparison.CurrentCultureIgnoreCase);
+                });
+            }
+
+            dgvAllAssurances.DataSource = rows.Any() ? rows.CopyToDataTable() : null;
             _LoadRecordsCount();
+        }
 
-            _dtAllAssurances = _dtAllAssurances.DefaultView.ToTable();
+
+        private void txtFilterByValue_TextChanged(object sender, EventArgs e)
+        {
+            
+            ApplyFilters();
 
         }
 
@@ -331,37 +325,37 @@ namespace GestionAssurances
             return true;
         }
 
-        void _FilterData()
-        {
-            if (!_IsYearSelected() && !_IsMonthSelected())
-            {
-                dgvAllAssurances.DataSource = _dtAllAssurances;
-                _LoadData();
-                return;
-            }
-            var filteredRows = _dtAllAssurances.AsEnumerable();
-            if (_IsYearSelected())
-            {
-                int year = Convert.ToInt32(cbAnnee.Text.Trim());
-                int targetYear = year;
-                filteredRows = _dtAllAssurances.AsEnumerable()
-                    .Where(r => r.Field<DateTime>("Debut").Year == targetYear);
-            }
-            if (_IsMonthSelected())
-            {
-                if (int.TryParse(cbMois.Text.Trim(), out int month))
-                {
-                    int targetMonth = month;
-                    filteredRows = filteredRows
-                        .Where(r => r.Field<DateTime>("Debut").Month == targetMonth);
-                    filteredRows = filteredRows
-                    .Where(r => r.Field<DateTime>("Debut").Month == targetMonth);
-                }
+        //void _FilterData()
+        //{
+        //    if (!_IsYearSelected() && !_IsMonthSelected())
+        //    {
+        //        dgvAllAssurances.DataSource = _dtAllAssurances;
+        //        _LoadData();
+        //        return;
+        //    }
+        //    var filteredRows = _dtAllAssurances.AsEnumerable();
+        //    if (_IsYearSelected())
+        //    {
+        //        int year = Convert.ToInt32(cbAnnee.Text.Trim());
+        //        int targetYear = year;
+        //        filteredRows = _dtAllAssurances.AsEnumerable()
+        //            .Where(r => r.Field<DateTime>("Debut").Year == targetYear);
+        //    }
+        //    if (_IsMonthSelected())
+        //    {
+        //        if (int.TryParse(cbMois.Text.Trim(), out int month))
+        //        {
+        //            int targetMonth = month;
+        //            filteredRows = filteredRows
+        //                .Where(r => r.Field<DateTime>("Debut").Month == targetMonth);
+        //            filteredRows = filteredRows
+        //            .Where(r => r.Field<DateTime>("Debut").Month == targetMonth);
+        //        }
 
-            }
-            dgvAllAssurances.DataSource = filteredRows.Any() ? filteredRows.CopyToDataTable() : null;
-            _LoadData();
-        }
+        //    }
+        //    dgvAllAssurances.DataSource = filteredRows.Any() ? filteredRows.CopyToDataTable() : null;
+        //    _LoadData();
+        //}
 
         private void cbAnnee_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -373,7 +367,8 @@ namespace GestionAssurances
             // if year is selected we filter by year only
             // if year is not selected we show all records
 
-            _FilterData();
+            //_FilterData();
+            ApplyFilters();
         }
 
         private void cbMois_SelectedIndexChanged(object sender, EventArgs e)
@@ -386,7 +381,8 @@ namespace GestionAssurances
             // if year is selected we filter by year only
             // if year is not selected we show all records
 
-            _FilterData();
+            //_FilterData();
+            ApplyFilters();
         }
     }
 }
