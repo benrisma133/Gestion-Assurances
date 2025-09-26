@@ -16,5 +16,31 @@ namespace GestionAssurances.Cards
         {
             InitializeComponent();
         }
+
+        public void _RestDefaults()
+        {
+            lblEspece.Text = "????????????";
+            lblCheque.Text = "????????????";
+            lblVirBank.Text = "????????????";
+            lblWafaSalaf.Text = "????????????";
+            lblTotal.Text = "????????????";
+        }
+
+        public void _LoadPaymentDataByID(int PaymentID)
+        {
+            GA_BLL.clsPayment payment = GA_BLL.clsPayment.FindByID(PaymentID);
+            if(payment == null)
+            {
+                MessageBox.Show("Paiement non trouvé.", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _RestDefaults();
+                return;
+            }
+            lblEspece.Text = payment.Espece.ToString("N2") + " MAD";
+            lblCheque.Text = payment.Cheque.ToString("N2") + " MAD";
+            lblVirBank.Text = payment.VirBank.ToString("N2") + " MAD";
+            lblWafaSalaf.Text = payment.WafaSalaf.ToString("N2") + " MAD";
+            lblTotal.Text = payment.Total.ToString("N2") + " MAD";
+        }
+
     }
 }

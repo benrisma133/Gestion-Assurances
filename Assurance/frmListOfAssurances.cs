@@ -110,10 +110,6 @@ namespace GestionAssurances
             _dtAllAssurancesMaster = _dtAllAssurances.Copy(); // حفظ نسخة أصلية
             dgvAllAssurances.DataSource = _dtAllAssurances;
             _LoadData();
-
-            
-
-            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -383,6 +379,13 @@ namespace GestionAssurances
 
             //_FilterData();
             ApplyFilters();
+        }
+
+        private void trouverToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int AssuranceID = Convert.ToInt32(dgvAllAssurances.CurrentRow.Cells[0].Value);
+            frmAssuranceInfo frmAssuranceInfo = new frmAssuranceInfo(AssuranceID);
+            frmAssuranceInfo.ShowDialog();
         }
     }
 }

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListOfAssurances));
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.txtFilterByValue = new Guna.UI.WinForms.GunaLineTextBox();
@@ -130,30 +130,30 @@
             // 
             this.dgvAllAssurances.AllowUserToAddRows = false;
             this.dgvAllAssurances.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvAllAssurances.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvAllAssurances.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAllAssurances.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAllAssurances.BackgroundColor = System.Drawing.Color.White;
             this.dgvAllAssurances.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvAllAssurances.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(160)))), ((int)(((byte)(110)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(62)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAllAssurances.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(160)))), ((int)(((byte)(110)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(62)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAllAssurances.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAllAssurances.ColumnHeadersHeight = 17;
             this.dgvAllAssurances.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAllAssurances.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAllAssurances.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAllAssurances.EnableHeadersVisualStyles = false;
             this.dgvAllAssurances.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
             this.dgvAllAssurances.Location = new System.Drawing.Point(9, 213);
@@ -198,7 +198,7 @@
             this.trouverToolStripMenuItem,
             this.suprimerToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(207, 184);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(249, 217);
             // 
             // ajouterToolStripMenuItem
             // 
@@ -206,7 +206,7 @@
             this.ajouterToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.main_add_24_green;
             this.ajouterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
             this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
             // 
@@ -216,7 +216,7 @@
             this.editerToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.edit_green_24;
             this.editerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.editerToolStripMenuItem.Name = "editerToolStripMenuItem";
-            this.editerToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
+            this.editerToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
             this.editerToolStripMenuItem.Text = "Editer";
             this.editerToolStripMenuItem.Click += new System.EventHandler(this.editerToolStripMenuItem_Click);
             // 
@@ -225,7 +225,7 @@
             this.renevoulerToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.renevoulerToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.renew_green_24;
             this.renevoulerToolStripMenuItem.Name = "renevoulerToolStripMenuItem";
-            this.renevoulerToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
+            this.renevoulerToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
             this.renevoulerToolStripMenuItem.Text = "Renevouler";
             this.renevoulerToolStripMenuItem.Click += new System.EventHandler(this.renevoulerToolStripMenuItem_Click);
             // 
@@ -235,8 +235,9 @@
             this.trouverToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.find_green_24;
             this.trouverToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.trouverToolStripMenuItem.Name = "trouverToolStripMenuItem";
-            this.trouverToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
+            this.trouverToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
             this.trouverToolStripMenuItem.Text = "Trouver";
+            this.trouverToolStripMenuItem.Click += new System.EventHandler(this.trouverToolStripMenuItem_Click);
             // 
             // suprimerToolStripMenuItem
             // 
@@ -244,7 +245,7 @@
             this.suprimerToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.delete_red_24;
             this.suprimerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.suprimerToolStripMenuItem.Name = "suprimerToolStripMenuItem";
-            this.suprimerToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
+            this.suprimerToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
             this.suprimerToolStripMenuItem.Text = "Suprimer";
             this.suprimerToolStripMenuItem.Click += new System.EventHandler(this.suprimerToolStripMenuItem_Click);
             // 

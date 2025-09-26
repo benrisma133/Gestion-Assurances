@@ -28,16 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlAssuranceCard1 = new GestionAssurances.Cards.ctrlAssuranceCard();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.ctrlAssuranceCard1 = new GestionAssurances.Cards.ctrlAssuranceCard();
             this.SuspendLayout();
-            // 
-            // ctrlAssuranceCard1
-            // 
-            this.ctrlAssuranceCard1.Location = new System.Drawing.Point(12, 111);
-            this.ctrlAssuranceCard1.Name = "ctrlAssuranceCard1";
-            this.ctrlAssuranceCard1.Size = new System.Drawing.Size(1136, 733);
-            this.ctrlAssuranceCard1.TabIndex = 0;
             // 
             // gunaLabel1
             // 
@@ -51,15 +44,27 @@
             this.gunaLabel1.Text = "Information du Assurance";
             this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ctrlAssuranceCard1
+            // 
+            this.ctrlAssuranceCard1.Location = new System.Drawing.Point(10, 101);
+            this.ctrlAssuranceCard1.Name = "ctrlAssuranceCard1";
+            this.ctrlAssuranceCard1.Size = new System.Drawing.Size(1151, 881);
+            this.ctrlAssuranceCard1.TabIndex = 0;
+            // 
             // frmAssuranceInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1162, 848);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1162, 994);
             this.Controls.Add(this.gunaLabel1);
             this.Controls.Add(this.ctrlAssuranceCard1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAssuranceInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frmAssuranceInfo";
+            this.Load += new System.EventHandler(this.frmAssuranceInfo_Load);
             this.ResumeLayout(false);
 
         }
