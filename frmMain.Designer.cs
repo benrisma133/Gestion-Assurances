@@ -28,50 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.voituresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.historiquesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statistiquesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comercialsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notificationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.voituresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historiquesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statistiquesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comercialsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.comercialsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // voituresToolStripMenuItem
-            // 
-            this.voituresToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.voituresToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.voituresToolStripMenuItem.Name = "voituresToolStripMenuItem";
-            this.voituresToolStripMenuItem.Size = new System.Drawing.Size(175, 52);
-            this.voituresToolStripMenuItem.Text = "Voitures";
-            this.voituresToolStripMenuItem.Click += new System.EventHandler(this.voituresToolStripMenuItem_Click);
-            // 
-            // historiquesToolStripMenuItem
-            // 
-            this.historiquesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.historiquesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.historiquesToolStripMenuItem.Name = "historiquesToolStripMenuItem";
-            this.historiquesToolStripMenuItem.Size = new System.Drawing.Size(229, 52);
-            this.historiquesToolStripMenuItem.Text = "Historiques";
-            // 
-            // statistiquesToolStripMenuItem
-            // 
-            this.statistiquesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statistiquesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.statistiquesToolStripMenuItem.Name = "statistiquesToolStripMenuItem";
-            this.statistiquesToolStripMenuItem.Size = new System.Drawing.Size(231, 52);
-            this.statistiquesToolStripMenuItem.Text = "Statistiques";
-            // 
-            // comercialsToolStripMenuItem
-            // 
-            this.comercialsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comercialsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.comercialsToolStripMenuItem.Name = "comercialsToolStripMenuItem";
-            this.comercialsToolStripMenuItem.Size = new System.Drawing.Size(218, 52);
-            this.comercialsToolStripMenuItem.Text = "Comercials";
-            this.comercialsToolStripMenuItem.Click += new System.EventHandler(this.comercialsToolStripMenuItem_Click);
             // 
             // notificationsToolStripMenuItem
             // 
@@ -80,7 +47,7 @@
             this.notificationsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.notificationsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(310, 0, 0, 0);
             this.notificationsToolStripMenuItem.Name = "notificationsToolStripMenuItem";
-            this.notificationsToolStripMenuItem.Size = new System.Drawing.Size(78, 52);
+            this.notificationsToolStripMenuItem.Size = new System.Drawing.Size(78, 68);
             this.notificationsToolStripMenuItem.Text = "10";
             this.notificationsToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -97,7 +64,7 @@
             this.notificationsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1776, 56);
+            this.menuStrip1.Size = new System.Drawing.Size(1776, 72);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -105,12 +72,64 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(209)))), ((int)(((byte)(202)))));
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 56);
+            this.pictureBox1.Image = global::GestionAssurances.Properties.Resources.ChatGPT_Image_May_8__2025__10_14_00_AM;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 72);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1776, 686);
+            this.pictureBox1.Size = new System.Drawing.Size(1776, 670);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
+            // 
+            // voituresToolStripMenuItem
+            // 
+            this.voituresToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.voituresToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.assurance_64_green;
+            this.voituresToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.voituresToolStripMenuItem.Name = "voituresToolStripMenuItem";
+            this.voituresToolStripMenuItem.Size = new System.Drawing.Size(286, 68);
+            this.voituresToolStripMenuItem.Text = "Assurances";
+            this.voituresToolStripMenuItem.Click += new System.EventHandler(this.voituresToolStripMenuItem_Click);
+            // 
+            // historiquesToolStripMenuItem
+            // 
+            this.historiquesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.historiquesToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.history_64_green;
+            this.historiquesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.historiquesToolStripMenuItem.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.historiquesToolStripMenuItem.Name = "historiquesToolStripMenuItem";
+            this.historiquesToolStripMenuItem.Size = new System.Drawing.Size(293, 68);
+            this.historiquesToolStripMenuItem.Text = "Historiques";
+            // 
+            // statistiquesToolStripMenuItem
+            // 
+            this.statistiquesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.comercialsToolStripMenuItem1});
+            this.statistiquesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statistiquesToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.stitistics_64_green;
+            this.statistiquesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.statistiquesToolStripMenuItem.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.statistiquesToolStripMenuItem.Name = "statistiquesToolStripMenuItem";
+            this.statistiquesToolStripMenuItem.Size = new System.Drawing.Size(295, 68);
+            this.statistiquesToolStripMenuItem.Text = "Statistiques";
+            // 
+            // comercialsToolStripMenuItem1
+            // 
+            this.comercialsToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comercialsToolStripMenuItem1.Image = global::GestionAssurances.Properties.Resources.comercials_32_green;
+            this.comercialsToolStripMenuItem1.Name = "comercialsToolStripMenuItem1";
+            this.comercialsToolStripMenuItem1.Size = new System.Drawing.Size(270, 46);
+            this.comercialsToolStripMenuItem1.Text = "Comercials";
+            // 
+            // comercialsToolStripMenuItem
+            // 
+            this.comercialsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comercialsToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.comercials_64_green;
+            this.comercialsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.comercialsToolStripMenuItem.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.comercialsToolStripMenuItem.Name = "comercialsToolStripMenuItem";
+            this.comercialsToolStripMenuItem.Size = new System.Drawing.Size(282, 68);
+            this.comercialsToolStripMenuItem.Text = "Comercials";
+            this.comercialsToolStripMenuItem.Click += new System.EventHandler(this.comercialsToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -139,5 +158,6 @@
         private System.Windows.Forms.ToolStripMenuItem comercialsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem notificationsToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem comercialsToolStripMenuItem1;
     }
 }

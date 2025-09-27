@@ -123,6 +123,16 @@ namespace GestionAssurances.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap assurance_64_green {
+            get {
+                object obj = ResourceManager.GetObject("assurance_64_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap car_card_16_black {
             get {
                 object obj = ResourceManager.GetObject("car_card_16_black", resourceCulture);
@@ -263,6 +273,16 @@ namespace GestionAssurances.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_May_8__2025__10_14_00_AM {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image May 8, 2025, 10_14_00 AM", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap client_card_16_black {
             get {
                 object obj = ResourceManager.GetObject("client_card_16_black", resourceCulture);
@@ -286,6 +306,26 @@ namespace GestionAssurances.Properties {
         internal static System.Drawing.Bitmap closeWhite30 {
             get {
                 object obj = ResourceManager.GetObject("closeWhite30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap comercials_32_green {
+            get {
+                object obj = ResourceManager.GetObject("comercials_32_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap comercials_64_green {
+            get {
+                object obj = ResourceManager.GetObject("comercials_64_green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -356,6 +396,16 @@ namespace GestionAssurances.Properties {
         internal static System.Drawing.Bitmap find_green_24 {
             get {
                 object obj = ResourceManager.GetObject("find_green_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap history_64_green {
+            get {
+                object obj = ResourceManager.GetObject("history_64_green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -466,6 +516,16 @@ namespace GestionAssurances.Properties {
         internal static System.Drawing.Bitmap save_24_white {
             get {
                 object obj = ResourceManager.GetObject("save_24_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stitistics_64_green {
+            get {
+                object obj = ResourceManager.GetObject("stitistics_64_green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

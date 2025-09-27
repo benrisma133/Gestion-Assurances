@@ -404,5 +404,23 @@
   <ItemGroup>
     <None Include="Resources\renew_green_24.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image May 8, 2025, 10_14_00 AM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assurance_64_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comercials_64_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history_64_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stitistics_64_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comercials_32_green.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
