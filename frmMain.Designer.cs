@@ -30,12 +30,12 @@
         {
             this.notificationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.voituresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historiquesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statistiquesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comercialsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.comercialsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +68,18 @@
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(209)))), ((int)(((byte)(202)))));
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::GestionAssurances.Properties.Resources.ChatGPT_Image_May_8__2025__10_14_00_AM;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 72);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1776, 670);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // voituresToolStripMenuItem
             // 
             this.voituresToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -99,6 +111,7 @@
             this.statistiquesToolStripMenuItem.Name = "statistiquesToolStripMenuItem";
             this.statistiquesToolStripMenuItem.Size = new System.Drawing.Size(295, 68);
             this.statistiquesToolStripMenuItem.Text = "Statistiques";
+            this.statistiquesToolStripMenuItem.Click += new System.EventHandler(this.statistiquesToolStripMenuItem_Click);
             // 
             // comercialsToolStripMenuItem1
             // 
@@ -108,6 +121,7 @@
             this.comercialsToolStripMenuItem1.Name = "comercialsToolStripMenuItem1";
             this.comercialsToolStripMenuItem1.Size = new System.Drawing.Size(278, 46);
             this.comercialsToolStripMenuItem1.Text = "Comercials";
+            this.comercialsToolStripMenuItem1.Click += new System.EventHandler(this.comercialsToolStripMenuItem1_Click);
             // 
             // comercialsToolStripMenuItem
             // 
@@ -119,18 +133,6 @@
             this.comercialsToolStripMenuItem.Size = new System.Drawing.Size(282, 68);
             this.comercialsToolStripMenuItem.Text = "Comercials";
             this.comercialsToolStripMenuItem.Click += new System.EventHandler(this.comercialsToolStripMenuItem_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(209)))), ((int)(((byte)(202)))));
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::GestionAssurances.Properties.Resources.ChatGPT_Image_May_8__2025__10_14_00_AM;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 72);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1776, 670);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
             // 
             // frmMain
             // 

@@ -29,5 +29,16 @@ namespace GestionAssurances
             frmListOfComercials frmListOfComercials = new frmListOfComercials();
             frmListOfComercials.ShowDialog();
         }
+
+        private void statistiquesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void comercialsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmStatistic frm = new frmStatistic();
+            frm.ShowDialog();
+        }
     }
 }
