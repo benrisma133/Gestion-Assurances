@@ -118,14 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="add_16_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_16_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="client_card_16_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\client_card_16_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stitistics_64_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stitistics_64_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="accept_16_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\accept_16_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="updated_green_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\updated_green_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="char_w_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\char_w_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,14 +145,17 @@
   <data name="ChatGPT Image May 8, 2025, 10_14_00 AM" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ChatGPT Image May 8, 2025, 10_14_00 AM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="arrow_next_16_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_next_16_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="renew_32_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\renew_32_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arrow_back_16_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow_back_16_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="updated_green_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\updated_green_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="char_a_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\char_a_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="char_v_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\char_v_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,11 +166,8 @@
   <data name="p_16_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\p_16_blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="assurance_64_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\assurance_64_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="char_c_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\char_c_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="stitistics_64_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stitistics_64_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="car_card_16_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\car_card_16_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,6 +190,9 @@
   <data name="char_n_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\char_n_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="char_c_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\char_c_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="char_m_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\char_m_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -199,8 +205,8 @@
   <data name="char_d_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\char_d_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="char_a_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\char_a_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="assurance_64_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\assurance_64_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="main_add_64_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\main_add_64_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,8 +253,8 @@
   <data name="delete_red_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_red_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arrow_next_16_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow_next_16_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="comercials_32_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\comercials_32_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="char_e_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\char_e_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -259,7 +265,7 @@
   <data name="char_p_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\char_p_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="comercials_32_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\comercials_32_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="add_16_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_16_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

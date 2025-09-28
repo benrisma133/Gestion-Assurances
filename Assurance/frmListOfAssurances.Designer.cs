@@ -198,7 +198,7 @@
             this.trouverToolStripMenuItem,
             this.suprimerToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(249, 217);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(207, 184);
             // 
             // ajouterToolStripMenuItem
             // 
@@ -206,7 +206,7 @@
             this.ajouterToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.main_add_24_green;
             this.ajouterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
             this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
             // 
@@ -216,7 +216,7 @@
             this.editerToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.edit_green_24;
             this.editerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.editerToolStripMenuItem.Name = "editerToolStripMenuItem";
-            this.editerToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
+            this.editerToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
             this.editerToolStripMenuItem.Text = "Editer";
             this.editerToolStripMenuItem.Click += new System.EventHandler(this.editerToolStripMenuItem_Click);
             // 
@@ -225,7 +225,7 @@
             this.renevoulerToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.renevoulerToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.renew_green_24;
             this.renevoulerToolStripMenuItem.Name = "renevoulerToolStripMenuItem";
-            this.renevoulerToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
+            this.renevoulerToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
             this.renevoulerToolStripMenuItem.Text = "Renevouler";
             this.renevoulerToolStripMenuItem.Click += new System.EventHandler(this.renevoulerToolStripMenuItem_Click);
             // 
@@ -235,7 +235,7 @@
             this.trouverToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.find_green_24;
             this.trouverToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.trouverToolStripMenuItem.Name = "trouverToolStripMenuItem";
-            this.trouverToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
+            this.trouverToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
             this.trouverToolStripMenuItem.Text = "Trouver";
             this.trouverToolStripMenuItem.Click += new System.EventHandler(this.trouverToolStripMenuItem_Click);
             // 
@@ -245,7 +245,7 @@
             this.suprimerToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.delete_red_24;
             this.suprimerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.suprimerToolStripMenuItem.Name = "suprimerToolStripMenuItem";
-            this.suprimerToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
+            this.suprimerToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
             this.suprimerToolStripMenuItem.Text = "Suprimer";
             this.suprimerToolStripMenuItem.Click += new System.EventHandler(this.suprimerToolStripMenuItem_Click);
             // 
@@ -300,7 +300,7 @@
             this.gunaAdvenceButton1.FocusedColor = System.Drawing.Color.Empty;
             this.gunaAdvenceButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaAdvenceButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceButton1.Image = global::GestionAssurances.Properties.Resources.main_add_64_green;
+            this.gunaAdvenceButton1.Image = global::GestionAssurances.Properties.Resources.add_16_green;
             this.gunaAdvenceButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaAdvenceButton1.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaAdvenceButton1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));

@@ -143,7 +143,7 @@ namespace GestionAssurances.Comercial.Forms
             }
 
             // تحديد القيمة الإفتراضية
-            cbAnnee.SelectedIndex = 0;
+            cbAnnee.SelectedItem = currentYear;
         }
 
         private void cbMois_SelectedIndexChanged(object sender, EventArgs e)

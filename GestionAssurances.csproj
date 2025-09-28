@@ -115,6 +115,12 @@
     <Compile Include="Assurance\frmAssuranceInfo.Designer.cs">
       <DependentUpon>frmAssuranceInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Brand\Forms\frmAddEditBrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Brand\Forms\frmAddEditBrand.Designer.cs">
+      <DependentUpon>frmAddEditBrand.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cards\ctrlAssuranceCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Assurance\frmAssuranceInfo.resx">
       <DependentUpon>frmAssuranceInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Brand\Forms\frmAddEditBrand.resx">
+      <DependentUpon>frmAddEditBrand.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cards\ctrlAssuranceCard.resx">
       <DependentUpon>ctrlAssuranceCard.cs</DependentUpon>
@@ -431,6 +440,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\comercials_32_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16_white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -39,6 +39,7 @@
             this.txtFieldTelephone = new GestionAssurances.Controls.ctrlTextBox();
             this.txtFieldEmail = new GestionAssurances.Controls.ctrlTextBox();
             this.tbVehiculDetails = new System.Windows.Forms.TabPage();
+            this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnBackAddCar = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnNextAddCar = new Guna.UI.WinForms.GunaAdvenceButton();
             this.cbFieldComercial = new GestionAssurances.Controls.ctrlComboBox();
@@ -60,15 +61,15 @@
             this.txtFieldCheque = new GestionAssurances.Controls.ctrlTextBox();
             this.txtFieldVirBank = new GestionAssurances.Controls.ctrlTextBox();
             this.txtFieldWafaSalaf = new GestionAssurances.Controls.ctrlTextBox();
-            this.pbTitle = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pbTitle = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tbClient.SuspendLayout();
             this.tbVehiculDetails.SuspendLayout();
             this.tbVehiculDure.SuspendLayout();
             this.tbPaiment.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbTitle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTitle)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -202,6 +203,7 @@
             // 
             // tbVehiculDetails
             // 
+            this.tbVehiculDetails.Controls.Add(this.gunaAdvenceButton1);
             this.tbVehiculDetails.Controls.Add(this.btnBackAddCar);
             this.tbVehiculDetails.Controls.Add(this.btnNextAddCar);
             this.tbVehiculDetails.Controls.Add(this.cbFieldComercial);
@@ -216,6 +218,41 @@
             this.tbVehiculDetails.TabIndex = 1;
             this.tbVehiculDetails.Text = "Détails du véhicule";
             this.tbVehiculDetails.UseVisualStyleBackColor = true;
+            // 
+            // gunaAdvenceButton1
+            // 
+            this.gunaAdvenceButton1.Animated = true;
+            this.gunaAdvenceButton1.AnimationHoverSpeed = 0.07F;
+            this.gunaAdvenceButton1.AnimationSpeed = 0.03F;
+            this.gunaAdvenceButton1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaAdvenceButton1.BaseColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.gunaAdvenceButton1.BorderSize = 1;
+            this.gunaAdvenceButton1.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.gunaAdvenceButton1.CheckedBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton1.CheckedForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton1.CheckedImage = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceButton1.CheckedImage")));
+            this.gunaAdvenceButton1.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.gunaAdvenceButton1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaAdvenceButton1.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaAdvenceButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaAdvenceButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.gunaAdvenceButton1.Image = global::GestionAssurances.Properties.Resources.add_16_green;
+            this.gunaAdvenceButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaAdvenceButton1.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaAdvenceButton1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.gunaAdvenceButton1.Location = new System.Drawing.Point(1047, 194);
+            this.gunaAdvenceButton1.Name = "gunaAdvenceButton1";
+            this.gunaAdvenceButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.gunaAdvenceButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton1.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton1.OnHoverImage = global::GestionAssurances.Properties.Resources.add_16_white;
+            this.gunaAdvenceButton1.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.gunaAdvenceButton1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton1.Radius = 10;
+            this.gunaAdvenceButton1.Size = new System.Drawing.Size(65, 63);
+            this.gunaAdvenceButton1.TabIndex = 11;
+            this.gunaAdvenceButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnBackAddCar
             // 
@@ -647,6 +684,10 @@
             this.txtFieldWafaSalaf.TabIndex = 7;
             this.txtFieldWafaSalaf.ValidatingTextChanged += new System.EventHandler<GestionAssurances.Controls.ctrlTextBox.ValidationEventArgs>(this.VPayments_ValidatingTextChanged);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // pbTitle
             // 
             this.pbTitle.Image = global::GestionAssurances.Properties.Resources.renew_32_green;
@@ -656,10 +697,6 @@
             this.pbTitle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbTitle.TabIndex = 2;
             this.pbTitle.TabStop = false;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // frmAddEditRenewAssurance
             // 
@@ -679,8 +716,8 @@
             this.tbVehiculDetails.ResumeLayout(false);
             this.tbVehiculDure.ResumeLayout(false);
             this.tbPaiment.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbTitle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTitle)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -719,5 +756,6 @@
         private Guna.UI.WinForms.GunaAdvenceButton btnBackAddDure;
         private Guna.UI.WinForms.GunaAdvenceButton btnBackAddPayment;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton1;
     }
 }
