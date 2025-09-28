@@ -1,4 +1,5 @@
-﻿using GestionAssurances.Comercial.Forms;
+﻿using GestionAssurances.Brand.Forms;
+using GestionAssurances.Comercial.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,8 +21,7 @@ namespace GestionAssurances
 
         private void voituresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmListOfAssurances frm = new frmListOfAssurances();
-            frm.ShowDialog();
+            
         }
 
         private void comercialsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -38,6 +38,23 @@ namespace GestionAssurances
         private void comercialsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmStatistic frm = new frmStatistic();
+            frm.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void listDesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListOfAssurances frm = new frmListOfAssurances();
+            frm.ShowDialog();
+        }
+
+        private void listDesMarquesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListOfBrands frm = new frmListOfBrands();
             frm.ShowDialog();
         }
     }

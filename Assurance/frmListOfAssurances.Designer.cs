@@ -254,9 +254,9 @@
             this.gunaLabel3.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
-            this.gunaLabel3.Location = new System.Drawing.Point(12, 855);
+            this.gunaLabel3.Location = new System.Drawing.Point(12, 861);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(431, 64);
+            this.gunaLabel3.Size = new System.Drawing.Size(382, 46);
             this.gunaLabel3.TabIndex = 7;
             this.gunaLabel3.Text = "Nombre d\'enregistrements : ";
             this.gunaLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -266,9 +266,9 @@
             this.lblRecord.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
             this.lblRecord.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRecord.ForeColor = System.Drawing.Color.White;
-            this.lblRecord.Location = new System.Drawing.Point(450, 854);
+            this.lblRecord.Location = new System.Drawing.Point(400, 859);
             this.lblRecord.Name = "lblRecord";
-            this.lblRecord.Size = new System.Drawing.Size(310, 64);
+            this.lblRecord.Size = new System.Drawing.Size(261, 46);
             this.lblRecord.TabIndex = 8;
             this.lblRecord.Text = "# 0";
             this.lblRecord.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -322,9 +322,9 @@
             this.lblMessage.BackColor = System.Drawing.Color.Transparent;
             this.lblMessage.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
-            this.lblMessage.Location = new System.Drawing.Point(766, 854);
+            this.lblMessage.Location = new System.Drawing.Point(667, 861);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(394, 64);
+            this.lblMessage.Size = new System.Drawing.Size(345, 46);
             this.lblMessage.TabIndex = 10;
             this.lblMessage.Text = "Assurances.";
             this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

@@ -121,6 +121,12 @@
     <Compile Include="Brand\Forms\frmAddEditBrand.Designer.cs">
       <DependentUpon>frmAddEditBrand.cs</DependentUpon>
     </Compile>
+    <Compile Include="Brand\Forms\frmListOfBrands.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Brand\Forms\frmListOfBrands.Designer.cs">
+      <DependentUpon>frmListOfBrands.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cards\ctrlAssuranceCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -221,6 +227,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Brand\Forms\frmAddEditBrand.resx">
       <DependentUpon>frmAddEditBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Brand\Forms\frmListOfBrands.resx">
+      <DependentUpon>frmListOfBrands.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cards\ctrlAssuranceCard.resx">
       <DependentUpon>ctrlAssuranceCard.cs</DependentUpon>
@@ -446,6 +455,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add_16_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list_24_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history_24_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_64_green.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

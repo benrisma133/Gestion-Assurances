@@ -423,6 +423,16 @@ namespace GestionAssurances.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap history_24_green {
+            get {
+                object obj = ResourceManager.GetObject("history_24_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap history_64_green {
             get {
                 object obj = ResourceManager.GetObject("history_64_green", resourceCulture);
@@ -436,6 +446,16 @@ namespace GestionAssurances.Properties {
         internal static System.Drawing.Bitmap letter_p_24_blue {
             get {
                 object obj = ResourceManager.GetObject("letter_p_24_blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap list_24_green {
+            get {
+                object obj = ResourceManager.GetObject("list_24_green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -536,6 +556,16 @@ namespace GestionAssurances.Properties {
         internal static System.Drawing.Bitmap save_24_white {
             get {
                 object obj = ResourceManager.GetObject("save_24_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settings_64_green {
+            get {
+                object obj = ResourceManager.GetObject("settings_64_green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

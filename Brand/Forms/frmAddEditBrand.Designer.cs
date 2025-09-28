@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddEditBrand));
             this.btnSave = new Guna.UI.WinForms.GunaAdvenceButton();
             this.txtFieldMarque = new GestionAssurances.Controls.ctrlTextBox();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.lblTitle = new Guna.UI.WinForms.GunaLabel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -78,22 +81,27 @@
             this.txtFieldMarque.FieldValue = "";
             this.txtFieldMarque.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFieldMarque.IsVisibleIconAccept = false;
-            this.txtFieldMarque.Location = new System.Drawing.Point(75, 165);
+            this.txtFieldMarque.Location = new System.Drawing.Point(47, 158);
             this.txtFieldMarque.Name = "txtFieldMarque";
-            this.txtFieldMarque.Size = new System.Drawing.Size(629, 47);
+            this.txtFieldMarque.Size = new System.Drawing.Size(679, 47);
             this.txtFieldMarque.TabIndex = 10;
+            this.txtFieldMarque.ValidatingTextChanged += new System.EventHandler<GestionAssurances.Controls.ctrlTextBox.ValidationEventArgs>(this.txtFieldMarque_ValidatingTextChanged);
             // 
-            // gunaLabel1
+            // lblTitle
             // 
-            this.gunaLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.Transparent;
-            this.gunaLabel1.Location = new System.Drawing.Point(2, 0);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(758, 71);
-            this.gunaLabel1.TabIndex = 11;
-            this.gunaLabel1.Text = "Ajouter un marque";
-            this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Location = new System.Drawing.Point(2, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(758, 71);
+            this.lblTitle.TabIndex = 11;
+            this.lblTitle.Text = "Ajouter un marque";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // frmAddEditBrand
             // 
@@ -101,13 +109,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(762, 334);
-            this.Controls.Add(this.gunaLabel1);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.txtFieldMarque);
             this.Controls.Add(this.btnSave);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAddEditBrand";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmAddEditBrand";
+            this.Load += new System.EventHandler(this.frmAddEditBrand_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -116,6 +127,7 @@
 
         private Guna.UI.WinForms.GunaAdvenceButton btnSave;
         private Controls.ctrlTextBox txtFieldMarque;
-        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaLabel lblTitle;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

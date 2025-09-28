@@ -1,4 +1,5 @@
 ﻿using GA_BLL;
+using GestionAssurances.Brand.Forms;
 using GestionAssurances.Controls;
 using GestionAssurances.Properties;
 using Mysqlx.Crud;
@@ -220,6 +221,7 @@ namespace GestionAssurances.Assurance
         {
             _LoadDateToComboBoxes();
             _FillComboBoxWithComercials();
+            _FillComboBoxWithBrands();
 
             if (_Mode == enMode.Add)
             {
@@ -239,7 +241,6 @@ namespace GestionAssurances.Assurance
             _ResetDefaultVtBasicDetailsValues();
             _ResetDefaultVtDureValues();
             _ResetDefaultVtPaimentValues();
-            _FillComboBoxWithBrands();
         }
 
         private bool ValidateClientFields()
@@ -558,6 +559,15 @@ namespace GestionAssurances.Assurance
             _Month = int.Parse(cbFieldMois.MyComboBox.SelectedItem.ToString());
             cbFieldJour.MyComboBox.Items.Clear();
             _FillComboBoxWithDays(_Year, _Month);
+        }
+
+        private void gunaAdvenceButton1_Click(object sender, EventArgs e)
+        {
+            frmAddEditBrand frmAddEditBrand = new frmAddEditBrand();
+            frmAddEditBrand.ShowDialog();
+            cbFieldMarque.MyComboBox.Items.Clear();
+            _FillComboBoxWithBrands();
+            cbFieldMarque.MyComboBox.SelectedIndex = cbFieldMarque.MyComboBox.FindString("DACIA");
         }
     }
 }

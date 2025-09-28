@@ -117,8 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnSave.CheckedImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="gunaAdvenceButton1.CheckedImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAa9JREFUOE+N
         1E2Lz1EUwPFRg2bGw5iUPGwsjJehMGOBpcgCSVNegFKed8oSe4uZjdgOUUwKC/KwlVdAyUMU0kdnnB/3
@@ -131,21 +134,4 @@
         ra/5CTCotD71VpT6AAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="txtFieldMarque.FieldIconAccept" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHOSURBVDhPfZLP
-        KwRhHMbnRCGRXcpBknjHj7+AcuPmKDdHRS2JhnJwoNS+u/nVcnDwa1lbuygphYPlZN5trRUxckQodres
-        3dn56n3tjpndWd96DjPzfJ53vm8Px2UMEu3NyG+bRSIOIYKjTCIO8QTP8BfWpky/OrX3c/m83+pABCcR
-        wZBDMiJ4ofF6Ii8LRgSfGAC5dKwL4UW8aGDKUgOxaZ5t8wxmO///20x90g58yl+w9kKA/30nNwTsjRy7
-        MANAq35pF+KKDOnp8DkAESv9ZucQwddpY8/dNrheL6E1uPgHP+hh37MEpetDYN4bgzoRh2hAhBrbQ8sQ
-        SyaYSfp6g5agA3olL3xr4POXByh3jkDBioWpzCskaECYBrQFlyAsx1TzUzwMCSWphzf+YKqitQFFt0LX
-        rVMXkp7Tp3swbwzrYKriraEYRxumvbDu202QNSfffDyDyQBmK3gEP0frmWqYGiI8HkBSUeA9FoUq11gW
-        yLRqgcr98c7fLhC8oA1gOp+GwvXBbDAlk1cIqE2ktawn+CgzpOZsyjCkxD38bnZPFKkB6RBaz8x19CED
-        YPKMBioOrYU6WDu0nrRhiOCrVEci1b5JyeQRiLqzZn4AU308ktLGLjYAAAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="errorProvider1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
 </root>

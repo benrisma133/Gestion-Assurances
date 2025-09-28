@@ -124,6 +124,9 @@
   <data name="client_card_16_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\client_card_16_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="comercials_32_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\comercials_32_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="accept_16_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\accept_16_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,6 +139,9 @@
   <data name="renew_green_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\renew_green_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="history_24_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\history_24_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="duration_card_16_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\duration_card_16_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,11 +151,11 @@
   <data name="ChatGPT Image May 8, 2025, 10_14_00 AM" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ChatGPT Image May 8, 2025, 10_14_00 AM.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="arrow_next_16_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\arrow_next_16_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="renew_32_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\renew_32_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="main_add_32_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\main_add_32_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="arrow_back_16_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow_back_16_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -168,6 +174,9 @@
   </data>
   <data name="stitistics_64_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stitistics_64_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="find_green_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\find_green_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="car_card_16_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\car_card_16_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,8 +220,11 @@
   <data name="main_add_64_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\main_add_64_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="main_add_32_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\main_add_32_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="list_24_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\list_24_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_red_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete_red_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="char_f_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\char_f_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -222,9 +234,6 @@
   </data>
   <data name="char_u_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\char_u_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="find_green_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\find_green_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="payment_card_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\payment_card_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,11 +259,11 @@
   <data name="edit_person_40_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\edit_person_40_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete_red_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete_red_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="add_16_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_16_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="comercials_32_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\comercials_32_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arrow_next_16_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\arrow_next_16_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="char_e_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\char_e_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -265,7 +274,7 @@
   <data name="char_p_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\char_p_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="add_16_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add_16_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="settings_64_green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings_64_green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
