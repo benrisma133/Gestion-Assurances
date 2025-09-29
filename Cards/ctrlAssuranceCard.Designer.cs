@@ -132,7 +132,7 @@
             // 
             // ctrlPaymentCard1
             // 
-            this.ctrlPaymentCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(241)))), ((int)(((byte)(224)))));
+            this.ctrlPaymentCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ctrlPaymentCard1.Location = new System.Drawing.Point(583, 369);
             this.ctrlPaymentCard1.Name = "ctrlPaymentCard1";
             this.ctrlPaymentCard1.Size = new System.Drawing.Size(550, 350);
@@ -140,7 +140,7 @@
             // 
             // ctrlDurationCard1
             // 
-            this.ctrlDurationCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(253)))), ((int)(((byte)(230)))));
+            this.ctrlDurationCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ctrlDurationCard1.Location = new System.Drawing.Point(583, 3);
             this.ctrlDurationCard1.Name = "ctrlDurationCard1";
             this.ctrlDurationCard1.Size = new System.Drawing.Size(550, 350);
@@ -148,7 +148,7 @@
             // 
             // ctrlCarCard1
             // 
-            this.ctrlCarCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(235)))), ((int)(((byte)(252)))));
+            this.ctrlCarCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ctrlCarCard1.Location = new System.Drawing.Point(17, 369);
             this.ctrlCarCard1.Name = "ctrlCarCard1";
             this.ctrlCarCard1.Size = new System.Drawing.Size(550, 350);
@@ -156,7 +156,7 @@
             // 
             // ctrlClientCard1
             // 
-            this.ctrlClientCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(230)))), ((int)(((byte)(201)))));
+            this.ctrlClientCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ctrlClientCard1.Location = new System.Drawing.Point(17, 3);
             this.ctrlClientCard1.Name = "ctrlClientCard1";
             this.ctrlClientCard1.Size = new System.Drawing.Size(550, 350);
