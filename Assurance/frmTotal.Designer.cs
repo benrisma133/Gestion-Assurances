@@ -55,7 +55,7 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(727, 98);
+            this.chart1.Location = new System.Drawing.Point(733, 98);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
@@ -68,9 +68,9 @@
             // ctrlMoneyCard1
             // 
             this.ctrlMoneyCard1.BackColor = System.Drawing.Color.White;
-            this.ctrlMoneyCard1.Location = new System.Drawing.Point(23, 299);
+            this.ctrlMoneyCard1.Location = new System.Drawing.Point(6, 299);
             this.ctrlMoneyCard1.Name = "ctrlMoneyCard1";
-            this.ctrlMoneyCard1.Size = new System.Drawing.Size(660, 435);
+            this.ctrlMoneyCard1.Size = new System.Drawing.Size(715, 435);
             this.ctrlMoneyCard1.TabIndex = 3;
             // 
             // frmTotal
