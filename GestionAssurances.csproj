@@ -115,6 +115,12 @@
     <Compile Include="Assurance\frmAssuranceInfo.Designer.cs">
       <DependentUpon>frmAssuranceInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Assurance\frmTotal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assurance\frmTotal.Designer.cs">
+      <DependentUpon>frmTotal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Brand\Forms\frmAddEditBrand.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,11 +199,23 @@
     <Compile Include="Controls\ctrlComboBox.Designer.cs">
       <DependentUpon>ctrlComboBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ctrlField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlField.Designer.cs">
+      <DependentUpon>ctrlField.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ctrlLabelField.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controls\ctrlLabelField.Designer.cs">
       <DependentUpon>ctrlLabelField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlMoneyCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlMoneyCard.Designer.cs">
+      <DependentUpon>ctrlMoneyCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Controls\ctrlTextBox.cs">
       <SubType>UserControl</SubType>
@@ -223,6 +241,7 @@
     <Compile Include="frmTest.Designer.cs">
       <DependentUpon>frmTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modals\clsPaymentDetails.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Assurance\frmAddEditRenewAssurance.resx">
@@ -230,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Assurance\frmAssuranceInfo.resx">
       <DependentUpon>frmAssuranceInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assurance\frmTotal.resx">
+      <DependentUpon>frmTotal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Brand\Forms\frmAddEditBrand.resx">
       <DependentUpon>frmAddEditBrand.cs</DependentUpon>
@@ -270,8 +292,14 @@
     <EmbeddedResource Include="Controls\ctrlComboBox.resx">
       <DependentUpon>ctrlComboBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlField.resx">
+      <DependentUpon>ctrlField.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\ctrlLabelField.resx">
       <DependentUpon>ctrlLabelField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlMoneyCard.resx">
+      <DependentUpon>ctrlMoneyCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ctrlTextBox.resx">
       <DependentUpon>ctrlTextBox.cs</DependentUpon>
@@ -500,6 +528,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\calculator_16_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\espece_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transfer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wafasalaf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letter_w_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\total.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

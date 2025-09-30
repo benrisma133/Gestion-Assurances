@@ -1,5 +1,6 @@
 ﻿using GA_BLL;
 using GestionAssurances.Assurance;
+using GestionAssurances.Modals;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,32 @@ namespace GestionAssurances
             InitializeComponent();
         }
 
+        decimal _EspeceTotal = 0;
+        decimal _ChequeTotal = 0;
+        decimal _VirBankTotal = 0;
+        decimal _WafaSalafTotal = 0;
+        decimal _AllTotal = 0;
+
+        clsPaymentDetails _PaymentDetails;
+
+        public void LoadAllTotals()
+        {
+            if (dgvAllAssurances.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dgvAllAssurances.Rows)
+                {
+                    _EspeceTotal += Convert.ToDecimal(row.Cells["Espece"].Value);
+                    _ChequeTotal += Convert.ToDecimal(row.Cells["Cheque"].Value);
+                    _VirBankTotal += Convert.ToDecimal(row.Cells["VirBank"].Value);
+                    _WafaSalafTotal += Convert.ToDecimal(row.Cells["WafaSalaf"].Value);
+                    _AllTotal += Convert.ToDecimal(row.Cells["Total"].Value);
+
+                }
+            }
+            
+            _PaymentDetails = new clsPaymentDetails(_EspeceTotal, _ChequeTotal, _VirBankTotal, _WafaSalafTotal, _AllTotal);
+
+        }
         private void _LoadRecordsCount()
         {
             lblRecord.Text = dgvAllAssurances.Rows.Count.ToString();
@@ -386,6 +413,13 @@ namespace GestionAssurances
             int AssuranceID = Convert.ToInt32(dgvAllAssurances.CurrentRow.Cells[0].Value);
             frmAssuranceInfo frmAssuranceInfo = new frmAssuranceInfo(AssuranceID);
             frmAssuranceInfo.ShowDialog();
+        }
+
+        private void gunaAdvenceButton2_Click(object sender, EventArgs e)
+        {
+            LoadAllTotals();
+            frmTotal frmTotal = new frmTotal(_PaymentDetails);
+            frmTotal.ShowDialog();
         }
     }
 }

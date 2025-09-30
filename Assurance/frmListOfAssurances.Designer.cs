@@ -339,6 +339,7 @@
             this.gunaAdvenceButton2.Radius = 8;
             this.gunaAdvenceButton2.Size = new System.Drawing.Size(79, 74);
             this.gunaAdvenceButton2.TabIndex = 42;
+            this.gunaAdvenceButton2.Click += new System.EventHandler(this.gunaAdvenceButton2_Click);
             // 
             // ajouterToolStripMenuItem
             // 

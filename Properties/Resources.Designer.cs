@@ -343,6 +343,26 @@ namespace GestionAssurances.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap check {
+            get {
+                object obj = ResourceManager.GetObject("check", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap check_24 {
+            get {
+                object obj = ResourceManager.GetObject("check_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap client_card_16_black {
             get {
                 object obj = ResourceManager.GetObject("client_card_16_black", resourceCulture);
@@ -453,6 +473,16 @@ namespace GestionAssurances.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap espece_24 {
+            get {
+                object obj = ResourceManager.GetObject("espece_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap expired {
             get {
                 object obj = ResourceManager.GetObject("expired", resourceCulture);
@@ -506,6 +536,16 @@ namespace GestionAssurances.Properties {
         internal static System.Drawing.Bitmap letter_p_24_blue {
             get {
                 object obj = ResourceManager.GetObject("letter_p_24_blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap letter_w_24 {
+            get {
+                object obj = ResourceManager.GetObject("letter_w_24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -663,6 +703,26 @@ namespace GestionAssurances.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap total {
+            get {
+                object obj = ResourceManager.GetObject("total", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap transfer {
+            get {
+                object obj = ResourceManager.GetObject("transfer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap updated_green_16 {
             get {
                 object obj = ResourceManager.GetObject("updated_green_16", resourceCulture);
@@ -676,6 +736,16 @@ namespace GestionAssurances.Properties {
         internal static System.Drawing.Bitmap version {
             get {
                 object obj = ResourceManager.GetObject("version", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wafasalaf {
+            get {
+                object obj = ResourceManager.GetObject("wafasalaf", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
