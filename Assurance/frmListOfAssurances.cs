@@ -420,6 +420,11 @@ namespace GestionAssurances
             LoadAllTotals();
             frmTotal frmTotal = new frmTotal(_PaymentDetails);
             frmTotal.ShowDialog();
+            _EspeceTotal = 0;
+            _ChequeTotal = 0;
+            _VirBankTotal = 0;
+            _WafaSalafTotal = 0;
+            _AllTotal = 0;
         }
     }
 }
