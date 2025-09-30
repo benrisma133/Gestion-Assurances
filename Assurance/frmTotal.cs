@@ -14,7 +14,6 @@ namespace GestionAssurances.Assurance
 {
     public partial class frmTotal : Form
     {
-
         clsPaymentDetails _PaymentDetails;
 
         public frmTotal(clsPaymentDetails PaymentDetails)
@@ -79,9 +78,6 @@ namespace GestionAssurances.Assurance
             chart1.ChartAreas[0].AxisY.Minimum = 0;
             chart1.ChartAreas[0].AxisY.Maximum = axisMax;
         }
-
-
-
 
         private void frmTotal_Load(object sender, EventArgs e)
         {
