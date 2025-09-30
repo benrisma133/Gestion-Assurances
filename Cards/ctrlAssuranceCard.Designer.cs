@@ -36,6 +36,7 @@
             this.ctrlDurationCard1 = new GestionAssurances.Cards.ctrlDurationCard();
             this.ctrlCarCard1 = new GestionAssurances.Cards.ctrlCarCard();
             this.ctrlClientCard1 = new GestionAssurances.Cards.ctrlClientCard();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // gunaGroupBox1
@@ -49,7 +50,7 @@
             this.gunaGroupBox1.Location = new System.Drawing.Point(7, 739);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
             this.gunaGroupBox1.Radius = 6;
-            this.gunaGroupBox1.Size = new System.Drawing.Size(1236, 48);
+            this.gunaGroupBox1.Size = new System.Drawing.Size(1236, 59);
             this.gunaGroupBox1.TabIndex = 4;
             this.gunaGroupBox1.Text = "Détails du Client";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
@@ -62,7 +63,7 @@
             this.ctrlLabelFieldIsCurrent.FieldNameColor = System.Drawing.SystemColors.ControlText;
             this.ctrlLabelFieldIsCurrent.FieldValue = "Yes";
             this.ctrlLabelFieldIsCurrent.FieldValueColor = System.Drawing.SystemColors.ControlText;
-            this.ctrlLabelFieldIsCurrent.Location = new System.Drawing.Point(825, 804);
+            this.ctrlLabelFieldIsCurrent.Location = new System.Drawing.Point(825, 811);
             this.ctrlLabelFieldIsCurrent.Name = "ctrlLabelFieldIsCurrent";
             this.ctrlLabelFieldIsCurrent.Size = new System.Drawing.Size(387, 63);
             this.ctrlLabelFieldIsCurrent.TabIndex = 7;
@@ -75,7 +76,7 @@
             this.ctrlLabelFieldVersion.FieldNameColor = System.Drawing.SystemColors.ControlText;
             this.ctrlLabelFieldVersion.FieldValue = "1";
             this.ctrlLabelFieldVersion.FieldValueColor = System.Drawing.SystemColors.ControlText;
-            this.ctrlLabelFieldVersion.Location = new System.Drawing.Point(430, 804);
+            this.ctrlLabelFieldVersion.Location = new System.Drawing.Point(430, 811);
             this.ctrlLabelFieldVersion.Name = "ctrlLabelFieldVersion";
             this.ctrlLabelFieldVersion.Size = new System.Drawing.Size(387, 63);
             this.ctrlLabelFieldVersion.TabIndex = 6;
@@ -88,7 +89,7 @@
             this.ctrlLabelFieldStatus.FieldNameColor = System.Drawing.SystemColors.ControlText;
             this.ctrlLabelFieldStatus.FieldValue = "label";
             this.ctrlLabelFieldStatus.FieldValueColor = System.Drawing.SystemColors.ControlText;
-            this.ctrlLabelFieldStatus.Location = new System.Drawing.Point(35, 804);
+            this.ctrlLabelFieldStatus.Location = new System.Drawing.Point(35, 811);
             this.ctrlLabelFieldStatus.Name = "ctrlLabelFieldStatus";
             this.ctrlLabelFieldStatus.Size = new System.Drawing.Size(387, 63);
             this.ctrlLabelFieldStatus.TabIndex = 5;
@@ -125,10 +126,18 @@
             this.ctrlClientCard1.Size = new System.Drawing.Size(550, 350);
             this.ctrlClientCard1.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(558, 888);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 8;
+            // 
             // ctrlAssuranceCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ctrlLabelFieldIsCurrent);
             this.Controls.Add(this.ctrlLabelFieldVersion);
             this.Controls.Add(this.ctrlLabelFieldStatus);
@@ -153,5 +162,6 @@
         private Controls.ctrlLabelField ctrlLabelFieldStatus;
         private Controls.ctrlLabelField ctrlLabelFieldVersion;
         private Controls.ctrlLabelField ctrlLabelFieldIsCurrent;
+        private System.Windows.Forms.Label label1;
     }
 }
