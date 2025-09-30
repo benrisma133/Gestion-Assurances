@@ -153,6 +153,26 @@ namespace GestionAssurances.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap button_cancel {
+            get {
+                object obj = ResourceManager.GetObject("button_cancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cancel {
+            get {
+                object obj = ResourceManager.GetObject("cancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap car_card_16_black {
             get {
                 object obj = ResourceManager.GetObject("car_card_16_black", resourceCulture);
@@ -353,6 +373,16 @@ namespace GestionAssurances.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Current {
+            get {
+                object obj = ResourceManager.GetObject("Current", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_red_16 {
             get {
                 object obj = ResourceManager.GetObject("delete_red_16", resourceCulture);
@@ -396,6 +426,16 @@ namespace GestionAssurances.Properties {
         internal static System.Drawing.Bitmap edit_person_40_green {
             get {
                 object obj = ResourceManager.GetObject("edit_person_40_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap expired {
+            get {
+                object obj = ResourceManager.GetObject("expired", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -503,6 +543,16 @@ namespace GestionAssurances.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap not_current {
+            get {
+                object obj = ResourceManager.GetObject("not_current", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap p_16_blue {
             get {
                 object obj = ResourceManager.GetObject("p_16_blue", resourceCulture);
@@ -516,6 +566,16 @@ namespace GestionAssurances.Properties {
         internal static System.Drawing.Bitmap payment_card_16 {
             get {
                 object obj = ResourceManager.GetObject("payment_card_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pending {
+            get {
+                object obj = ResourceManager.GetObject("pending", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -586,6 +646,16 @@ namespace GestionAssurances.Properties {
         internal static System.Drawing.Bitmap updated_green_16 {
             get {
                 object obj = ResourceManager.GetObject("updated_green_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap version {
+            get {
+                object obj = ResourceManager.GetObject("version", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

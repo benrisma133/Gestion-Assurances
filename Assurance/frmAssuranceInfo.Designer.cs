@@ -39,7 +39,7 @@
             this.gunaLabel1.ForeColor = System.Drawing.Color.Transparent;
             this.gunaLabel1.Location = new System.Drawing.Point(1, 0);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(1160, 86);
+            this.gunaLabel1.Size = new System.Drawing.Size(1267, 86);
             this.gunaLabel1.TabIndex = 1;
             this.gunaLabel1.Text = "Information du Assurance";
             this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -48,7 +48,7 @@
             // 
             this.ctrlAssuranceCard1.Location = new System.Drawing.Point(10, 101);
             this.ctrlAssuranceCard1.Name = "ctrlAssuranceCard1";
-            this.ctrlAssuranceCard1.Size = new System.Drawing.Size(1151, 881);
+            this.ctrlAssuranceCard1.Size = new System.Drawing.Size(1249, 881);
             this.ctrlAssuranceCard1.TabIndex = 0;
             // 
             // frmAssuranceInfo
@@ -56,7 +56,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1162, 994);
+            this.ClientSize = new System.Drawing.Size(1269, 994);
             this.Controls.Add(this.gunaLabel1);
             this.Controls.Add(this.ctrlAssuranceCard1);
             this.MaximizeBox = false;

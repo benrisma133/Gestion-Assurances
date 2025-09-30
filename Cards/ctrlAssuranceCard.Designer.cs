@@ -29,111 +29,74 @@
         private void InitializeComponent()
         {
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
-            this.lblIsCurrent = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblVersion = new System.Windows.Forms.Label();
-            this.label80 = new System.Windows.Forms.Label();
-            this.lblStatus = new System.Windows.Forms.Label();
-            this.lblDure = new System.Windows.Forms.Label();
+            this.ctrlLabelFieldIsCurrent = new GestionAssurances.Controls.ctrlLabelField();
+            this.ctrlLabelFieldVersion = new GestionAssurances.Controls.ctrlLabelField();
+            this.ctrlLabelFieldStatus = new GestionAssurances.Controls.ctrlLabelField();
             this.ctrlPaymentCard1 = new GestionAssurances.Cards.ctrlPaymentCard();
             this.ctrlDurationCard1 = new GestionAssurances.Cards.ctrlDurationCard();
             this.ctrlCarCard1 = new GestionAssurances.Cards.ctrlCarCard();
             this.ctrlClientCard1 = new GestionAssurances.Cards.ctrlClientCard();
-            this.gunaGroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gunaGroupBox1
             // 
             this.gunaGroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGroupBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaGroupBox1.BaseColor = System.Drawing.SystemColors.Control;
             this.gunaGroupBox1.BorderColor = System.Drawing.Color.Gainsboro;
-            this.gunaGroupBox1.Controls.Add(this.lblIsCurrent);
-            this.gunaGroupBox1.Controls.Add(this.label2);
-            this.gunaGroupBox1.Controls.Add(this.lblVersion);
-            this.gunaGroupBox1.Controls.Add(this.label80);
-            this.gunaGroupBox1.Controls.Add(this.lblStatus);
-            this.gunaGroupBox1.Controls.Add(this.lblDure);
             this.gunaGroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaGroupBox1.ForeColor = System.Drawing.Color.White;
             this.gunaGroupBox1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
-            this.gunaGroupBox1.Location = new System.Drawing.Point(7, 732);
+            this.gunaGroupBox1.Location = new System.Drawing.Point(7, 739);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
-            this.gunaGroupBox1.Radius = 10;
-            this.gunaGroupBox1.Size = new System.Drawing.Size(1136, 127);
+            this.gunaGroupBox1.Radius = 6;
+            this.gunaGroupBox1.Size = new System.Drawing.Size(1236, 48);
             this.gunaGroupBox1.TabIndex = 4;
             this.gunaGroupBox1.Text = "Détails du Client";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(10, 8);
             // 
-            // lblIsCurrent
+            // ctrlLabelFieldIsCurrent
             // 
-            this.lblIsCurrent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIsCurrent.ForeColor = System.Drawing.Color.Black;
-            this.lblIsCurrent.Location = new System.Drawing.Point(915, 67);
-            this.lblIsCurrent.Name = "lblIsCurrent";
-            this.lblIsCurrent.Size = new System.Drawing.Size(135, 35);
-            this.lblIsCurrent.TabIndex = 29;
-            this.lblIsCurrent.Text = "Statut";
-            this.lblIsCurrent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ctrlLabelFieldIsCurrent.BackColor = System.Drawing.SystemColors.Menu;
+            this.ctrlLabelFieldIsCurrent.FieldIconAccept = global::GestionAssurances.Properties.Resources.Current;
+            this.ctrlLabelFieldIsCurrent.FieldName = "  Is Current";
+            this.ctrlLabelFieldIsCurrent.FieldNameColor = System.Drawing.SystemColors.ControlText;
+            this.ctrlLabelFieldIsCurrent.FieldValue = "Yes";
+            this.ctrlLabelFieldIsCurrent.FieldValueColor = System.Drawing.SystemColors.ControlText;
+            this.ctrlLabelFieldIsCurrent.Location = new System.Drawing.Point(825, 804);
+            this.ctrlLabelFieldIsCurrent.Name = "ctrlLabelFieldIsCurrent";
+            this.ctrlLabelFieldIsCurrent.Size = new System.Drawing.Size(387, 63);
+            this.ctrlLabelFieldIsCurrent.TabIndex = 7;
             // 
-            // label2
+            // ctrlLabelFieldVersion
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(742, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(135, 35);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Est actuel :";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ctrlLabelFieldVersion.BackColor = System.Drawing.SystemColors.Menu;
+            this.ctrlLabelFieldVersion.FieldIconAccept = global::GestionAssurances.Properties.Resources.version;
+            this.ctrlLabelFieldVersion.FieldName = "  Version";
+            this.ctrlLabelFieldVersion.FieldNameColor = System.Drawing.SystemColors.ControlText;
+            this.ctrlLabelFieldVersion.FieldValue = "1";
+            this.ctrlLabelFieldVersion.FieldValueColor = System.Drawing.SystemColors.ControlText;
+            this.ctrlLabelFieldVersion.Location = new System.Drawing.Point(430, 804);
+            this.ctrlLabelFieldVersion.Name = "ctrlLabelFieldVersion";
+            this.ctrlLabelFieldVersion.Size = new System.Drawing.Size(387, 63);
+            this.ctrlLabelFieldVersion.TabIndex = 6;
             // 
-            // lblVersion
+            // ctrlLabelFieldStatus
             // 
-            this.lblVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVersion.ForeColor = System.Drawing.Color.Black;
-            this.lblVersion.Location = new System.Drawing.Point(538, 67);
-            this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(133, 35);
-            this.lblVersion.TabIndex = 27;
-            this.lblVersion.Text = "Statut";
-            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label80
-            // 
-            this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label80.ForeColor = System.Drawing.Color.Black;
-            this.label80.Location = new System.Drawing.Point(404, 67);
-            this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(110, 35);
-            this.label80.TabIndex = 26;
-            this.label80.Text = "Version :";
-            this.label80.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.ForeColor = System.Drawing.Color.Black;
-            this.lblStatus.Location = new System.Drawing.Point(152, 68);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(139, 35);
-            this.lblStatus.TabIndex = 25;
-            this.lblStatus.Text = "Statut";
-            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblDure
-            // 
-            this.lblDure.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDure.ForeColor = System.Drawing.Color.Black;
-            this.lblDure.Location = new System.Drawing.Point(36, 68);
-            this.lblDure.Name = "lblDure";
-            this.lblDure.Size = new System.Drawing.Size(86, 35);
-            this.lblDure.TabIndex = 24;
-            this.lblDure.Text = "Statut :";
-            this.lblDure.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ctrlLabelFieldStatus.BackColor = System.Drawing.SystemColors.Menu;
+            this.ctrlLabelFieldStatus.FieldIconAccept = global::GestionAssurances.Properties.Resources.accept_16_green;
+            this.ctrlLabelFieldStatus.FieldName = "  Statut";
+            this.ctrlLabelFieldStatus.FieldNameColor = System.Drawing.SystemColors.ControlText;
+            this.ctrlLabelFieldStatus.FieldValue = "label";
+            this.ctrlLabelFieldStatus.FieldValueColor = System.Drawing.SystemColors.ControlText;
+            this.ctrlLabelFieldStatus.Location = new System.Drawing.Point(35, 804);
+            this.ctrlLabelFieldStatus.Name = "ctrlLabelFieldStatus";
+            this.ctrlLabelFieldStatus.Size = new System.Drawing.Size(387, 63);
+            this.ctrlLabelFieldStatus.TabIndex = 5;
             // 
             // ctrlPaymentCard1
             // 
             this.ctrlPaymentCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ctrlPaymentCard1.Location = new System.Drawing.Point(583, 369);
+            this.ctrlPaymentCard1.Location = new System.Drawing.Point(640, 369);
             this.ctrlPaymentCard1.Name = "ctrlPaymentCard1";
             this.ctrlPaymentCard1.Size = new System.Drawing.Size(550, 350);
             this.ctrlPaymentCard1.TabIndex = 3;
@@ -141,7 +104,7 @@
             // ctrlDurationCard1
             // 
             this.ctrlDurationCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ctrlDurationCard1.Location = new System.Drawing.Point(583, 3);
+            this.ctrlDurationCard1.Location = new System.Drawing.Point(640, 3);
             this.ctrlDurationCard1.Name = "ctrlDurationCard1";
             this.ctrlDurationCard1.Size = new System.Drawing.Size(550, 350);
             this.ctrlDurationCard1.TabIndex = 2;
@@ -149,7 +112,7 @@
             // ctrlCarCard1
             // 
             this.ctrlCarCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ctrlCarCard1.Location = new System.Drawing.Point(17, 369);
+            this.ctrlCarCard1.Location = new System.Drawing.Point(52, 369);
             this.ctrlCarCard1.Name = "ctrlCarCard1";
             this.ctrlCarCard1.Size = new System.Drawing.Size(550, 350);
             this.ctrlCarCard1.TabIndex = 1;
@@ -157,7 +120,7 @@
             // ctrlClientCard1
             // 
             this.ctrlClientCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ctrlClientCard1.Location = new System.Drawing.Point(17, 3);
+            this.ctrlClientCard1.Location = new System.Drawing.Point(52, 3);
             this.ctrlClientCard1.Name = "ctrlClientCard1";
             this.ctrlClientCard1.Size = new System.Drawing.Size(550, 350);
             this.ctrlClientCard1.TabIndex = 0;
@@ -166,14 +129,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.ctrlLabelFieldIsCurrent);
+            this.Controls.Add(this.ctrlLabelFieldVersion);
+            this.Controls.Add(this.ctrlLabelFieldStatus);
             this.Controls.Add(this.gunaGroupBox1);
             this.Controls.Add(this.ctrlPaymentCard1);
             this.Controls.Add(this.ctrlDurationCard1);
             this.Controls.Add(this.ctrlCarCard1);
             this.Controls.Add(this.ctrlClientCard1);
             this.Name = "ctrlAssuranceCard";
-            this.Size = new System.Drawing.Size(1155, 883);
-            this.gunaGroupBox1.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(1246, 910);
             this.ResumeLayout(false);
 
         }
@@ -185,11 +150,8 @@
         private ctrlDurationCard ctrlDurationCard1;
         private ctrlPaymentCard ctrlPaymentCard1;
         private Guna.UI.WinForms.GunaGroupBox gunaGroupBox1;
-        private System.Windows.Forms.Label lblIsCurrent;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblVersion;
-        private System.Windows.Forms.Label label80;
-        private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.Label lblDure;
+        private Controls.ctrlLabelField ctrlLabelFieldStatus;
+        private Controls.ctrlLabelField ctrlLabelFieldVersion;
+        private Controls.ctrlLabelField ctrlLabelFieldIsCurrent;
     }
 }

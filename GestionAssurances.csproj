@@ -193,6 +193,12 @@
     <Compile Include="Controls\ctrlComboBox.Designer.cs">
       <DependentUpon>ctrlComboBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ctrlLabelField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlLabelField.Designer.cs">
+      <DependentUpon>ctrlLabelField.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ctrlTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -263,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ctrlComboBox.resx">
       <DependentUpon>ctrlComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlLabelField.resx">
+      <DependentUpon>ctrlLabelField.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ctrlTextBox.resx">
       <DependentUpon>ctrlTextBox.cs</DependentUpon>
@@ -464,6 +473,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\settings_64_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button_cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expired.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pending.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Current.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not_current.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\version.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

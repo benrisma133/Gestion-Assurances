@@ -37,9 +37,58 @@ namespace GestionAssurances.Cards
             ctrlDurationCard1.LoadDurationDataByID(assurance.DurationID);
             ctrlPaymentCard1._LoadPaymentDataByID(assurance.PaymentID);
 
-            lblStatus.Text = clsStatus.FindByID(assurance.StatusID).StatusName;
-            lblIsCurrent.Text = assurance.IsCurrent ? "Oui" : "Non";
-            lblVersion.Text = assurance.Version.ToString();
+            //lblStatus.Text = clsStatus.FindByID(assurance.StatusID).StatusName;
+            //lblIsCurrent.Text = assurance.IsCurrent ? "Oui" : "Non";
+            //lblVersion.Text = assurance.Version.ToString();
+
+            if (assurance.IsCurrent)
+            {
+                ctrlLabelFieldIsCurrent.FieldValue = "Oui";
+                ctrlLabelFieldIsCurrent.FieldValueColor = Color.Green;
+                ctrlLabelFieldIsCurrent.FieldIconAccept = Properties.Resources.Current;
+            }
+            else
+            {
+                ctrlLabelFieldIsCurrent.FieldValue = "Non";
+                ctrlLabelFieldIsCurrent.FieldValueColor = Color.Red;
+                ctrlLabelFieldIsCurrent.FieldIconAccept = Properties.Resources.not_current;
+            }
+
+            string StatusName = clsStatus.FindByID(assurance.StatusID).StatusName;
+
+            ctrlLabelFieldStatus.FieldValue = StatusName;
+
+            // Actif
+            // Annulé
+            // Expiré
+
+            if (StatusName == "Actif")
+            {
+                ctrlLabelFieldStatus.FieldValueColor = Color.Green;
+                ctrlLabelFieldStatus.FieldIconAccept = Properties.Resources.pending;
+            }
+            else if (StatusName == "Annulé")
+            {
+                ctrlLabelFieldStatus.FieldValueColor = Color.OrangeRed;
+                ctrlLabelFieldStatus.FieldIconAccept = Properties.Resources.cancel;
+                ctrlLabelFieldIsCurrent.FieldValue = "Non";
+                ctrlLabelFieldIsCurrent.FieldValueColor = Color.Red;
+                ctrlLabelFieldIsCurrent.FieldIconAccept = Properties.Resources.not_current;
+            }
+            else if (StatusName == "Expiré")
+            {
+                ctrlLabelFieldStatus.FieldValueColor = Color.Red;
+                ctrlLabelFieldStatus.FieldIconAccept = Properties.Resources.expired;
+                ctrlLabelFieldIsCurrent.FieldValue = "Non";
+                ctrlLabelFieldIsCurrent.FieldValueColor = Color.Red;
+                ctrlLabelFieldIsCurrent.FieldIconAccept = Properties.Resources.not_current;
+            }
+
+            ctrlLabelFieldVersion.FieldValue = assurance.Version.ToString();
+            ctrlLabelFieldVersion.FieldValueColor = Color.Black;
+            ctrlLabelFieldVersion.FieldIconAccept = Properties.Resources.version;
+
+
 
         }
 
