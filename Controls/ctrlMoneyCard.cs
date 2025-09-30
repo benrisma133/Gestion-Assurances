@@ -36,5 +36,7 @@ namespace GestionAssurances.Controls
             ctrlLabelFieldTotal.FieldValue = PaymentDetails.Total.ToString("N2");
         }
 
+
+
     }
 }
