@@ -90,6 +90,7 @@
             // ctrlLabelFieldTotal
             // 
             this.ctrlLabelFieldTotal.BackColor = System.Drawing.SystemColors.Menu;
+            this.ctrlLabelFieldTotal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(118)))), ((int)(((byte)(3)))));
             this.ctrlLabelFieldTotal.FieldIconAccept = global::GestionAssurances.Properties.Resources.total;
             this.ctrlLabelFieldTotal.FieldName = "TOTAL :";
             this.ctrlLabelFieldTotal.FieldNameColor = System.Drawing.SystemColors.ControlText;
@@ -103,6 +104,7 @@
             // ctrlLabelFieldWafaSalaf
             // 
             this.ctrlLabelFieldWafaSalaf.BackColor = System.Drawing.SystemColors.Menu;
+            this.ctrlLabelFieldWafaSalaf.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(226)))), ((int)(((byte)(3)))));
             this.ctrlLabelFieldWafaSalaf.FieldIconAccept = global::GestionAssurances.Properties.Resources.letter_w_24;
             this.ctrlLabelFieldWafaSalaf.FieldName = "WafaSalaf :";
             this.ctrlLabelFieldWafaSalaf.FieldNameColor = System.Drawing.SystemColors.ControlText;
@@ -116,6 +118,7 @@
             // ctrlLabelFieldVirBank
             // 
             this.ctrlLabelFieldVirBank.BackColor = System.Drawing.SystemColors.Menu;
+            this.ctrlLabelFieldVirBank.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(197)))), ((int)(((byte)(218)))));
             this.ctrlLabelFieldVirBank.FieldIconAccept = global::GestionAssurances.Properties.Resources.transfer;
             this.ctrlLabelFieldVirBank.FieldName = "Vir. Bank   :";
             this.ctrlLabelFieldVirBank.FieldNameColor = System.Drawing.SystemColors.ControlText;
@@ -129,6 +132,7 @@
             // ctrlLabelFieldCheque
             // 
             this.ctrlLabelFieldCheque.BackColor = System.Drawing.SystemColors.Menu;
+            this.ctrlLabelFieldCheque.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
             this.ctrlLabelFieldCheque.FieldIconAccept = global::GestionAssurances.Properties.Resources.check_24;
             this.ctrlLabelFieldCheque.FieldName = "Chèque     :";
             this.ctrlLabelFieldCheque.FieldNameColor = System.Drawing.SystemColors.ControlText;
@@ -142,6 +146,7 @@
             // ctrlLabelFieldEspece
             // 
             this.ctrlLabelFieldEspece.BackColor = System.Drawing.SystemColors.Menu;
+            this.ctrlLabelFieldEspece.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
             this.ctrlLabelFieldEspece.FieldIconAccept = global::GestionAssurances.Properties.Resources.espece_24;
             this.ctrlLabelFieldEspece.FieldName = "Espèces   :";
             this.ctrlLabelFieldEspece.FieldNameColor = System.Drawing.SystemColors.ControlText;

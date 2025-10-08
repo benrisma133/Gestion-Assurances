@@ -52,9 +52,9 @@
             // 
             this.gunaPanel1.BackColor = System.Drawing.Color.Gold;
             this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gunaPanel1.Location = new System.Drawing.Point(108, 0);
+            this.gunaPanel1.Location = new System.Drawing.Point(111, 0);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(13, 63);
+            this.gunaPanel1.Size = new System.Drawing.Size(10, 63);
             this.gunaPanel1.TabIndex = 1;
             // 
             // ctrlField

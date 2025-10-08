@@ -34,6 +34,7 @@
             this.lblTitle = new Guna.UI.WinForms.GunaLabel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.ctrlMoneyCard1 = new GestionAssurances.Controls.ctrlMoneyCard();
+            this.ctrlCarDetails1 = new GestionAssurances.Cards.ctrlCarDetails();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(1543, 87);
             this.lblTitle.TabIndex = 2;
-            this.lblTitle.Text = "Créer un Nouveau Assurance";
+            this.lblTitle.Text = "Aperçu des totaux de paiements";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // chart1
@@ -55,30 +56,39 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(733, 98);
+            this.chart1.Location = new System.Drawing.Point(736, 106);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(791, 636);
+            this.chart1.Size = new System.Drawing.Size(791, 706);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
             // 
             // ctrlMoneyCard1
             // 
             this.ctrlMoneyCard1.BackColor = System.Drawing.Color.White;
-            this.ctrlMoneyCard1.Location = new System.Drawing.Point(6, 299);
+            this.ctrlMoneyCard1.Location = new System.Drawing.Point(15, 377);
             this.ctrlMoneyCard1.Name = "ctrlMoneyCard1";
             this.ctrlMoneyCard1.Size = new System.Drawing.Size(715, 435);
             this.ctrlMoneyCard1.TabIndex = 3;
+            // 
+            // ctrlCarDetails1
+            // 
+            this.ctrlCarDetails1.BackColor = System.Drawing.Color.White;
+            this.ctrlCarDetails1.Location = new System.Drawing.Point(15, 106);
+            this.ctrlCarDetails1.Name = "ctrlCarDetails1";
+            this.ctrlCarDetails1.Size = new System.Drawing.Size(715, 265);
+            this.ctrlCarDetails1.TabIndex = 5;
             // 
             // frmTotal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1539, 751);
+            this.ClientSize = new System.Drawing.Size(1539, 828);
+            this.Controls.Add(this.ctrlCarDetails1);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.ctrlMoneyCard1);
             this.Controls.Add(this.lblTitle);
@@ -98,5 +108,6 @@
         private Guna.UI.WinForms.GunaLabel lblTitle;
         private Controls.ctrlMoneyCard ctrlMoneyCard1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private Cards.ctrlCarDetails ctrlCarDetails1;
     }
 }

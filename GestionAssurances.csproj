@@ -145,6 +145,12 @@
     <Compile Include="Cards\ctrlCarCard.Designer.cs">
       <DependentUpon>ctrlCarCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cards\ctrlCarDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cards\ctrlCarDetails.Designer.cs">
+      <DependentUpon>ctrlCarDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cards\ctrlClientCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -156,6 +162,12 @@
     </Compile>
     <Compile Include="Cards\ctrlDurationCard.Designer.cs">
       <DependentUpon>ctrlDurationCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ctrlLbaelField2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ctrlLbaelField2.Designer.cs">
+      <DependentUpon>ctrlLbaelField2.cs</DependentUpon>
     </Compile>
     <Compile Include="Cards\ctrlPaymentCard.cs">
       <SubType>UserControl</SubType>
@@ -265,6 +277,9 @@
     <EmbeddedResource Include="Cards\ctrlCarCard.resx">
       <DependentUpon>ctrlCarCard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cards\ctrlCarDetails.resx">
+      <DependentUpon>ctrlCarDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cards\ctrlClientCard.resx">
       <DependentUpon>ctrlClientCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -297,6 +312,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ctrlLabelField.resx">
       <DependentUpon>ctrlLabelField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ctrlLbaelField2.resx">
+      <DependentUpon>ctrlLbaelField2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\ctrlMoneyCard.resx">
       <DependentUpon>ctrlMoneyCard.cs</DependentUpon>

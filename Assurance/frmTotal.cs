@@ -26,58 +26,65 @@ namespace GestionAssurances.Assurance
         private void LoadChart()
         {
             chart1.Series.Clear();
-            chart1.ChartAreas[0].AxisY.Title = "Amount (DH)";
-            chart1.ChartAreas[0].AxisX.Title = "Payment Type";
-
-            // Rotate bottom titles (X axis labels)
+            chart1.ChartAreas[0].AxisY.Title = "Montant (DH)";
+            chart1.ChartAreas[0].AxisX.Title = "Type de paiement";
             chart1.ChartAreas[0].AxisX.LabelStyle.Angle = -45;
 
-            Series series = new Series("Payments");
+            // Single series
+            Series series = new Series();
             series.ChartType = SeriesChartType.Column;
             series.IsValueShownAsLabel = true;
 
-            // Make legend text bold
-            series.Font = new Font("Segoe UI", 9, FontStyle.Bold); // labels on bars
-            chart1.Legends[0].Font = new Font("Segoe UI", 10, FontStyle.Bold); // legend itself
+            // Bold fonts
+            series.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+            chart1.Legends[0].Font = new Font("Segoe UI", 10, FontStyle.Bold);
 
-            // Data
+            // Payment data
             var data = new Dictionary<string, decimal>
-            {
+{
                 { "Espèce", _PaymentDetails.Espece },
                 { "Chèque", _PaymentDetails.Cheque },
                 { "Virement", _PaymentDetails.VirBank },
                 { "WafaSalaf", _PaymentDetails.WafaSalaf },
                 { "Total", _PaymentDetails.Total }
-            };
+};
 
-            // Sort ascending
-            var sortedData = data.OrderBy(kv => kv.Value).ToList();
-
-            // Add points with custom colours
-            foreach (var kv in sortedData)
+            // Add points with colors and custom legend text
+            foreach (var kv in data)
             {
                 int pointIndex = series.Points.AddXY(kv.Key, (double)kv.Value);
+                series.Points[pointIndex].LegendText = kv.Key; // This makes legend show the payment type
 
-                // Assign colours
-                if (kv.Key == "Total")
+                switch (kv.Key)
                 {
-                    series.Points[pointIndex].Color = Color.Gold;  // Highlight Total
-                }
-                else
-                {
-                    series.Points[pointIndex].Color = Color.FromArgb(40, 205, 140);  // Other bars
+                    case "Espèce":
+                        series.Points[pointIndex].Color = Color.FromArgb(66, 133, 244); // Blue
+                        break;
+                    case "Chèque":
+                        series.Points[pointIndex].Color = Color.FromArgb(40, 205, 140); // Green
+                        break;
+                    case "Virement":
+                        series.Points[pointIndex].Color = Color.FromArgb(11, 197, 218); // Cyan
+                        break;
+                    case "WafaSalaf":
+                        series.Points[pointIndex].Color = Color.FromArgb(222, 226, 3); // Yellow-Green
+                        break;
+                    case "Total":
+                        series.Points[pointIndex].Color = Color.Gold; // Highlight Total
+                        break;
                 }
             }
 
+            // Add series to chart
             chart1.Series.Add(series);
 
             // Axis scaling
-            double maxValue = (double)sortedData.Max(kv => kv.Value);
-            double axisMax = Math.Ceiling(maxValue / 10000) * 10000; // round up
-
+            double maxValue = (double)data.Max(kv => kv.Value);
             chart1.ChartAreas[0].AxisY.Minimum = 0;
-            chart1.ChartAreas[0].AxisY.Maximum = axisMax;
+            chart1.ChartAreas[0].AxisY.Maximum = Math.Ceiling(maxValue / 10000) * 10000;
+
         }
+
 
         private void frmTotal_Load(object sender, EventArgs e)
         {

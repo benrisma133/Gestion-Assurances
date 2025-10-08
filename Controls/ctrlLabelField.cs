@@ -70,9 +70,28 @@ namespace GestionAssurances.Controls
             }
         }
 
+        // ------------------- Border Color Property ------------------
+
+        private Color _borderColor = Color.FromArgb(66, 133, 244); // default blue
+
+        [Category("Appearance")]
+        [Description("Gets or sets the border color of the left panel.")]
+        public Color BorderColor
+        {
+            get { return _borderColor; }
+            set
+            {
+                _borderColor = value;
+                gunaPanel1.BackColor = value; // apply to your docked left panel
+            }
+        }
+
+
         public ctrlLabelField()
         {
             InitializeComponent();
+
+            gunaPanel1.BackColor = _borderColor; // init default
         }
     }
 }

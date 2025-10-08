@@ -286,6 +286,7 @@ namespace GestionAssurances
             }
 
             dgvAllAssurances.DataSource = rows.Any() ? rows.CopyToDataTable() : null;
+            _LoadData();
             _LoadRecordsCount();
         }
 
