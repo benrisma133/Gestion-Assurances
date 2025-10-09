@@ -58,7 +58,7 @@
             // ctrlField4
             // 
             this.ctrlField4.BackColor = System.Drawing.SystemColors.Menu;
-            this.ctrlField4.Location = new System.Drawing.Point(406, 235);
+            this.ctrlField4.Location = new System.Drawing.Point(422, 235);
             this.ctrlField4.Name = "ctrlField4";
             this.ctrlField4.Size = new System.Drawing.Size(121, 63);
             this.ctrlField4.TabIndex = 8;
@@ -66,7 +66,7 @@
             // ctrlField3
             // 
             this.ctrlField3.BackColor = System.Drawing.SystemColors.Menu;
-            this.ctrlField3.Location = new System.Drawing.Point(406, 161);
+            this.ctrlField3.Location = new System.Drawing.Point(422, 161);
             this.ctrlField3.Name = "ctrlField3";
             this.ctrlField3.Size = new System.Drawing.Size(121, 63);
             this.ctrlField3.TabIndex = 7;
@@ -74,7 +74,7 @@
             // ctrlField2
             // 
             this.ctrlField2.BackColor = System.Drawing.SystemColors.Menu;
-            this.ctrlField2.Location = new System.Drawing.Point(406, 87);
+            this.ctrlField2.Location = new System.Drawing.Point(422, 87);
             this.ctrlField2.Name = "ctrlField2";
             this.ctrlField2.Size = new System.Drawing.Size(121, 63);
             this.ctrlField2.TabIndex = 6;
@@ -82,7 +82,7 @@
             // ctrlField1
             // 
             this.ctrlField1.BackColor = System.Drawing.SystemColors.Menu;
-            this.ctrlField1.Location = new System.Drawing.Point(406, 13);
+            this.ctrlField1.Location = new System.Drawing.Point(422, 13);
             this.ctrlField1.Name = "ctrlField1";
             this.ctrlField1.Size = new System.Drawing.Size(121, 63);
             this.ctrlField1.TabIndex = 5;
@@ -92,7 +92,7 @@
             this.ctrlLabelFieldTotal.BackColor = System.Drawing.SystemColors.Menu;
             this.ctrlLabelFieldTotal.BorderColor = System.Drawing.Color.Gold;
             this.ctrlLabelFieldTotal.FieldIconAccept = global::GestionAssurances.Properties.Resources.total;
-            this.ctrlLabelFieldTotal.FieldName = "TOTAL :";
+            this.ctrlLabelFieldTotal.FieldName = "TOTAL";
             this.ctrlLabelFieldTotal.FieldNameColor = System.Drawing.SystemColors.ControlText;
             this.ctrlLabelFieldTotal.FieldValue = "????";
             this.ctrlLabelFieldTotal.FieldValueColor = System.Drawing.SystemColors.ControlText;
@@ -107,14 +107,14 @@
             this.ctrlLabelFieldWafaSalaf.BackColor = System.Drawing.SystemColors.Menu;
             this.ctrlLabelFieldWafaSalaf.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(226)))), ((int)(((byte)(3)))));
             this.ctrlLabelFieldWafaSalaf.FieldIconAccept = global::GestionAssurances.Properties.Resources.letter_w_24;
-            this.ctrlLabelFieldWafaSalaf.FieldName = "WafaSalaf :";
+            this.ctrlLabelFieldWafaSalaf.FieldName = "WafaSalaf";
             this.ctrlLabelFieldWafaSalaf.FieldNameColor = System.Drawing.SystemColors.ControlText;
             this.ctrlLabelFieldWafaSalaf.FieldValue = "????";
             this.ctrlLabelFieldWafaSalaf.FieldValueColor = System.Drawing.SystemColors.ControlText;
             this.ctrlLabelFieldWafaSalaf.IsVisibleIconAccept = false;
             this.ctrlLabelFieldWafaSalaf.Location = new System.Drawing.Point(12, 235);
             this.ctrlLabelFieldWafaSalaf.Name = "ctrlLabelFieldWafaSalaf";
-            this.ctrlLabelFieldWafaSalaf.Size = new System.Drawing.Size(387, 63);
+            this.ctrlLabelFieldWafaSalaf.Size = new System.Drawing.Size(404, 63);
             this.ctrlLabelFieldWafaSalaf.TabIndex = 3;
             // 
             // ctrlLabelFieldVirBank
@@ -122,14 +122,14 @@
             this.ctrlLabelFieldVirBank.BackColor = System.Drawing.SystemColors.Menu;
             this.ctrlLabelFieldVirBank.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(197)))), ((int)(((byte)(218)))));
             this.ctrlLabelFieldVirBank.FieldIconAccept = global::GestionAssurances.Properties.Resources.transfer;
-            this.ctrlLabelFieldVirBank.FieldName = "Vir. Bank   :";
+            this.ctrlLabelFieldVirBank.FieldName = "Vir. Bank";
             this.ctrlLabelFieldVirBank.FieldNameColor = System.Drawing.SystemColors.ControlText;
             this.ctrlLabelFieldVirBank.FieldValue = "????";
             this.ctrlLabelFieldVirBank.FieldValueColor = System.Drawing.SystemColors.ControlText;
             this.ctrlLabelFieldVirBank.IsVisibleIconAccept = false;
             this.ctrlLabelFieldVirBank.Location = new System.Drawing.Point(12, 161);
             this.ctrlLabelFieldVirBank.Name = "ctrlLabelFieldVirBank";
-            this.ctrlLabelFieldVirBank.Size = new System.Drawing.Size(387, 63);
+            this.ctrlLabelFieldVirBank.Size = new System.Drawing.Size(404, 63);
             this.ctrlLabelFieldVirBank.TabIndex = 2;
             // 
             // ctrlLabelFieldCheque
@@ -137,14 +137,14 @@
             this.ctrlLabelFieldCheque.BackColor = System.Drawing.SystemColors.Menu;
             this.ctrlLabelFieldCheque.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
             this.ctrlLabelFieldCheque.FieldIconAccept = global::GestionAssurances.Properties.Resources.check_24;
-            this.ctrlLabelFieldCheque.FieldName = "Chèque     :";
+            this.ctrlLabelFieldCheque.FieldName = "Chèque";
             this.ctrlLabelFieldCheque.FieldNameColor = System.Drawing.SystemColors.ControlText;
             this.ctrlLabelFieldCheque.FieldValue = "????";
             this.ctrlLabelFieldCheque.FieldValueColor = System.Drawing.SystemColors.ControlText;
             this.ctrlLabelFieldCheque.IsVisibleIconAccept = false;
             this.ctrlLabelFieldCheque.Location = new System.Drawing.Point(12, 87);
             this.ctrlLabelFieldCheque.Name = "ctrlLabelFieldCheque";
-            this.ctrlLabelFieldCheque.Size = new System.Drawing.Size(387, 63);
+            this.ctrlLabelFieldCheque.Size = new System.Drawing.Size(404, 63);
             this.ctrlLabelFieldCheque.TabIndex = 1;
             // 
             // ctrlLabelFieldEspece
@@ -152,14 +152,14 @@
             this.ctrlLabelFieldEspece.BackColor = System.Drawing.SystemColors.Menu;
             this.ctrlLabelFieldEspece.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
             this.ctrlLabelFieldEspece.FieldIconAccept = global::GestionAssurances.Properties.Resources.espece_24;
-            this.ctrlLabelFieldEspece.FieldName = "Espèces   :";
+            this.ctrlLabelFieldEspece.FieldName = "Espèces";
             this.ctrlLabelFieldEspece.FieldNameColor = System.Drawing.SystemColors.ControlText;
             this.ctrlLabelFieldEspece.FieldValue = "????";
             this.ctrlLabelFieldEspece.FieldValueColor = System.Drawing.SystemColors.ControlText;
             this.ctrlLabelFieldEspece.IsVisibleIconAccept = false;
             this.ctrlLabelFieldEspece.Location = new System.Drawing.Point(12, 13);
             this.ctrlLabelFieldEspece.Name = "ctrlLabelFieldEspece";
-            this.ctrlLabelFieldEspece.Size = new System.Drawing.Size(387, 63);
+            this.ctrlLabelFieldEspece.Size = new System.Drawing.Size(404, 63);
             this.ctrlLabelFieldEspece.TabIndex = 0;
             // 
             // ctrlMoneyCard

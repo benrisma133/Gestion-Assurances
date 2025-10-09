@@ -20,18 +20,36 @@ namespace GestionAssurances.Cards
 
         public void _LoadData(clsFilterData filterData)
         {
+
+            if(filterData == null)
+            {
+                ctrlLabelFieldAnnee.FieldValue = "N/A";
+                ctrlLabelFieldMois.FieldValue = "N/A";
+
+                ctrlLabelFieldFilteringName.FieldValue = "N/A";
+                ctrlLabelFieldFilteringName.FieldName = "N/A";
+                return;
+            }
+
             ctrlLabelFieldFilteringName.FieldName = filterData.FilterName;
             ctrlLabelFieldFilteringName.FieldValue = filterData.FilterValue;
-            
-            if(filterData.Annee.HasValue)
+
+
+            if (filterData.Annee.HasValue && filterData.Mois.HasValue)
             {
                 ctrlLabelFieldAnnee.FieldValue = filterData.Annee.Value.ToString();
-                ctrlLabelFieldMois.Visible = false;
+                ctrlLabelFieldMois.FieldValue = new DateTime(1, filterData.Mois.Value, 1).ToString("MMMM");
+                return;
+            }
+            else if(filterData.Annee.HasValue)
+            {
+                ctrlLabelFieldAnnee.FieldValue = filterData.Annee.Value.ToString();
+                ctrlLabelFieldMois.FieldValue = "N/A";
             }
             else if(filterData.Mois.HasValue)
             {
                 ctrlLabelFieldMois.FieldValue = new DateTime(1, filterData.Mois.Value, 1).ToString("MMMM");
-                ctrlLabelFieldAnnee.Visible = false;
+                ctrlLabelFieldAnnee.FieldValue = "N/A";
             }
             else
             {

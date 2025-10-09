@@ -506,18 +506,20 @@ namespace GestionAssurances
             }
 
             frmTotal.ShowDialog();
-        }
 
-        private void frmListOfAssurances_FormClosed(object sender, FormClosedEventArgs e)
-        {
             _EspeceTotal = 0;
             _ChequeTotal = 0;
             _VirBankTotal = 0;
             _WafaSalafTotal = 0;
             _AllTotal = 0;
 
-            _PaymentDetails = null;
-            _FilterData = null;
+            
+
+        }
+
+        private void frmListOfAssurances_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
         }
     }
 }

@@ -41,67 +41,68 @@ namespace GestionAssurances.Assurance
             chart1.ChartAreas[0].AxisX.Title = "Type de paiement";
             chart1.ChartAreas[0].AxisX.LabelStyle.Angle = -45;
 
-            // Single series
-            Series series = new Series();
-            series.ChartType = SeriesChartType.Column;
-            series.IsValueShownAsLabel = true;
-
-            // Bold fonts
-            series.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+            Series series = new Series
+            {
+                ChartType = SeriesChartType.Column,
+                IsValueShownAsLabel = true,
+                Font = new Font("Segoe UI", 9, FontStyle.Bold)
+            };
             chart1.Legends[0].Font = new Font("Segoe UI", 10, FontStyle.Bold);
 
-            // Payment data
+            // Protect against nulls
+            decimal GetSafeValue(decimal? val) => val ?? 0m;
+
             var data = new Dictionary<string, decimal>
             {
-                { "Espèce", _PaymentDetails.Espece },
-                { "Chèque", _PaymentDetails.Cheque },
-                { "Virement", _PaymentDetails.VirBank },
-                { "WafaSalaf", _PaymentDetails.WafaSalaf },
-                { "Total", _PaymentDetails.Total }
+                { "Espèce", GetSafeValue(_PaymentDetails?.Espece) },
+                { "Chèque", GetSafeValue(_PaymentDetails?.Cheque) },
+                { "Virement", GetSafeValue(_PaymentDetails?.VirBank) },
+                { "WafaSalaf", GetSafeValue(_PaymentDetails?.WafaSalaf) },
+                { "Total", GetSafeValue(_PaymentDetails?.Total) }
             };
 
-            // Add points with colors and custom legend text
             foreach (var kv in data)
             {
                 int pointIndex = series.Points.AddXY(kv.Key, (double)kv.Value);
-                series.Points[pointIndex].LegendText = kv.Key; // This makes legend show the payment type
+
+                // Show value with "MAD" on top
+                //series.Points[pointIndex].Label = $"{kv.Value} MAD";
+                //series.Points[pointIndex].LabelAngle = 90; // Vertical label
+
+                series.Points[pointIndex].LegendText = kv.Key;
 
                 switch (kv.Key)
                 {
                     case "Espèce":
-                        series.Points[pointIndex].Color = Color.FromArgb(66, 133, 244); // Blue
+                        series.Points[pointIndex].Color = Color.FromArgb(66, 133, 244);
                         break;
                     case "Chèque":
-                        series.Points[pointIndex].Color = Color.FromArgb(40, 205, 140); // Green
+                        series.Points[pointIndex].Color = Color.FromArgb(40, 205, 140);
                         break;
                     case "Virement":
-                        series.Points[pointIndex].Color = Color.FromArgb(11, 197, 218); // Cyan
+                        series.Points[pointIndex].Color = Color.FromArgb(11, 197, 218);
                         break;
                     case "WafaSalaf":
-                        series.Points[pointIndex].Color = Color.FromArgb(222, 226, 3); // Yellow-Green
+                        series.Points[pointIndex].Color = Color.FromArgb(222, 226, 3);
                         break;
                     case "Total":
-                        series.Points[pointIndex].Color = Color.Gold; // Highlight Total
+                        series.Points[pointIndex].Color = Color.Gold;
                         break;
                 }
             }
 
-            // Add series to chart
             chart1.Series.Add(series);
 
-            // Axis scaling
-            double maxValue = (double)data.Max(kv => kv.Value);
+            double maxValue = data.Max(kv => (double)kv.Value);
             chart1.ChartAreas[0].AxisY.Minimum = 0;
-            chart1.ChartAreas[0].AxisY.Maximum = Math.Ceiling(maxValue / 10000) * 10000;
-
+            chart1.ChartAreas[0].AxisY.Maximum = Math.Max(1000, Math.Ceiling(maxValue / 10000) * 10000);
         }
-
 
         private void frmTotal_Load(object sender, EventArgs e)
         {
             ctrlMoneyCard1.LoadPaymentDetails(_PaymentDetails);
-            if(_FilterData != null)
-                ctrlCarDetails1._LoadData(_FilterData);
+            
+            ctrlCarDetails1._LoadData(_FilterData);
 
             LoadChart();
         }
