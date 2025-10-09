@@ -70,6 +70,17 @@ namespace GestionAssurances.Controls
             }
         }
 
+        bool _isVisibleIconAccept;
+        public bool IsVisibleIconAccept
+        {
+            get { return _isVisibleIconAccept; }
+            set
+            {
+                _isVisibleIconAccept = value;
+                pbIconAccept.Visible = _isVisibleIconAccept;
+            }
+        }
+
         // ------------------- Border Color Property ------------------
 
         private Color _borderColor = Color.FromArgb(66, 133, 244); // default blue

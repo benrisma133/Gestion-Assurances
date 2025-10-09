@@ -39,6 +39,11 @@
             this.cbFilterBy = new Guna.UI.WinForms.GunaComboBox();
             this.dgvAllAssurances = new Guna.UI.WinForms.GunaDataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.renevoulerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trouverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.suprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.lblRecord = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
@@ -48,11 +53,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblDebut = new System.Windows.Forms.Label();
             this.gunaAdvenceButton2 = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.renevoulerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trouverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.suprimerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllAssurances)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -201,6 +201,55 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(207, 184);
             // 
+            // ajouterToolStripMenuItem
+            // 
+            this.ajouterToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ajouterToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.main_add_24_green;
+            this.ajouterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
+            this.ajouterToolStripMenuItem.Text = "Ajouter";
+            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
+            // 
+            // editerToolStripMenuItem
+            // 
+            this.editerToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editerToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.edit_green_24;
+            this.editerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.editerToolStripMenuItem.Name = "editerToolStripMenuItem";
+            this.editerToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
+            this.editerToolStripMenuItem.Text = "Editer";
+            this.editerToolStripMenuItem.Click += new System.EventHandler(this.editerToolStripMenuItem_Click);
+            // 
+            // renevoulerToolStripMenuItem
+            // 
+            this.renevoulerToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.renevoulerToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.renew_green_24;
+            this.renevoulerToolStripMenuItem.Name = "renevoulerToolStripMenuItem";
+            this.renevoulerToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
+            this.renevoulerToolStripMenuItem.Text = "Renevouler";
+            this.renevoulerToolStripMenuItem.Click += new System.EventHandler(this.renevoulerToolStripMenuItem_Click);
+            // 
+            // trouverToolStripMenuItem
+            // 
+            this.trouverToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trouverToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.find_green_24;
+            this.trouverToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.trouverToolStripMenuItem.Name = "trouverToolStripMenuItem";
+            this.trouverToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
+            this.trouverToolStripMenuItem.Text = "Trouver";
+            this.trouverToolStripMenuItem.Click += new System.EventHandler(this.trouverToolStripMenuItem_Click);
+            // 
+            // suprimerToolStripMenuItem
+            // 
+            this.suprimerToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.suprimerToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.delete_red_24;
+            this.suprimerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.suprimerToolStripMenuItem.Name = "suprimerToolStripMenuItem";
+            this.suprimerToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
+            this.suprimerToolStripMenuItem.Text = "Suprimer";
+            this.suprimerToolStripMenuItem.Click += new System.EventHandler(this.suprimerToolStripMenuItem_Click);
+            // 
             // gunaLabel3
             // 
             this.gunaLabel3.BackColor = System.Drawing.Color.Transparent;
@@ -341,55 +390,6 @@
             this.gunaAdvenceButton2.TabIndex = 42;
             this.gunaAdvenceButton2.Click += new System.EventHandler(this.gunaAdvenceButton2_Click);
             // 
-            // ajouterToolStripMenuItem
-            // 
-            this.ajouterToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ajouterToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.main_add_24_green;
-            this.ajouterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
-            this.ajouterToolStripMenuItem.Text = "Ajouter";
-            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
-            // 
-            // editerToolStripMenuItem
-            // 
-            this.editerToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editerToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.edit_green_24;
-            this.editerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.editerToolStripMenuItem.Name = "editerToolStripMenuItem";
-            this.editerToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
-            this.editerToolStripMenuItem.Text = "Editer";
-            this.editerToolStripMenuItem.Click += new System.EventHandler(this.editerToolStripMenuItem_Click);
-            // 
-            // renevoulerToolStripMenuItem
-            // 
-            this.renevoulerToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.renevoulerToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.renew_green_24;
-            this.renevoulerToolStripMenuItem.Name = "renevoulerToolStripMenuItem";
-            this.renevoulerToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
-            this.renevoulerToolStripMenuItem.Text = "Renevouler";
-            this.renevoulerToolStripMenuItem.Click += new System.EventHandler(this.renevoulerToolStripMenuItem_Click);
-            // 
-            // trouverToolStripMenuItem
-            // 
-            this.trouverToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.trouverToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.find_green_24;
-            this.trouverToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.trouverToolStripMenuItem.Name = "trouverToolStripMenuItem";
-            this.trouverToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
-            this.trouverToolStripMenuItem.Text = "Trouver";
-            this.trouverToolStripMenuItem.Click += new System.EventHandler(this.trouverToolStripMenuItem_Click);
-            // 
-            // suprimerToolStripMenuItem
-            // 
-            this.suprimerToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.suprimerToolStripMenuItem.Image = global::GestionAssurances.Properties.Resources.delete_red_24;
-            this.suprimerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.suprimerToolStripMenuItem.Name = "suprimerToolStripMenuItem";
-            this.suprimerToolStripMenuItem.Size = new System.Drawing.Size(206, 36);
-            this.suprimerToolStripMenuItem.Text = "Suprimer";
-            this.suprimerToolStripMenuItem.Click += new System.EventHandler(this.suprimerToolStripMenuItem_Click);
-            // 
             // gunaAdvenceButton1
             // 
             this.gunaAdvenceButton1.Animated = true;
@@ -450,6 +450,7 @@
             this.Name = "frmListOfAssurances";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmListOfAssurances_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllAssurances)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);

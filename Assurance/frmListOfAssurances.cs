@@ -32,6 +32,41 @@ namespace GestionAssurances
 
         clsPaymentDetails _PaymentDetails;
 
+        string _filterName = string.Empty;
+        string _filterValue = string.Empty;
+        int _Annee;
+        int _Mois;
+
+        enum enFilterMode
+        {
+            None = 0,
+            YearOnly = 1,
+            MonthOnly = 2,
+            YearAndMonth = 3
+        }
+
+        enFilterMode GetFilterMode()
+        {
+            if (_IsYearSelected() && !_IsMonthSelected())
+            {
+                return enFilterMode.YearOnly;
+            }
+            else if (!_IsYearSelected() && _IsMonthSelected())
+            {
+                return enFilterMode.MonthOnly;
+            }
+            else if (_IsYearSelected() && _IsMonthSelected())
+            {
+                return enFilterMode.YearAndMonth;
+            }
+            else
+            {
+                return enFilterMode.None;
+            }
+        }
+
+        clsFilterData _FilterData;
+
         public void LoadAllTotals()
         {
             if (dgvAllAssurances.Rows.Count > 0)
@@ -275,6 +310,45 @@ namespace GestionAssurances
             string filterColumn = GetFilterColumn();
             string search = txtFilterByValue.Text.Trim();
 
+            if (filterColumn == "Aucun")
+            {
+                _FilterData = null;
+            }
+
+            else
+            {
+
+                _filterName = cbFilterBy.Text;
+                _filterValue = search;
+
+                if(!_IsYearSelected() && !_IsMonthSelected())
+                {
+                    _FilterData = new clsFilterData(_filterName, _filterValue);
+                }
+
+                if (_IsYearSelected() && !_IsMonthSelected())
+                {
+                    _Annee = Convert.ToInt32(cbAnnee.Text.Trim());
+                    _FilterData = new clsFilterData(_filterName, _filterValue, _Annee ,clsFilterData.enDateSelection.ParAnnee);
+                }
+
+                if (_IsMonthSelected() && !_IsYearSelected())
+                {
+                    _Mois = Convert.ToInt32(cbMois.Text.Trim());
+                    _FilterData = new clsFilterData(_filterName, _filterValue, _Mois , clsFilterData.enDateSelection.ParMois);
+                }
+
+                if (_IsMonthSelected() && _IsYearSelected())
+                {
+                    _Annee = Convert.ToInt32(cbAnnee.Text.Trim());
+                    _Mois = Convert.ToInt32(cbMois.Text.Trim());
+                    _FilterData = new clsFilterData(_filterName, _filterValue, _Annee, _Mois);
+                }
+
+
+                
+            }
+
             if (!string.IsNullOrEmpty(search) && filterColumn != "Aucun")
             {
                 rows = rows.Where(r =>
@@ -419,13 +493,31 @@ namespace GestionAssurances
         private void gunaAdvenceButton2_Click(object sender, EventArgs e)
         {
             LoadAllTotals();
-            frmTotal frmTotal = new frmTotal(_PaymentDetails);
+
+            frmTotal frmTotal = null;
+
+            if (_FilterData != null)
+            {
+                frmTotal = new frmTotal(_PaymentDetails, _FilterData);
+            }
+            else
+            {
+                frmTotal = new frmTotal(_PaymentDetails);
+            }
+
             frmTotal.ShowDialog();
+        }
+
+        private void frmListOfAssurances_FormClosed(object sender, FormClosedEventArgs e)
+        {
             _EspeceTotal = 0;
             _ChequeTotal = 0;
             _VirBankTotal = 0;
             _WafaSalafTotal = 0;
             _AllTotal = 0;
+
+            _PaymentDetails = null;
+            _FilterData = null;
         }
     }
 }

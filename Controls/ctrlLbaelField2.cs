@@ -26,6 +26,28 @@ namespace GestionAssurances.Cards
                 gunaPanel1.BackColor = value; // apply to your docked left panel
             }
         }
+
+        string _fieldName;
+        public string FieldName
+        {
+            get { return _fieldName; }
+            set
+            {
+                _fieldName = value;
+                lblName.Text = _fieldName;
+            }
+        }
+
+        string _fieldValue;
+        public string FieldValue
+        {
+            get { return lblValue.Text; }
+            set
+            {
+                _fieldValue = value;
+                lblValue.Text = _fieldValue;
+            }
+        }
         public ctrlLbaelField2()
         {
             InitializeComponent();

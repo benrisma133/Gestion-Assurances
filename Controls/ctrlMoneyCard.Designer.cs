@@ -90,12 +90,13 @@
             // ctrlLabelFieldTotal
             // 
             this.ctrlLabelFieldTotal.BackColor = System.Drawing.SystemColors.Menu;
-            this.ctrlLabelFieldTotal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(118)))), ((int)(((byte)(3)))));
+            this.ctrlLabelFieldTotal.BorderColor = System.Drawing.Color.Gold;
             this.ctrlLabelFieldTotal.FieldIconAccept = global::GestionAssurances.Properties.Resources.total;
             this.ctrlLabelFieldTotal.FieldName = "TOTAL :";
             this.ctrlLabelFieldTotal.FieldNameColor = System.Drawing.SystemColors.ControlText;
             this.ctrlLabelFieldTotal.FieldValue = "????";
             this.ctrlLabelFieldTotal.FieldValueColor = System.Drawing.SystemColors.ControlText;
+            this.ctrlLabelFieldTotal.IsVisibleIconAccept = false;
             this.ctrlLabelFieldTotal.Location = new System.Drawing.Point(182, 341);
             this.ctrlLabelFieldTotal.Name = "ctrlLabelFieldTotal";
             this.ctrlLabelFieldTotal.Size = new System.Drawing.Size(387, 63);
@@ -110,6 +111,7 @@
             this.ctrlLabelFieldWafaSalaf.FieldNameColor = System.Drawing.SystemColors.ControlText;
             this.ctrlLabelFieldWafaSalaf.FieldValue = "????";
             this.ctrlLabelFieldWafaSalaf.FieldValueColor = System.Drawing.SystemColors.ControlText;
+            this.ctrlLabelFieldWafaSalaf.IsVisibleIconAccept = false;
             this.ctrlLabelFieldWafaSalaf.Location = new System.Drawing.Point(12, 235);
             this.ctrlLabelFieldWafaSalaf.Name = "ctrlLabelFieldWafaSalaf";
             this.ctrlLabelFieldWafaSalaf.Size = new System.Drawing.Size(387, 63);
@@ -124,6 +126,7 @@
             this.ctrlLabelFieldVirBank.FieldNameColor = System.Drawing.SystemColors.ControlText;
             this.ctrlLabelFieldVirBank.FieldValue = "????";
             this.ctrlLabelFieldVirBank.FieldValueColor = System.Drawing.SystemColors.ControlText;
+            this.ctrlLabelFieldVirBank.IsVisibleIconAccept = false;
             this.ctrlLabelFieldVirBank.Location = new System.Drawing.Point(12, 161);
             this.ctrlLabelFieldVirBank.Name = "ctrlLabelFieldVirBank";
             this.ctrlLabelFieldVirBank.Size = new System.Drawing.Size(387, 63);
@@ -138,6 +141,7 @@
             this.ctrlLabelFieldCheque.FieldNameColor = System.Drawing.SystemColors.ControlText;
             this.ctrlLabelFieldCheque.FieldValue = "????";
             this.ctrlLabelFieldCheque.FieldValueColor = System.Drawing.SystemColors.ControlText;
+            this.ctrlLabelFieldCheque.IsVisibleIconAccept = false;
             this.ctrlLabelFieldCheque.Location = new System.Drawing.Point(12, 87);
             this.ctrlLabelFieldCheque.Name = "ctrlLabelFieldCheque";
             this.ctrlLabelFieldCheque.Size = new System.Drawing.Size(387, 63);
@@ -152,6 +156,7 @@
             this.ctrlLabelFieldEspece.FieldNameColor = System.Drawing.SystemColors.ControlText;
             this.ctrlLabelFieldEspece.FieldValue = "????";
             this.ctrlLabelFieldEspece.FieldValueColor = System.Drawing.SystemColors.ControlText;
+            this.ctrlLabelFieldEspece.IsVisibleIconAccept = false;
             this.ctrlLabelFieldEspece.Location = new System.Drawing.Point(12, 13);
             this.ctrlLabelFieldEspece.Name = "ctrlLabelFieldEspece";
             this.ctrlLabelFieldEspece.Size = new System.Drawing.Size(387, 63);

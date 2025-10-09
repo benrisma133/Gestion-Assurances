@@ -36,12 +36,13 @@
             // 
             // gunaElipse1
             // 
+            this.gunaElipse1.Radius = 0;
             this.gunaElipse1.TargetControl = this;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(2, 0);
+            this.label1.Location = new System.Drawing.Point(16, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 63);
             this.label1.TabIndex = 0;
@@ -50,11 +51,11 @@
             // 
             // gunaPanel1
             // 
-            this.gunaPanel1.BackColor = System.Drawing.Color.Gold;
-            this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gunaPanel1.Location = new System.Drawing.Point(111, 0);
+            this.gunaPanel1.BackColor = System.Drawing.Color.Lime;
+            this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.gunaPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaPanel1.Name = "gunaPanel1";
-            this.gunaPanel1.Size = new System.Drawing.Size(10, 63);
+            this.gunaPanel1.Size = new System.Drawing.Size(4, 63);
             this.gunaPanel1.TabIndex = 1;
             // 
             // ctrlField

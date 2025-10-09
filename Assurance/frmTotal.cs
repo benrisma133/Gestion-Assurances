@@ -15,12 +15,23 @@ namespace GestionAssurances.Assurance
     public partial class frmTotal : Form
     {
         clsPaymentDetails _PaymentDetails;
+        clsFilterData _FilterData;
 
         public frmTotal(clsPaymentDetails PaymentDetails)
         {
             InitializeComponent();
 
             _PaymentDetails = PaymentDetails;
+        }
+
+        public frmTotal(clsPaymentDetails PaymentDetails ,clsFilterData FilterData)
+        {
+            InitializeComponent();
+
+            _FilterData = FilterData;
+            
+            _PaymentDetails = PaymentDetails;
+
         }
 
         private void LoadChart()
@@ -41,13 +52,13 @@ namespace GestionAssurances.Assurance
 
             // Payment data
             var data = new Dictionary<string, decimal>
-{
+            {
                 { "Espèce", _PaymentDetails.Espece },
                 { "Chèque", _PaymentDetails.Cheque },
                 { "Virement", _PaymentDetails.VirBank },
                 { "WafaSalaf", _PaymentDetails.WafaSalaf },
                 { "Total", _PaymentDetails.Total }
-};
+            };
 
             // Add points with colors and custom legend text
             foreach (var kv in data)
@@ -89,6 +100,8 @@ namespace GestionAssurances.Assurance
         private void frmTotal_Load(object sender, EventArgs e)
         {
             ctrlMoneyCard1.LoadPaymentDetails(_PaymentDetails);
+            if(_FilterData != null)
+                ctrlCarDetails1._LoadData(_FilterData);
 
             LoadChart();
         }
