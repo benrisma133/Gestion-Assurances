@@ -17,6 +17,7 @@ namespace GestionAssurances.Assurance
         clsPaymentDetails _PaymentDetails;
         clsFilterData _FilterData;
 
+
         public frmTotal(clsPaymentDetails PaymentDetails)
         {
             InitializeComponent();
