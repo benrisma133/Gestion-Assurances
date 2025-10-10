@@ -17,6 +17,14 @@ namespace GestionAssurances.Assurance
         clsPaymentDetails _PaymentDetails;
         clsFilterData _FilterData;
 
+        void configureChart()
+        {
+            chart1.Series.Clear();
+            chart1.ChartAreas[0].AxisY.Title = "Montant (DH)";
+            chart1.ChartAreas[0].AxisX.Title = "Type de paiement";
+            chart1.ChartAreas[0].AxisX.LabelStyle.Angle = -45;
+        }
+
         public frmTotal(clsPaymentDetails PaymentDetails)
         {
             InitializeComponent();
