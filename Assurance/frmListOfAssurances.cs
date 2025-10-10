@@ -274,7 +274,7 @@ namespace GestionAssurances
                 case "Modèle": return "Model";
                 case "Matricule": return "Matricule";
                 case "Durée": return "Dure";
-                case "Commercial": return "ComercialUsername";
+                case "Comercial": return "ComercialUsername";
                 case "Statut": return "Status";
                 case "Version": return "Version";
                 case "Actuel": return "IsCurrent";
