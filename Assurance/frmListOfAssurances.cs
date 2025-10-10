@@ -85,6 +85,7 @@ namespace GestionAssurances
             _PaymentDetails = new clsPaymentDetails(_EspeceTotal, _ChequeTotal, _VirBankTotal, _WafaSalafTotal, _AllTotal);
 
         }
+
         private void _LoadRecordsCount()
         {
             lblRecord.Text = dgvAllAssurances.Rows.Count.ToString();
@@ -363,7 +364,6 @@ namespace GestionAssurances
             _LoadData();
             _LoadRecordsCount();
         }
-
 
         private void txtFilterByValue_TextChanged(object sender, EventArgs e)
         {
