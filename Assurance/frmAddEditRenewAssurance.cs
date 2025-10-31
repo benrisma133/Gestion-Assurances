@@ -1,5 +1,6 @@
 ﻿using GA_BLL;
 using GestionAssurances.Brand.Forms;
+using GestionAssurances.Comercial.Forms;
 using GestionAssurances.Controls;
 using GestionAssurances.Properties;
 using Mysqlx.Crud;
@@ -18,6 +19,7 @@ namespace GestionAssurances.Assurance
 {
     public partial class frmAddEditRenewAssurance : Form
     {
+        private bool _isComboMode = true;
 
         int _Year = DateTime.Now.Year;
         int _Month = DateTime.Now.Month;
@@ -52,6 +54,21 @@ namespace GestionAssurances.Assurance
                 _Mode = enMode.Update;
         }
 
+        void _FillComboBoxWithModels()
+        {
+            // Implementation to fill combo box with models if needed
+            for(int i = 2016 ; i <= DateTime.Now.Year; i++)
+            {
+                cbFieldModel.MyComboBox.Items.Add(i.ToString());
+            }
+
+            int currentYear = DateTime.Now.Year;
+
+            cbFieldModel.MyComboBox.Items.Add((currentYear + 1).ToString());
+            cbFieldModel.MyComboBox.Items.Add((currentYear + 2).ToString());
+
+        }
+
         void _FillComboBoxWithComercials()
         {
             DataTable dtComercials = clsComercial.AllComercials();
@@ -77,10 +94,11 @@ namespace GestionAssurances.Assurance
             cbFieldDure.MyComboBox.Items.Clear(); // Clear existing items to avoid duplicates
             if (cbFieldDure.MyComboBox.Items.Count > 0)
                 return; // If items are already filled, no need to fill again
-            cbFieldDure.MyComboBox.Items.Add("12");
-            cbFieldDure.MyComboBox.Items.Add("6");
-            cbFieldDure.MyComboBox.Items.Add("3");
-            cbFieldDure.MyComboBox.Items.Add("1");
+            for (int i = 1; i <= 12; i++)
+            {
+                cbFieldDure.MyComboBox.Items.Add(i.ToString());
+            }
+
         }
 
         void _FillCoboBoxWithMois()
@@ -161,6 +179,7 @@ namespace GestionAssurances.Assurance
             txtFieldModel.FieldValue = string.Empty;
             txtFieldMatricule.FieldValue = string.Empty;
             cbFieldMarque.MyComboBox.SelectedIndex = cbFieldMarque.MyComboBox.FindString("DACIA");
+            cbFieldModel.MyComboBox.SelectedIndex = cbFieldModel.MyComboBox.FindString(DateTime.Now.Year.ToString());
         }
 
         void _ResetDefaultVtDureValues()
@@ -219,6 +238,7 @@ namespace GestionAssurances.Assurance
 
         void _ResetAllDefaultValues()
         {
+            _FillComboBoxWithModels();
             _LoadDateToComboBoxes();
             _FillComboBoxWithComercials();
             _FillComboBoxWithBrands();
@@ -269,7 +289,7 @@ namespace GestionAssurances.Assurance
             bool allValid = true;
 
             // قائمة كل cfTextBox
-            foreach (ctrlTextBox ctl in new ctrlTextBox[] { txtFieldModel, txtFieldMatricule })
+            foreach (ctrlTextBox ctl in new ctrlTextBox[] {  txtFieldMatricule })
             {
                 if (string.IsNullOrWhiteSpace(ctl.FieldValue))
                 {
@@ -330,8 +350,43 @@ namespace GestionAssurances.Assurance
             txtFieldEmail.FieldValue = _Assurance.ClientInfo.Email;
             cbFieldComercial.MyComboBox.SelectedIndex = cbFieldComercial.MyComboBox.FindString(_Assurance.ComercialInfo.Username);
 
+
             // Vehicle Details Fields
-            txtFieldModel.FieldValue = _Assurance.Assurance.Model;
+            string modelValue = _Assurance.CarInfo.Model;
+
+            if (string.IsNullOrWhiteSpace(modelValue))
+            {
+                // If model is empty → default to ComboBox
+                cbFieldModel.Visible = true;
+                txtFieldModel.Visible = false;
+                cbFieldModel.MyComboBox.SelectedIndex = -1;
+                _isComboMode = true;
+            }
+            else
+            {
+                int index = cbFieldModel.MyComboBox.FindString(modelValue);
+
+                if (index == -1)
+                {
+                    // Not found in ComboBox → show TextBox
+                    cbFieldModel.Visible = false;
+                    txtFieldModel.Visible = true;
+                    txtFieldModel.FieldValue = modelValue;
+                    _isComboMode = false;
+                }
+                else
+                {
+                    // Found in ComboBox → show ComboBox
+                    cbFieldModel.Visible = true;
+                    txtFieldModel.Visible = false;
+                    cbFieldModel.MyComboBox.SelectedIndex = index;
+                    _isComboMode = true;
+                }
+            }
+
+
+
+
             txtFieldMatricule.FieldValue = _Assurance.Assurance.Matricule;
             cbFieldMarque.MyComboBox.SelectedIndex = cbFieldMarque.MyComboBox.FindString(clsBrand.FindByID(_Assurance.CarInfo.BrandID).Name);
 
@@ -347,7 +402,6 @@ namespace GestionAssurances.Assurance
             txtFieldVirBank.FieldValue = _Assurance.Assurance.VirBank.ToString("F2");
             txtFieldWafaSalaf.FieldValue = _Assurance.Assurance.WafaSalaf.ToString("F2");
         }
-
 
         private void btnNextAddClient_Click(object sender, EventArgs e)
         {
@@ -433,14 +487,65 @@ namespace GestionAssurances.Assurance
                 _Assurance.StatusID = 1;
 
             _Assurance.Assurance.Matricule = txtFieldMatricule.FieldValue;
-            _Assurance.Assurance.Model = txtFieldModel.FieldValue;
+
+            string modelValue;
+
+            if (_isComboMode)
+            {
+                // Handle empty selection safely
+                if (cbFieldModel.MyComboBox.SelectedItem != null)
+                    modelValue = cbFieldModel.MyComboBox.SelectedItem.ToString();
+                else
+                    modelValue = cbFieldModel.MyComboBox.Text; // even if user typed manually
+            }
+            else
+            {
+                modelValue = txtFieldModel.FieldValue;
+            }
+
+            // Save model
+            _Assurance.Assurance.Model = modelValue;
+
+
+
+
+            //MessageBox.Show($"Model : {_Assurance.Assurance.Model}\n{cbFieldModel.Visible}");
+            //MessageBox.Show($"Model : {_Assurance.Assurance.Model}\n{txtFieldModel.Visible}");
+
+
             _Assurance.Assurance.BrandID = clsBrand.FindByName(cbFieldMarque.MyComboBox.SelectedItem.ToString()).BrandID;
 
+            // Parse duration and start date
             _Assurance.Assurance.Duration = int.Parse(cbFieldDure.MyComboBox.SelectedItem.ToString());
-            _Assurance.Assurance.StartDate = new DateTime(int.Parse(cbFieldAnnee.MyComboBox.SelectedItem.ToString()),
-                                           int.Parse(cbFieldMois.MyComboBox.SelectedItem.ToString()),
-                                           int.Parse(cbFieldJour.MyComboBox.SelectedItem.ToString()));
-            _Assurance.Assurance.EndDate = _Assurance.Assurance.StartDate.AddMonths(_Assurance.Assurance.Duration);
+            _Assurance.Assurance.StartDate = new DateTime(
+                int.Parse(cbFieldAnnee.MyComboBox.SelectedItem.ToString()),
+                int.Parse(cbFieldMois.MyComboBox.SelectedItem.ToString()),
+                int.Parse(cbFieldJour.MyComboBox.SelectedItem.ToString())
+            );
+
+            DateTime startDate = _Assurance.Assurance.StartDate;
+            int duration = _Assurance.Assurance.Duration;
+
+            // Add months (calendar-safe, handles month-end & leap years)
+            DateTime endDate = startDate.AddMonths(duration);
+
+            // Dynamic adjustment based on leap year
+            bool startLeap = DateTime.IsLeapYear(startDate.Year);
+            bool endLeap = DateTime.IsLeapYear(endDate.Year);
+
+            // Subtract 1 day only if neither start nor end year is leap
+            if (!startLeap && !endLeap)
+            {
+                endDate = endDate.AddDays(-1);
+            }
+
+            // Assign final date
+            _Assurance.Assurance.EndDate = endDate;
+
+
+
+
+
 
             _Assurance.Assurance.Espece = decimal.Parse(txtFieldEspece.FieldValue.ToString());
             _Assurance.Assurance.Cheque = decimal.Parse(txtFieldCheque.FieldValue.ToString());
@@ -569,5 +674,40 @@ namespace GestionAssurances.Assurance
             _FillComboBoxWithBrands();
             cbFieldMarque.MyComboBox.SelectedIndex = cbFieldMarque.MyComboBox.FindString("DACIA");
         }
+
+        private void gunaAdvenceButton2_Click(object sender, EventArgs e)
+        {
+            frmAddEditComercial frmAddEditComercial = new frmAddEditComercial();
+            frmAddEditComercial.ShowDialog();
+        }
+
+        private void gunaAdvenceButton3_Click(object sender, EventArgs e)
+        {
+            _isComboMode = !_isComboMode;
+
+            cbFieldModel.Visible = _isComboMode;
+            txtFieldModel.Visible = !_isComboMode;
+
+            if (_isComboMode)
+            {
+                // Switch to ComboBox
+                int index = cbFieldModel.MyComboBox.FindString(txtFieldModel.FieldValue);
+                if (index >= 0)
+                    cbFieldModel.MyComboBox.SelectedIndex = index;
+                else
+                    cbFieldModel.MyComboBox.Text = txtFieldModel.FieldValue;
+            }
+            else
+            {
+                // Switch to TextBox
+                txtFieldModel.FieldValue = cbFieldModel.MyComboBox.Text;
+            }
+        }
+
+
+
+
+
+
     }
 }

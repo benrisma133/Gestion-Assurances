@@ -39,6 +39,8 @@
             this.txtFieldTelephone = new GestionAssurances.Controls.ctrlTextBox();
             this.txtFieldEmail = new GestionAssurances.Controls.ctrlTextBox();
             this.tbVehiculDetails = new System.Windows.Forms.TabPage();
+            this.gunaAdvenceButton3 = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.gunaAdvenceButton2 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnBackAddCar = new Guna.UI.WinForms.GunaAdvenceButton();
             this.btnNextAddCar = new Guna.UI.WinForms.GunaAdvenceButton();
@@ -62,7 +64,9 @@
             this.txtFieldVirBank = new GestionAssurances.Controls.ctrlTextBox();
             this.txtFieldWafaSalaf = new GestionAssurances.Controls.ctrlTextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pbTitle = new System.Windows.Forms.PictureBox();
+            this.cbFieldModel = new GestionAssurances.Controls.ctrlComboBox();
             this.tabControl1.SuspendLayout();
             this.tbClient.SuspendLayout();
             this.tbVehiculDetails.SuspendLayout();
@@ -193,7 +197,7 @@
             // 
             this.txtFieldEmail.FieldIcon = global::GestionAssurances.Properties.Resources.char_e_green;
             this.txtFieldEmail.FieldIconAccept = null;
-            this.txtFieldEmail.FieldName = "Email";
+            this.txtFieldEmail.FieldName = "Police";
             this.txtFieldEmail.FieldValue = "";
             this.txtFieldEmail.IsVisibleIconAccept = false;
             this.txtFieldEmail.Location = new System.Drawing.Point(350, 428);
@@ -203,6 +207,9 @@
             // 
             // tbVehiculDetails
             // 
+            this.tbVehiculDetails.Controls.Add(this.gunaAdvenceButton3);
+            this.tbVehiculDetails.Controls.Add(this.cbFieldModel);
+            this.tbVehiculDetails.Controls.Add(this.gunaAdvenceButton2);
             this.tbVehiculDetails.Controls.Add(this.gunaAdvenceButton1);
             this.tbVehiculDetails.Controls.Add(this.btnBackAddCar);
             this.tbVehiculDetails.Controls.Add(this.btnNextAddCar);
@@ -218,6 +225,80 @@
             this.tbVehiculDetails.TabIndex = 1;
             this.tbVehiculDetails.Text = "Détails du véhicule";
             this.tbVehiculDetails.UseVisualStyleBackColor = true;
+            // 
+            // gunaAdvenceButton3
+            // 
+            this.gunaAdvenceButton3.Animated = true;
+            this.gunaAdvenceButton3.AnimationHoverSpeed = 0.07F;
+            this.gunaAdvenceButton3.AnimationSpeed = 0.03F;
+            this.gunaAdvenceButton3.BackColor = System.Drawing.Color.Transparent;
+            this.gunaAdvenceButton3.BaseColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.gunaAdvenceButton3.BorderSize = 1;
+            this.gunaAdvenceButton3.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.gunaAdvenceButton3.CheckedBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton3.CheckedForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton3.CheckedImage = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceButton3.CheckedImage")));
+            this.gunaAdvenceButton3.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.gunaAdvenceButton3.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaAdvenceButton3.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaAdvenceButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaAdvenceButton3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.gunaAdvenceButton3.Image = global::GestionAssurances.Properties.Resources.switch_16_green;
+            this.gunaAdvenceButton3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaAdvenceButton3.ImageSize = new System.Drawing.Size(10, 10);
+            this.gunaAdvenceButton3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.gunaAdvenceButton3.Location = new System.Drawing.Point(983, 300);
+            this.gunaAdvenceButton3.Name = "gunaAdvenceButton3";
+            this.gunaAdvenceButton3.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.gunaAdvenceButton3.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.gunaAdvenceButton3.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton3.OnHoverImage = global::GestionAssurances.Properties.Resources.switch_16_white;
+            this.gunaAdvenceButton3.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.gunaAdvenceButton3.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton3.Radius = 4;
+            this.gunaAdvenceButton3.Size = new System.Drawing.Size(30, 30);
+            this.gunaAdvenceButton3.TabIndex = 14;
+            this.gunaAdvenceButton3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip1.SetToolTip(this.gunaAdvenceButton3, "Ajouter une nouvelle marque");
+            this.gunaAdvenceButton3.Click += new System.EventHandler(this.gunaAdvenceButton3_Click);
+            // 
+            // gunaAdvenceButton2
+            // 
+            this.gunaAdvenceButton2.Animated = true;
+            this.gunaAdvenceButton2.AnimationHoverSpeed = 0.07F;
+            this.gunaAdvenceButton2.AnimationSpeed = 0.03F;
+            this.gunaAdvenceButton2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaAdvenceButton2.BaseColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.gunaAdvenceButton2.BorderSize = 1;
+            this.gunaAdvenceButton2.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.gunaAdvenceButton2.CheckedBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton2.CheckedForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton2.CheckedImage = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceButton2.CheckedImage")));
+            this.gunaAdvenceButton2.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.gunaAdvenceButton2.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.gunaAdvenceButton2.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaAdvenceButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaAdvenceButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.gunaAdvenceButton2.Image = global::GestionAssurances.Properties.Resources.add_16_green;
+            this.gunaAdvenceButton2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gunaAdvenceButton2.ImageSize = new System.Drawing.Size(10, 10);
+            this.gunaAdvenceButton2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.gunaAdvenceButton2.Location = new System.Drawing.Point(983, 445);
+            this.gunaAdvenceButton2.Name = "gunaAdvenceButton2";
+            this.gunaAdvenceButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.gunaAdvenceButton2.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.gunaAdvenceButton2.OnHoverForeColor = System.Drawing.Color.White;
+            this.gunaAdvenceButton2.OnHoverImage = null;
+            this.gunaAdvenceButton2.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.gunaAdvenceButton2.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton2.Radius = 4;
+            this.gunaAdvenceButton2.Size = new System.Drawing.Size(30, 30);
+            this.gunaAdvenceButton2.TabIndex = 12;
+            this.gunaAdvenceButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip1.SetToolTip(this.gunaAdvenceButton2, "Ajouter un nouveau commercial");
+            this.gunaAdvenceButton2.Click += new System.EventHandler(this.gunaAdvenceButton2_Click);
             // 
             // gunaAdvenceButton1
             // 
@@ -239,20 +320,21 @@
             this.gunaAdvenceButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
             this.gunaAdvenceButton1.Image = global::GestionAssurances.Properties.Resources.add_16_green;
             this.gunaAdvenceButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaAdvenceButton1.ImageSize = new System.Drawing.Size(20, 20);
+            this.gunaAdvenceButton1.ImageSize = new System.Drawing.Size(10, 10);
             this.gunaAdvenceButton1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
-            this.gunaAdvenceButton1.Location = new System.Drawing.Point(1047, 221);
+            this.gunaAdvenceButton1.Location = new System.Drawing.Point(983, 228);
             this.gunaAdvenceButton1.Name = "gunaAdvenceButton1";
             this.gunaAdvenceButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
-            this.gunaAdvenceButton1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.gunaAdvenceButton1.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
             this.gunaAdvenceButton1.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaAdvenceButton1.OnHoverImage = null;
             this.gunaAdvenceButton1.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
             this.gunaAdvenceButton1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaAdvenceButton1.Radius = 4;
-            this.gunaAdvenceButton1.Size = new System.Drawing.Size(42, 39);
+            this.gunaAdvenceButton1.Size = new System.Drawing.Size(30, 30);
             this.gunaAdvenceButton1.TabIndex = 11;
             this.gunaAdvenceButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolTip1.SetToolTip(this.gunaAdvenceButton1, "Ajouter une nouvelle marque");
             this.gunaAdvenceButton1.Click += new System.EventHandler(this.gunaAdvenceButton1_Click);
             // 
             // btnBackAddCar
@@ -554,7 +636,7 @@
             this.tbPaiment.Padding = new System.Windows.Forms.Padding(3);
             this.tbPaiment.Size = new System.Drawing.Size(1395, 656);
             this.tbPaiment.TabIndex = 3;
-            this.tbPaiment.Text = "Mode de paiment";
+            this.tbPaiment.Text = "Mode de Paiement";
             this.tbPaiment.UseVisualStyleBackColor = true;
             // 
             // btnBackAddPayment
@@ -699,6 +781,19 @@
             this.pbTitle.TabIndex = 2;
             this.pbTitle.TabStop = false;
             // 
+            // cbFieldModel
+            // 
+            this.cbFieldModel.FieldIcon = global::GestionAssurances.Properties.Resources.char_m_green;
+            this.cbFieldModel.FieldName = "Model";
+            this.cbFieldModel.FieldValue = null;
+            this.cbFieldModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFieldModel.IsVisibleIconAccept = false;
+            this.cbFieldModel.Location = new System.Drawing.Point(350, 290);
+            this.cbFieldModel.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.cbFieldModel.Name = "cbFieldModel";
+            this.cbFieldModel.Size = new System.Drawing.Size(689, 64);
+            this.cbFieldModel.TabIndex = 13;
+            // 
             // frmAddEditRenewAssurance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -758,5 +853,9 @@
         private Guna.UI.WinForms.GunaAdvenceButton btnBackAddPayment;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton1;
+        private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton2;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton3;
+        private Controls.ctrlComboBox cbFieldModel;
     }
 }

@@ -17,15 +17,6 @@ namespace GestionAssurances.Assurance
         clsPaymentDetails _PaymentDetails;
         clsFilterData _FilterData;
 
-
-        void configureChart()
-        {
-            chart1.Series.Clear();
-            chart1.ChartAreas[0].AxisY.Title = "Montant (DH)";
-            chart1.ChartAreas[0].AxisX.Title = "Type de paiement";
-            chart1.ChartAreas[0].AxisX.LabelStyle.Angle = -45;
-        }
-
         public frmTotal(clsPaymentDetails PaymentDetails)
         {
             InitializeComponent();
@@ -49,6 +40,9 @@ namespace GestionAssurances.Assurance
             chart1.ChartAreas[0].AxisY.Title = "Montant (DH)";
             chart1.ChartAreas[0].AxisX.Title = "Type de paiement";
             chart1.ChartAreas[0].AxisX.LabelStyle.Angle = -45;
+
+            // ✅ Make only bottom labels (X-axis) bold and bigger
+            chart1.ChartAreas[0].AxisX.LabelStyle.Font = new Font("Segoe UI", 11, FontStyle.Bold);
 
             Series series = new Series
             {
@@ -74,28 +68,28 @@ namespace GestionAssurances.Assurance
             {
                 int pointIndex = series.Points.AddXY(kv.Key, (double)kv.Value);
 
-                // Show value with "MAD" on top
-                //series.Points[pointIndex].Label = $"{kv.Value} MAD";
-                //series.Points[pointIndex].LabelAngle = 90; // Vertical label
+                // optional: show values above columns
+                // series.Points[pointIndex].Label = $"{kv.Value} DH";
 
                 series.Points[pointIndex].LegendText = kv.Key;
 
                 switch (kv.Key)
                 {
                     case "Espèce":
-                        series.Points[pointIndex].Color = Color.FromArgb(66, 133, 244);
+                        series.Points[pointIndex].Color = Color.FromArgb(0, 70, 255);
                         break;
                     case "Chèque":
-                        series.Points[pointIndex].Color = Color.FromArgb(40, 205, 140);
+                        series.Points[pointIndex].Color = Color.FromArgb(6, 146, 62);
                         break;
                     case "Virement":
-                        series.Points[pointIndex].Color = Color.FromArgb(11, 197, 218);
+                        series.Points[pointIndex].Color = Color.FromArgb(140, 0, 255);
                         break;
                     case "WafaSalaf":
-                        series.Points[pointIndex].Color = Color.FromArgb(222, 226, 3);
+                        series.Points[pointIndex].Color = Color.FromArgb(244, 247, 84);
                         break;
                     case "Total":
-                        series.Points[pointIndex].Color = Color.Gold;
+                        //rgb(244 247 84)
+                        series.Points[pointIndex].Color = Color.FromArgb(255 ,63 ,127);
                         break;
                 }
             }
@@ -115,5 +109,7 @@ namespace GestionAssurances.Assurance
 
             LoadChart();
         }
+
+
     }
 }

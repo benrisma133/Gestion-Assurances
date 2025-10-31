@@ -59,5 +59,28 @@ namespace GestionAssurances.Modals
             FilterValue = value;
         }
 
+        public clsFilterData(int Annee ,int Mois)
+        {
+            this.Annee = Annee;
+            this.Mois = Mois;
+        }
+
+        public clsFilterData(int AnneeOrMois ,bool isAnneeOrMois)
+        {
+            if(isAnneeOrMois)
+            {
+                Mois = AnneeOrMois;
+            }
+            else
+            {
+                Annee = AnneeOrMois;
+            }
+
+        }
+
+        
+
+
+
     }
 }

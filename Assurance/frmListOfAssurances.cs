@@ -106,27 +106,29 @@ namespace GestionAssurances
                 // I want to set width for each column and header text
                 // For User i want to put titles an Francais
 
+                dgvAllAssurances.Columns["AssuranceID"].Width = 60;
+                dgvAllAssurances.Columns["AssuranceID"].HeaderText = "Nr Or";
 
 
                 dgvAllAssurances.Columns["ClientFullName"].Width = 150;
                 dgvAllAssurances.Columns["ClientFullName"].HeaderText = "Client";
 
-                dgvAllAssurances.Columns["ClientPhone"].Width = 120;
+                dgvAllAssurances.Columns["ClientPhone"].Width = 100;
                 dgvAllAssurances.Columns["ClientPhone"].HeaderText = "Téléphone";
 
-                dgvAllAssurances.Columns["ClientEmail"].Width = 150;
-                dgvAllAssurances.Columns["ClientEmail"].HeaderText = "Email";
+                dgvAllAssurances.Columns["ClientEmail"].Width = 100;
+                dgvAllAssurances.Columns["ClientEmail"].HeaderText = "Police";
 
-                dgvAllAssurances.Columns["Marque"].Width = 120;
+                dgvAllAssurances.Columns["Marque"].Width = 100;
                 dgvAllAssurances.Columns["Marque"].HeaderText = "Marque";
 
-                dgvAllAssurances.Columns["Model"].Width = 120;
+                dgvAllAssurances.Columns["Model"].Width = 100;
                 dgvAllAssurances.Columns["Model"].HeaderText = "Modèle";
 
                 dgvAllAssurances.Columns["Matricule"].Width = 100;
                 dgvAllAssurances.Columns["Matricule"].HeaderText = "Matricule";
 
-                dgvAllAssurances.Columns["Dure"].Width = 70;
+                dgvAllAssurances.Columns["Dure"].Width = 60;
                 dgvAllAssurances.Columns["Dure"].HeaderText = "Durée";
 
                 dgvAllAssurances.Columns["Debut"].Width = 90;
@@ -155,12 +157,15 @@ namespace GestionAssurances
 
                 dgvAllAssurances.Columns["Status"].Width = 100;
                 dgvAllAssurances.Columns["Status"].HeaderText = "Statut";
+                dgvAllAssurances.Columns["Status"].Visible = false;
 
                 dgvAllAssurances.Columns["Version"].Width = 60;
                 dgvAllAssurances.Columns["Version"].HeaderText = "Version";
+                dgvAllAssurances.Columns["Version"].Visible = false;
 
                 dgvAllAssurances.Columns["IsCurrent"].Width = 60;
                 dgvAllAssurances.Columns["IsCurrent"].HeaderText = "Actuel";
+                dgvAllAssurances.Columns["IsCurrent"].Visible = false;
 
             }
 
@@ -311,7 +316,7 @@ namespace GestionAssurances
             string filterColumn = GetFilterColumn();
             string search = txtFilterByValue.Text.Trim();
 
-            if (filterColumn == "Aucun")
+            if (filterColumn == "Aucun" && cbAnnee.Text == "Aucun" && cbMois.Text == "Aucun")
             {
                 _FilterData = null;
             }
@@ -342,7 +347,8 @@ namespace GestionAssurances
                 if (_IsMonthSelected() && _IsYearSelected())
                 {
                     _Annee = Convert.ToInt32(cbAnnee.Text.Trim());
-                    _Mois = Convert.ToInt32(cbMois.Text.Trim());
+                    if(_Mois != 0)
+                        _Mois = Convert.ToInt32(cbMois.Text.Trim());
                     _FilterData = new clsFilterData(_filterName, _filterValue, _Annee, _Mois);
                 }
 

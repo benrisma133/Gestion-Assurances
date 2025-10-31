@@ -35,24 +35,30 @@ namespace GestionAssurances.Comercial.Forms
             dgvComercialStatistics.Columns["Year"].Visible = false;
             dgvComercialStatistics.Columns["Month"].Visible = false;
 
-            // تحديد العرض الإجمالي 656px
-            int totalWidth = 656;
+            // منع تغيير الحجم التلقائي
+            dgvComercialStatistics.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
 
-            // تقسيم العرض على الأعمدة الظاهرة (مثلاً: Comercial 250, Marque 250, Total 156)
-            dgvComercialStatistics.Columns["ComercialFullName"].Width = 250;
-            dgvComercialStatistics.Columns["BrandName"].Width = 250;
-            dgvComercialStatistics.Columns["TotalVoitures"].Width = 156;
+            // تحديد العرض الثابت لكل عمود
+            dgvComercialStatistics.Columns["ComercialFullName"].Width = 160;
+            dgvComercialStatistics.Columns["BrandName"].Width = 120;
+            dgvComercialStatistics.Columns["TotalVoitures"].Width = 61;
+
+            // محاذاة القيم في عمود Total للوسط
+            dgvComercialStatistics.Columns["TotalVoitures"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvComercialStatistics.Columns["TotalVoitures"].DefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+
+            // منع المستخدم من تعديل حجم الأعمدة
+            foreach (DataGridViewColumn col in dgvComercialStatistics.Columns)
+            {
+                col.Resizable = DataGridViewTriState.False;
+            }
 
             // تعبئة ComboBoxes
             FillMonthComboBox();
             FillYearComboBox();
 
             LoadChartFromDGV();
-
-            // منع المستخدم من تعديل حجم الأعمدة
-            dgvComercialStatistics.AllowUserToResizeColumns = false;
         }
-
 
         private void frmStatistic_Load(object sender, EventArgs e)
         {
@@ -84,7 +90,8 @@ namespace GestionAssurances.Comercial.Forms
             var series = new Series("TotalVoitures")
             {
                 ChartType = SeriesChartType.Column,
-                Color = Color.FromArgb(40, 205, 140) // اللون الجديد
+                Color = Color.FromArgb(255 ,63 ,127)
+                //rgb(255 63 127)
             };
 
             Dictionary<string, int> comercialTotals = new Dictionary<string, int>();
@@ -108,10 +115,18 @@ namespace GestionAssurances.Comercial.Forms
             }
 
             chart1.Series.Add(series);
+
+            // X-Axis settings
             chart1.ChartAreas[0].AxisX.Interval = 1;
             chart1.ChartAreas[0].AxisX.LabelStyle.Angle = -45;
-        }
+            chart1.ChartAreas[0].AxisX.LabelStyle.Font = new Font("Segoe UI", 11, FontStyle.Bold);
 
+            // Y-Axis settings
+            chart1.ChartAreas[0].AxisY.Minimum = 0;   // Start at 1
+            chart1.ChartAreas[0].AxisY.Maximum = 30;  // End at 30
+            chart1.ChartAreas[0].AxisY.Interval = 5;  // Step: 5 (1, 5, 10, 15, 20, 25, 30)
+            chart1.ChartAreas[0].AxisY.LabelStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+        }
 
         private void FillMonthComboBox()
         {
@@ -184,6 +199,13 @@ namespace GestionAssurances.Comercial.Forms
             dv.RowFilter = filter;
 
             dgvComercialStatistics.DataSource = dv;
+            // Suppose dv is your DataView (e.g. from DataTable.DefaultView)
+            int totalSum = dv.ToTable()
+                             .AsEnumerable()
+                             .Sum(r => Convert.ToInt32(r["TotalVoitures"]));
+
+            ctrlTotal.FieldValue = totalSum.ToString();
+
 
             // تحديث Chart من نفس الـ DGV
             LoadChartFromDGV();

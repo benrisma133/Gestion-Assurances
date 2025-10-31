@@ -22,7 +22,7 @@ namespace GestionAssurances
             Application.Run(new frmMain());
             //Application.Run(new frmAssuranceInfo());
             //Application.Run(new frmTest());
-            //Application.Run(new frmAddEditRenewAssurance(1 ));
+            //Application.Run(new frmAddEditRenewAssurance());
             //Application.Run(new frmAddEditComercial(1));
             //Application.Run(new frmListOfComercials());
         }

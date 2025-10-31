@@ -36,6 +36,12 @@ namespace GestionAssurances.Controls
                 lblValue.Text = _fieldValue;
             }
         }
+        public Color BackgroundColor
+        {
+            get { return lblValue.BackColor; }
+            set { lblValue.BackColor = value; }
+        }
+
 
         Color _fieldValueColor;
         public Color FieldValueColor

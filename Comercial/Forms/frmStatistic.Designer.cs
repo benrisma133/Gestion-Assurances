@@ -42,6 +42,7 @@
             this.lblDebut = new System.Windows.Forms.Label();
             this.cbMois = new Guna.UI.WinForms.GunaComboBox();
             this.cbAnnee = new Guna.UI.WinForms.GunaComboBox();
+            this.ctrlTotal = new GestionAssurances.Cards.ctrlLbaelField2();
             ((System.ComponentModel.ISupportInitialize)(this.dgvComercialStatistics)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +65,6 @@
             this.dgvComercialStatistics.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dgvComercialStatistics.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvComercialStatistics.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvComercialStatistics.BackgroundColor = System.Drawing.Color.White;
             this.dgvComercialStatistics.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvComercialStatistics.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -94,7 +94,7 @@
             this.dgvComercialStatistics.RowHeadersWidth = 62;
             this.dgvComercialStatistics.RowTemplate.Height = 28;
             this.dgvComercialStatistics.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvComercialStatistics.Size = new System.Drawing.Size(656, 617);
+            this.dgvComercialStatistics.Size = new System.Drawing.Size(539, 617);
             this.dgvComercialStatistics.TabIndex = 7;
             this.dgvComercialStatistics.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgvComercialStatistics.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -125,13 +125,13 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(684, 244);
+            this.chart1.Location = new System.Drawing.Point(572, 244);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(1175, 617);
+            this.chart1.Size = new System.Drawing.Size(1287, 617);
             this.chart1.TabIndex = 8;
             this.chart1.Text = "chart1";
             // 
@@ -147,7 +147,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(355, 195);
+            this.label2.Location = new System.Drawing.Point(12, 127);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 29);
             this.label2.TabIndex = 45;
@@ -157,7 +157,7 @@
             // 
             this.lblDebut.AutoSize = true;
             this.lblDebut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDebut.Location = new System.Drawing.Point(12, 193);
+            this.lblDebut.Location = new System.Drawing.Point(12, 176);
             this.lblDebut.Name = "lblDebut";
             this.lblDebut.Size = new System.Drawing.Size(94, 29);
             this.lblDebut.TabIndex = 44;
@@ -175,7 +175,7 @@
             this.cbMois.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbMois.ForeColor = System.Drawing.Color.Black;
             this.cbMois.FormattingEnabled = true;
-            this.cbMois.Location = new System.Drawing.Point(454, 193);
+            this.cbMois.Location = new System.Drawing.Point(122, 124);
             this.cbMois.Name = "cbMois";
             this.cbMois.OnHoverItemBaseColor = System.Drawing.Color.MediumSeaGreen;
             this.cbMois.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -195,7 +195,7 @@
             this.cbAnnee.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbAnnee.ForeColor = System.Drawing.Color.Black;
             this.cbAnnee.FormattingEnabled = true;
-            this.cbAnnee.Location = new System.Drawing.Point(122, 191);
+            this.cbAnnee.Location = new System.Drawing.Point(122, 174);
             this.cbAnnee.Name = "cbAnnee";
             this.cbAnnee.OnHoverItemBaseColor = System.Drawing.Color.MediumSeaGreen;
             this.cbAnnee.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -203,12 +203,23 @@
             this.cbAnnee.TabIndex = 42;
             this.cbAnnee.SelectedIndexChanged += new System.EventHandler(this.cbAnnee_SelectedIndexChanged);
             // 
+            // ctrlTotal
+            // 
+            this.ctrlTotal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(133)))), ((int)(((byte)(244)))));
+            this.ctrlTotal.FieldName = "Total";
+            this.ctrlTotal.FieldValue = "0";
+            this.ctrlTotal.Location = new System.Drawing.Point(962, 165);
+            this.ctrlTotal.Name = "ctrlTotal";
+            this.ctrlTotal.Size = new System.Drawing.Size(355, 63);
+            this.ctrlTotal.TabIndex = 46;
+            // 
             // frmStatistic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1881, 884);
+            this.Controls.Add(this.ctrlTotal);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblDebut);
             this.Controls.Add(this.cbMois);
@@ -240,5 +251,6 @@
         private System.Windows.Forms.Label lblDebut;
         private Guna.UI.WinForms.GunaComboBox cbMois;
         private Guna.UI.WinForms.GunaComboBox cbAnnee;
+        private Cards.ctrlLbaelField2 ctrlTotal;
     }
 }
