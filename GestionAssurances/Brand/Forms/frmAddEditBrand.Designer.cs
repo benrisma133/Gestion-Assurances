@@ -1,0 +1,133 @@
+﻿namespace GestionAssurances.Brand.Forms
+{
+    partial class frmAddEditBrand
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddEditBrand));
+            this.btnSave = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.txtFieldMarque = new GestionAssurances.Controls.ctrlTextBox();
+            this.lblTitle = new Guna.UI.WinForms.GunaLabel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // btnSave
+            // 
+            this.btnSave.Animated = true;
+            this.btnSave.AnimationHoverSpeed = 0.07F;
+            this.btnSave.AnimationSpeed = 0.03F;
+            this.btnSave.BackColor = System.Drawing.Color.Transparent;
+            this.btnSave.BaseColor = System.Drawing.Color.White;
+            this.btnSave.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.btnSave.BorderSize = 1;
+            this.btnSave.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnSave.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnSave.CheckedForeColor = System.Drawing.Color.White;
+            this.btnSave.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnSave.CheckedImage")));
+            this.btnSave.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnSave.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSave.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.btnSave.Image = global::GestionAssurances.Properties.Resources.save_24_mainColor;
+            this.btnSave.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSave.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.btnSave.Location = new System.Drawing.Point(516, 264);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.btnSave.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSave.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSave.OnHoverImage = global::GestionAssurances.Properties.Resources.save_24_white;
+            this.btnSave.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.btnSave.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSave.Radius = 10;
+            this.btnSave.Size = new System.Drawing.Size(234, 58);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Enregistrer";
+            this.btnSave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // txtFieldMarque
+            // 
+            this.txtFieldMarque.FieldIcon = global::GestionAssurances.Properties.Resources.char_m_green;
+            this.txtFieldMarque.FieldIconAccept = ((System.Drawing.Image)(resources.GetObject("txtFieldMarque.FieldIconAccept")));
+            this.txtFieldMarque.FieldName = "La marque :";
+            this.txtFieldMarque.FieldValue = "";
+            this.txtFieldMarque.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFieldMarque.IsVisibleIconAccept = false;
+            this.txtFieldMarque.Location = new System.Drawing.Point(47, 158);
+            this.txtFieldMarque.Name = "txtFieldMarque";
+            this.txtFieldMarque.Size = new System.Drawing.Size(679, 47);
+            this.txtFieldMarque.TabIndex = 10;
+            this.txtFieldMarque.ValidatingTextChanged += new System.EventHandler<GestionAssurances.Controls.ctrlTextBox.ValidationEventArgs>(this.txtFieldMarque_ValidatingTextChanged);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(205)))), ((int)(((byte)(140)))));
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Location = new System.Drawing.Point(2, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(758, 71);
+            this.lblTitle.TabIndex = 11;
+            this.lblTitle.Text = "Ajouter un marque";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // frmAddEditBrand
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(762, 334);
+            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.txtFieldMarque);
+            this.Controls.Add(this.btnSave);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "frmAddEditBrand";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "frmAddEditBrand";
+            this.Load += new System.EventHandler(this.frmAddEditBrand_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private Guna.UI.WinForms.GunaAdvenceButton btnSave;
+        private Controls.ctrlTextBox txtFieldMarque;
+        private Guna.UI.WinForms.GunaLabel lblTitle;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+    }
+}
