@@ -351,7 +351,7 @@ namespace GA_DAL
                 try
                 {
                     conn.Open();
-                    string query = "select * from AtlantaSanad.v_assurance_main";
+                    string query = "select * from v_assurance_main";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
@@ -378,7 +378,7 @@ namespace GA_DAL
                 try
                 {
                     conn.Open();
-                    string query = "SELECT * FROM AtlantaSanad.v_assurance_archived";
+                    string query = "SELECT * FROM v_assurance_archived";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
@@ -406,7 +406,7 @@ namespace GA_DAL
                     conn.Open();
 
                     // Query the archived/old assurances view
-                    string query = "SELECT * FROM AtlantaSanad.v_assurance_old";
+                    string query = "SELECT * FROM v_assurance_old";
 
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))

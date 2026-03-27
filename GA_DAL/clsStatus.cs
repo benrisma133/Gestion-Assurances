@@ -19,7 +19,7 @@ namespace GA_DAL
             
             bool isFound = false;
 
-            string query = "SELECT * FROM AtlantaSanad.statuses WHERE StatusID = @StatusID";
+            string query = "SELECT * FROM statuses WHERE StatusID = @StatusID";
 
             try
             {
@@ -55,7 +55,7 @@ namespace GA_DAL
         static public DataTable GetAllStatuses()
         {
             DataTable dtStatuses = new DataTable();
-            string query = "SELECT * FROM AtlantaSanad.statuses";
+            string query = "SELECT * FROM statuses";
             try
             {
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
