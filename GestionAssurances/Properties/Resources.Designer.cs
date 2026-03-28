@@ -263,6 +263,16 @@ namespace GestionAssurances.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap car_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("car_white_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap char_a_green {
             get {
                 object obj = ResourceManager.GetObject("char_a_green", resourceCulture);
@@ -433,6 +443,16 @@ namespace GestionAssurances.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clients_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("clients_white_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap closeBlack32 {
             get {
                 object obj = ResourceManager.GetObject("closeBlack32", resourceCulture);
@@ -476,6 +496,16 @@ namespace GestionAssurances.Properties {
         internal static System.Drawing.Bitmap Current {
             get {
                 object obj = ResourceManager.GetObject("Current", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap deal_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("deal_white_24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -546,6 +576,16 @@ namespace GestionAssurances.Properties {
         internal static System.Drawing.Bitmap expired {
             get {
                 object obj = ResourceManager.GetObject("expired", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap expired_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("expired_white_24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -843,6 +883,16 @@ namespace GestionAssurances.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap shield_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("shield_white_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap stitistics_64_green {
             get {
                 object obj = ResourceManager.GetObject("stitistics_64_green", resourceCulture);
@@ -876,6 +926,26 @@ namespace GestionAssurances.Properties {
         internal static System.Drawing.Bitmap switch_16_white1 {
             get {
                 object obj = ResourceManager.GetObject("switch_16_white1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap today_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("today_white_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap topcommercial_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("topcommercial_white_24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -926,6 +996,16 @@ namespace GestionAssurances.Properties {
         internal static System.Drawing.Bitmap wafasalaf {
             get {
                 object obj = ResourceManager.GetObject("wafasalaf", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wallet_white_24 {
+            get {
+                object obj = ResourceManager.GetObject("wallet_white_24", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

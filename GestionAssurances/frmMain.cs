@@ -60,6 +60,7 @@ namespace GestionAssurances
         {
             frmListOfAssurances frm = new frmListOfAssurances();
             frm.ShowDialog();
+            _LoadDashboard();
         }
 
         private void historiquesToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -84,8 +85,7 @@ namespace GestionAssurances
         // ======== Global Variables ========
         private int _notificationCount = 0;
 
-
-        private void frmMain_Load(object sender, EventArgs e)
+        void _LoadNotifications()
         {
             // 1) Get unread notifications count
             _notificationCount = clsNotificationData.CountUnreadNotifications();
@@ -104,7 +104,46 @@ namespace GestionAssurances
 
             // 3) Update text
             notificationsToolStripMenuItem.Text = $"Notifications ({_notificationCount})";
+        }
 
+        private void _LoadDashboard()
+        {
+            // Clear first
+            lblCurrentAssurances.Text = "";
+            lblExpiredAssurances.Text = "";
+            lblTodayRevenue.Text = "";
+            lblTopBrand.Text = "";
+            lblTopComercial.Text = "";
+            lblTotalAssurances.Text = "";
+            lblTotalClients.Text = "";
+            lblTotalRevenue.Text = "";
+
+            try
+            {
+                // Get data from BLL
+                var dto = GA_BLL.clsDashboardStats.GetDashboard();
+
+                // Set labels
+                lblTotalAssurances.Text = dto.TotalAssurances.ToString();
+                lblCurrentAssurances.Text = dto.CurrentAssurances.ToString();
+                lblTotalClients.Text = dto.TotalClients.ToString();
+                lblExpiredAssurances.Text = dto.ExpiredAssurances.ToString();
+                lblTotalRevenue.Text = dto.TotalRevenue.ToString() + " MAD";    // formatted as currency
+                lblTodayRevenue.Text = dto.RevenueToday.ToString() + " MAD";     // formatted as currency
+                lblTopComercial.Text = $"{dto.TopComercialName} ({dto.TopComercialCount})";
+                lblTopBrand.Text = $"{dto.TopBrandName} ({dto.TopBrandCount})";
+            }
+            catch (Exception ex)
+            {
+                // Optional: log or show error
+                MessageBox.Show("Failed to load dashboard: " + ex.Message);
+            }
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            _LoadDashboard();
+            _LoadNotifications();
         }
 
 
@@ -141,5 +180,9 @@ namespace GestionAssurances
             notificationsToolStripMenuItem.Invalidate(); // repaint to update the number
         }
 
+        private void gunaLabel10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

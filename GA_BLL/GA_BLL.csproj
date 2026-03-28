@@ -46,6 +46,7 @@
     <Compile Include="clsCar.cs" />
     <Compile Include="clsClient.cs" />
     <Compile Include="clsComercial.cs" />
+    <Compile Include="clsDashboardStats.cs" />
     <Compile Include="clsDuration.cs" />
     <Compile Include="clsNotificacion.cs" />
     <Compile Include="clsPayment.cs" />

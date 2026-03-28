@@ -40,7 +40,7 @@
       <HintPath>packages\Google.Protobuf.3.30.0\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI">
-      <HintPath>..\..\..\Users\DELL\Desktop\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+      <HintPath>..\..\..\..\Users\DELL\Desktop\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
@@ -662,6 +662,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AtlantaSanad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deal_white_242.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shield_white_241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clients_white_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expired_white_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet_white_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\today_white_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topcommercial_white_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\car_white_24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

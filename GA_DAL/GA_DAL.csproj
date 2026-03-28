@@ -98,6 +98,7 @@
     <Compile Include="clsCar.cs" />
     <Compile Include="clsClient.cs" />
     <Compile Include="clsComercial.cs" />
+    <Compile Include="clsDashboardStats.cs" />
     <Compile Include="clsDataAccessSetting.cs" />
     <Compile Include="clsDuration.cs" />
     <Compile Include="clsNotification.cs" />
