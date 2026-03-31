@@ -42,10 +42,10 @@
             // 
             // lblValue
             // 
-            this.lblValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValue.Location = new System.Drawing.Point(166, 0);
+            this.lblValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValue.Location = new System.Drawing.Point(184, 0);
             this.lblValue.Name = "lblValue";
-            this.lblValue.Size = new System.Drawing.Size(186, 63);
+            this.lblValue.Size = new System.Drawing.Size(299, 63);
             this.lblValue.TabIndex = 5;
             this.lblValue.Text = "label";
             this.lblValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -53,9 +53,9 @@
             // lblName
             // 
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(18, 0);
+            this.lblName.Location = new System.Drawing.Point(16, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(112, 63);
+            this.lblName.Size = new System.Drawing.Size(132, 63);
             this.lblName.TabIndex = 4;
             this.lblName.Text = "label";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -72,12 +72,13 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(136, 0);
+            this.label1.Location = new System.Drawing.Point(154, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 63);
             this.label1.TabIndex = 6;
             this.label1.Text = ":";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // ctrlLbaelField2
             // 
@@ -88,7 +89,7 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.gunaPanel1);
             this.Name = "ctrlLbaelField2";
-            this.Size = new System.Drawing.Size(355, 63);
+            this.Size = new System.Drawing.Size(486, 63);
             this.ResumeLayout(false);
 
         }

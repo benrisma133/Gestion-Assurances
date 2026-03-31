@@ -48,5 +48,74 @@ namespace GA_DAL
             return ds;
         }
 
+        public static DataTable GetAssurancesByStatus()
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(clsDataAccessSetting.connectionString))
+                {
+                    conn.Open();
+
+                    string query = @"
+                SELECT s.StatusName, COUNT(*) AS Total
+                FROM assurances a
+                JOIN statuses s ON a.StatusID = s.StatusID
+                GROUP BY s.StatusID;
+            ";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                        {
+                            da.Fill(dt);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+
+            return dt;
+        }
+
+        public static DataTable GetAssurancesByMonth()
+        {
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(clsDataAccessSetting.connectionString))
+                {
+                    conn.Open();
+
+                    string query = @"
+                SELECT MONTH(d.StartDate) AS Month, COUNT(*) AS Total
+                FROM assurances a
+                JOIN durations d ON a.DurationID = d.DurationID
+                GROUP BY MONTH(d.StartDate)
+                ORDER BY Month;
+            ";
+
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                        {
+                            da.Fill(dt);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return dt;
+        }
+
     }
 }

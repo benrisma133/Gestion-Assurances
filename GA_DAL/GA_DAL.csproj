@@ -103,8 +103,10 @@
     <Compile Include="clsDuration.cs" />
     <Compile Include="clsNotification.cs" />
     <Compile Include="clsPayment.cs" />
+    <Compile Include="clsPerson.cs" />
     <Compile Include="clsResponse.cs" />
     <Compile Include="clsStatus.cs" />
+    <Compile Include="clsUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

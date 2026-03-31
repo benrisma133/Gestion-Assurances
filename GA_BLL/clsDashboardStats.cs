@@ -20,6 +20,18 @@ namespace GA_BLL
         public int TopBrandCount { get; set; }
     }
 
+    public class StatusDTO
+    {
+        public string StatusName { get; set; }
+        public int Total { get; set; }
+    }
+
+    public class MonthlyDTO
+    {
+        public int Month { get; set; }
+        public int Total { get; set; }
+    }
+
     public static class clsDashboardStats
     {
         // Call DAL, convert to DTO
@@ -68,6 +80,56 @@ namespace GA_BLL
             }
 
             return dto;
+        }
+
+        public static List<StatusDTO> GetAssurancesByStatus()
+        {
+            List<StatusDTO> list = new List<StatusDTO>();
+
+            try
+            {
+                DataTable dt = clsDashboardStatsData.GetAssurancesByStatus();
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    list.Add(new StatusDTO
+                    {
+                        StatusName = row["StatusName"].ToString(),
+                        Total = Convert.ToInt32(row["Total"])
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("BLL Error: " + ex.Message);
+            }
+
+            return list;
+        }
+
+        public static List<MonthlyDTO> GetAssurancesByMonth()
+        {
+            var list = new List<MonthlyDTO>();
+
+            try
+            {
+                var dt = clsDashboardStatsData.GetAssurancesByMonth();
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    list.Add(new MonthlyDTO
+                    {
+                        Month = Convert.ToInt32(row["Month"]),
+                        Total = Convert.ToInt32(row["Total"])
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            return list;
         }
     }
 }

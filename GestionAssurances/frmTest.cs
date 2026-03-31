@@ -44,20 +44,18 @@ namespace GestionAssurances
 
         private void frmTest_Load(object sender, EventArgs e)
         {
-            ctrlLabelField1.FieldIconAccept = Properties.Resources.cancel;
-            ctrlLabelField2.FieldIconAccept = Properties.Resources.cancel;
-            ctrlLabelField3.FieldIconAccept = Properties.Resources.cancel;
-            ctrlLabelField4.FieldIconAccept = Properties.Resources.cancel;
+            clsPerson person = clsPerson.GetPersonByID(1);
+            ctrlPersonCard1.LoadPersonData(person);
         }
 
         private void gunaShadowPanel1_MouseEnter(object sender, EventArgs e)
         {
-            gunaShadowPanel1.ShadowShift = 4; // Increase shadow when hovering
+            
         }
 
         private void gunaShadowPanel1_MouseLeave(object sender, EventArgs e)
         {
-            gunaShadowPanel1.ShadowShift = 3; // Reset shadow when leaving
+            
         }
     }
 }

@@ -54,5 +54,10 @@ namespace GestionAssurances.Cards
 
             gunaPanel1.BackColor = _borderColor; // init default
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

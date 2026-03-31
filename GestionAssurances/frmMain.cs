@@ -106,7 +106,7 @@ namespace GestionAssurances
             notificationsToolStripMenuItem.Text = $"Notifications ({_notificationCount})";
         }
 
-        private void _LoadDashboard()
+        private void _LoadDashboardStats()
         {
             // Clear first
             lblCurrentAssurances.Text = "";
@@ -140,10 +140,101 @@ namespace GestionAssurances
             }
         }
 
+        private void _LoadStatusChart()
+        {
+            try
+            {
+                // Clear old data
+                chartStatus.Series.Clear();
+                chartStatus.Titles.Clear();
+
+                // Get data
+                var list = GA_BLL.clsDashboardStats.GetAssurancesByStatus();
+
+                // ✅ هنا دير check قبل ما تكري series
+                if (list.Count == 0)
+                {
+                    chartStatus.Titles.Add("No Data Available");
+                    return;
+                }
+
+                // Create series
+                var series = chartStatus.Series.Add("Statuses");
+                series.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+
+                // Add data
+                foreach (var item in list)
+                {
+                    series.Points.AddXY(item.StatusName, item.Total);
+                }
+
+                // ✅ هنا تحط styling ديال pie
+                series.IsValueShownAsLabel = true;
+                series["PieLabelStyle"] = "Outside";
+                series["PieLineColor"] = "Black";
+
+                // Title
+                chartStatus.Titles.Add("Assurances by Status");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading chart: " + ex.Message);
+            }
+        }
+
+        private void _LoadMonthlyChart()
+        {
+            try
+            {
+                chartMonthly.Series.Clear();
+                chartMonthly.Titles.Clear();
+
+                var list = GA_BLL.clsDashboardStats.GetAssurancesByMonth();
+
+                if (list.Count == 0)
+                {
+                    chartMonthly.Titles.Add("No Data Available");
+                    return;
+                }
+
+                var series = chartMonthly.Series.Add("Assurances");
+                series.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+                series.BorderWidth = 3;
+
+                foreach (var item in list)
+                {
+                    string monthName = new DateTime(1, item.Month, 1).ToString("MMM");
+                    series.Points.AddXY(monthName, item.Total);
+                }
+
+                series.IsValueShownAsLabel = true;
+
+                // ✅ إعدادات المحور X
+                chartMonthly.ChartAreas[0].AxisX.Interval = 1;
+
+                // ✅ هنا تحطها (إخفاء grid lines)
+                chartMonthly.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
+                chartMonthly.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
+
+                chartMonthly.Titles.Add("Assurances per Month");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void _LoadDashboard()
+        {
+            _LoadDashboardStats();
+            //_LoadNotifications();
+            _LoadStatusChart();
+            _LoadMonthlyChart();
+        }
+
         private void frmMain_Load(object sender, EventArgs e)
         {
             _LoadDashboard();
-            _LoadNotifications();
         }
 
 
@@ -183,6 +274,11 @@ namespace GestionAssurances
         private void gunaLabel10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmMain_Load(null, null);
         }
     }
 }

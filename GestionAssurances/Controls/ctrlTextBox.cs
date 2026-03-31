@@ -81,6 +81,17 @@ namespace GestionAssurances.Controls
             }
         }
 
+        bool _isPassword;
+        public bool IsPassword
+        {
+            get { return _isPassword; }
+            set
+            {
+                _isPassword = value;
+                txtValue.UseSystemPasswordChar = _isPassword;
+            }
+        }
+
         public ctrlTextBox()
         {
             InitializeComponent();
