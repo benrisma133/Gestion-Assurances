@@ -22,14 +22,14 @@ namespace GestionAssurances
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
-            //Application.Run(new frmMain());
-            //Application.Run(new frmLogin());
+            //Application.Run(new frmMain(null));
+            Application.Run(new frmLogin());
             //Application.Run(new frmNotificationScreen());
             //Application.Run(new frmAssuranceInfo());
             //Application.Run(new frmTest());
             //Application.Run(new frmAddEditUser());
             //Application.Run(new frmUserInfo(1));
-            Application.Run(new frmListOfUsers());
+            //Application.Run(new frmListOfUsers());
             //Application.Run(new frmAddEditRenewAssurance());
             //Application.Run(new frmAddEditComercial(1));
             //Application.Run(new frmListOfComercials());

@@ -2,7 +2,10 @@
 using GA_DAL;
 using GestionAssurances.Brand.Forms;
 using GestionAssurances.Comercial.Forms;
+using GestionAssurances.Global;
+using GestionAssurances.Login;
 using GestionAssurances.Notification.Forms;
+using GestionAssurances.User.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,9 +20,12 @@ namespace GestionAssurances
 {
     public partial class frmMain : Form
     {
-        public frmMain()
+        frmLogin _frmLogin;
+        public frmMain(frmLogin frmLogin)
         {
             InitializeComponent();
+
+                _frmLogin = frmLogin;
         }
 
         private int unreadCount = 0;
@@ -232,9 +238,42 @@ namespace GestionAssurances
             _LoadMonthlyChart();
         }
 
+        private void SetWelcomeMessage(string username)
+        {
+            string greeting;
+
+            if (DateTime.Now.Hour < 12)
+                greeting = "Good morning";
+            else if (DateTime.Now.Hour < 18)
+                greeting = "Good afternoon";
+            else
+                greeting = "Good evening";
+
+            lblGreating.Text = $"{greeting}, {username} 👋";
+            //lblWelcome.Text = "Welcome back to Gestion Assurances System";
+        }
+
         private void frmMain_Load(object sender, EventArgs e)
         {
             _LoadDashboard();
+            flowLayoutPanel1.SuspendLayout();
+
+            flowLayoutPanel1.AutoScrollPosition = new Point(0, 0);
+
+            flowLayoutPanel1.ResumeLayout();
+
+            if (flowLayoutPanel1.Controls.Count > 0)
+            {
+                flowLayoutPanel1.ScrollControlIntoView(flowLayoutPanel1.Controls[0]);
+            }
+
+            this.BeginInvoke(new Action(() =>
+            {
+                flowLayoutPanel1.AutoScrollPosition = new Point(0, 0);
+            }));
+
+            string username = clsGlobal.CurrentUser.Username;
+            SetWelcomeMessage(username);
         }
 
 
@@ -279,6 +318,24 @@ namespace GestionAssurances
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmMain_Load(null, null);
+        }
+
+        private void manageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListOfUsers frmListOfUsers = new frmListOfUsers();
+            frmListOfUsers.ShowDialog();
+        }
+
+        private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            _frmLogin.Close();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsGlobal.CurrentUser = null;
+            clsGlobal.RememberUsernameAndPassword("", "");
+            this.Close();
         }
     }
 }

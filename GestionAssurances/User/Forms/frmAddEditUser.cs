@@ -84,7 +84,8 @@ namespace GestionAssurances.User.Forms
             txtFirstName.FieldValue = _User.FirstName;
             txtLastName.FieldValue = _User.LastName;
             txtEmail.FieldValue = _User.Email;
-            //txtPassword.FieldValue = _User.Password;
+            txtPassword.FieldValue = _User.Password;
+            txtConfirmPassword.FieldValue = _User.Password;
             txtUsername.FieldValue = _User.Username;
             txtAddress.FieldValue = _User.Address;
             txtPhone.FieldValue = _User.Phone;

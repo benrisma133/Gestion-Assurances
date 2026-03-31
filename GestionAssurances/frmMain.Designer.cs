@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.voituresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listDesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,6 +87,9 @@
             this.chartStatus = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.gunaShadowPanel10 = new Guna.UI.WinForms.GunaShadowPanel();
             this.chartMonthly = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
+            this.lblGreating = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.menuStrip1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.gunaShadowPanel1.SuspendLayout();
@@ -109,6 +112,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartStatus)).BeginInit();
             this.gunaShadowPanel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartMonthly)).BeginInit();
+            this.gunaPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -238,6 +242,7 @@
             this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
             this.manageToolStripMenuItem.Size = new System.Drawing.Size(287, 42);
             this.manageToolStripMenuItem.Text = "Manage Users";
+            this.manageToolStripMenuItem.Click += new System.EventHandler(this.manageToolStripMenuItem_Click);
             // 
             // profileToolStripMenuItem
             // 
@@ -278,6 +283,7 @@
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(315, 40);
             this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // notificationsToolStripMenuItem
             // 
@@ -303,11 +309,12 @@
             this.flowLayoutPanel1.Controls.Add(this.gunaShadowPanel8);
             this.flowLayoutPanel1.Controls.Add(this.gunaShadowPanel9);
             this.flowLayoutPanel1.Controls.Add(this.gunaShadowPanel10);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 72);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 177);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(8);
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1924, 978);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1924, 873);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // gunaShadowPanel1
@@ -324,7 +331,7 @@
             this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.Black;
             this.gunaShadowPanel1.ShadowDepth = 60;
             this.gunaShadowPanel1.ShadowShift = 4;
-            this.gunaShadowPanel1.Size = new System.Drawing.Size(469, 241);
+            this.gunaShadowPanel1.Size = new System.Drawing.Size(458, 241);
             this.gunaShadowPanel1.TabIndex = 0;
             // 
             // gunaLabel2
@@ -366,13 +373,13 @@
             this.gunaShadowPanel2.Controls.Add(this.lblCurrentAssurances);
             this.gunaShadowPanel2.Controls.Add(this.gunaPictureBox2);
             this.gunaShadowPanel2.ForeColor = System.Drawing.Color.White;
-            this.gunaShadowPanel2.Location = new System.Drawing.Point(486, 11);
+            this.gunaShadowPanel2.Location = new System.Drawing.Point(475, 11);
             this.gunaShadowPanel2.Name = "gunaShadowPanel2";
             this.gunaShadowPanel2.Radius = 4;
             this.gunaShadowPanel2.ShadowColor = System.Drawing.Color.Black;
             this.gunaShadowPanel2.ShadowDepth = 60;
             this.gunaShadowPanel2.ShadowShift = 4;
-            this.gunaShadowPanel2.Size = new System.Drawing.Size(469, 241);
+            this.gunaShadowPanel2.Size = new System.Drawing.Size(458, 241);
             this.gunaShadowPanel2.TabIndex = 3;
             // 
             // gunaLabel3
@@ -414,13 +421,13 @@
             this.gunaShadowPanel3.Controls.Add(this.lblTotalClients);
             this.gunaShadowPanel3.Controls.Add(this.gunaPictureBox3);
             this.gunaShadowPanel3.ForeColor = System.Drawing.Color.White;
-            this.gunaShadowPanel3.Location = new System.Drawing.Point(961, 11);
+            this.gunaShadowPanel3.Location = new System.Drawing.Point(939, 11);
             this.gunaShadowPanel3.Name = "gunaShadowPanel3";
             this.gunaShadowPanel3.Radius = 4;
             this.gunaShadowPanel3.ShadowColor = System.Drawing.Color.Black;
             this.gunaShadowPanel3.ShadowDepth = 60;
             this.gunaShadowPanel3.ShadowShift = 4;
-            this.gunaShadowPanel3.Size = new System.Drawing.Size(469, 241);
+            this.gunaShadowPanel3.Size = new System.Drawing.Size(458, 241);
             this.gunaShadowPanel3.TabIndex = 4;
             // 
             // gunaLabel5
@@ -462,13 +469,13 @@
             this.gunaShadowPanel4.Controls.Add(this.lblExpiredAssurances);
             this.gunaShadowPanel4.Controls.Add(this.gunaPictureBox4);
             this.gunaShadowPanel4.ForeColor = System.Drawing.Color.White;
-            this.gunaShadowPanel4.Location = new System.Drawing.Point(1436, 11);
+            this.gunaShadowPanel4.Location = new System.Drawing.Point(1403, 11);
             this.gunaShadowPanel4.Name = "gunaShadowPanel4";
             this.gunaShadowPanel4.Radius = 4;
             this.gunaShadowPanel4.ShadowColor = System.Drawing.Color.Black;
             this.gunaShadowPanel4.ShadowDepth = 60;
             this.gunaShadowPanel4.ShadowShift = 4;
-            this.gunaShadowPanel4.Size = new System.Drawing.Size(469, 241);
+            this.gunaShadowPanel4.Size = new System.Drawing.Size(458, 241);
             this.gunaShadowPanel4.TabIndex = 5;
             // 
             // gunaLabel7
@@ -516,7 +523,7 @@
             this.gunaShadowPanel5.ShadowColor = System.Drawing.Color.Black;
             this.gunaShadowPanel5.ShadowDepth = 60;
             this.gunaShadowPanel5.ShadowShift = 4;
-            this.gunaShadowPanel5.Size = new System.Drawing.Size(469, 241);
+            this.gunaShadowPanel5.Size = new System.Drawing.Size(458, 241);
             this.gunaShadowPanel5.TabIndex = 6;
             // 
             // gunaLabel9
@@ -559,13 +566,13 @@
             this.gunaShadowPanel6.Controls.Add(this.lblTodayRevenue);
             this.gunaShadowPanel6.Controls.Add(this.gunaPictureBox6);
             this.gunaShadowPanel6.ForeColor = System.Drawing.Color.White;
-            this.gunaShadowPanel6.Location = new System.Drawing.Point(486, 258);
+            this.gunaShadowPanel6.Location = new System.Drawing.Point(475, 258);
             this.gunaShadowPanel6.Name = "gunaShadowPanel6";
             this.gunaShadowPanel6.Radius = 4;
             this.gunaShadowPanel6.ShadowColor = System.Drawing.Color.Black;
             this.gunaShadowPanel6.ShadowDepth = 60;
             this.gunaShadowPanel6.ShadowShift = 4;
-            this.gunaShadowPanel6.Size = new System.Drawing.Size(469, 241);
+            this.gunaShadowPanel6.Size = new System.Drawing.Size(458, 241);
             this.gunaShadowPanel6.TabIndex = 7;
             // 
             // gunaLabel11
@@ -607,13 +614,13 @@
             this.gunaShadowPanel7.Controls.Add(this.lblTopComercial);
             this.gunaShadowPanel7.Controls.Add(this.gunaPictureBox7);
             this.gunaShadowPanel7.ForeColor = System.Drawing.Color.White;
-            this.gunaShadowPanel7.Location = new System.Drawing.Point(961, 258);
+            this.gunaShadowPanel7.Location = new System.Drawing.Point(939, 258);
             this.gunaShadowPanel7.Name = "gunaShadowPanel7";
             this.gunaShadowPanel7.Radius = 4;
             this.gunaShadowPanel7.ShadowColor = System.Drawing.Color.Black;
             this.gunaShadowPanel7.ShadowDepth = 60;
             this.gunaShadowPanel7.ShadowShift = 4;
-            this.gunaShadowPanel7.Size = new System.Drawing.Size(469, 241);
+            this.gunaShadowPanel7.Size = new System.Drawing.Size(458, 241);
             this.gunaShadowPanel7.TabIndex = 4;
             // 
             // gunaLabel13
@@ -655,13 +662,13 @@
             this.gunaShadowPanel8.Controls.Add(this.lblTopBrand);
             this.gunaShadowPanel8.Controls.Add(this.gunaPictureBox8);
             this.gunaShadowPanel8.ForeColor = System.Drawing.Color.White;
-            this.gunaShadowPanel8.Location = new System.Drawing.Point(1436, 258);
+            this.gunaShadowPanel8.Location = new System.Drawing.Point(1403, 258);
             this.gunaShadowPanel8.Name = "gunaShadowPanel8";
             this.gunaShadowPanel8.Radius = 4;
             this.gunaShadowPanel8.ShadowColor = System.Drawing.Color.Black;
             this.gunaShadowPanel8.ShadowDepth = 60;
             this.gunaShadowPanel8.ShadowShift = 4;
-            this.gunaShadowPanel8.Size = new System.Drawing.Size(469, 241);
+            this.gunaShadowPanel8.Size = new System.Drawing.Size(458, 241);
             this.gunaShadowPanel8.TabIndex = 5;
             // 
             // gunaLabel15
@@ -707,23 +714,23 @@
             this.gunaShadowPanel9.ShadowColor = System.Drawing.Color.Black;
             this.gunaShadowPanel9.ShadowDepth = 60;
             this.gunaShadowPanel9.ShadowShift = 4;
-            this.gunaShadowPanel9.Size = new System.Drawing.Size(469, 442);
+            this.gunaShadowPanel9.Size = new System.Drawing.Size(458, 425);
             this.gunaShadowPanel9.TabIndex = 8;
             // 
             // chartStatus
             // 
             this.chartStatus.BackColor = System.Drawing.Color.Transparent;
-            chartArea5.Name = "ChartArea1";
-            this.chartStatus.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chartStatus.Legends.Add(legend5);
+            chartArea3.Name = "ChartArea1";
+            this.chartStatus.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartStatus.Legends.Add(legend3);
             this.chartStatus.Location = new System.Drawing.Point(20, 13);
             this.chartStatus.Name = "chartStatus";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chartStatus.Series.Add(series5);
-            this.chartStatus.Size = new System.Drawing.Size(432, 421);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartStatus.Series.Add(series3);
+            this.chartStatus.Size = new System.Drawing.Size(414, 421);
             this.chartStatus.TabIndex = 8;
             this.chartStatus.Text = "chart1";
             // 
@@ -733,42 +740,79 @@
             this.gunaShadowPanel10.BaseColor = System.Drawing.Color.WhiteSmoke;
             this.gunaShadowPanel10.Controls.Add(this.chartMonthly);
             this.gunaShadowPanel10.ForeColor = System.Drawing.Color.White;
-            this.gunaShadowPanel10.Location = new System.Drawing.Point(486, 505);
+            this.gunaShadowPanel10.Location = new System.Drawing.Point(475, 505);
             this.gunaShadowPanel10.Name = "gunaShadowPanel10";
             this.gunaShadowPanel10.Radius = 4;
             this.gunaShadowPanel10.ShadowColor = System.Drawing.Color.Black;
             this.gunaShadowPanel10.ShadowDepth = 60;
             this.gunaShadowPanel10.ShadowShift = 4;
-            this.gunaShadowPanel10.Size = new System.Drawing.Size(1419, 442);
+            this.gunaShadowPanel10.Size = new System.Drawing.Size(1386, 425);
             this.gunaShadowPanel10.TabIndex = 9;
             // 
             // chartMonthly
             // 
             this.chartMonthly.BackColor = System.Drawing.Color.Transparent;
-            chartArea6.Name = "ChartArea1";
-            this.chartMonthly.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chartMonthly.Legends.Add(legend6);
+            chartArea4.Name = "ChartArea1";
+            this.chartMonthly.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartMonthly.Legends.Add(legend4);
             this.chartMonthly.Location = new System.Drawing.Point(20, 13);
             this.chartMonthly.Name = "chartMonthly";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chartMonthly.Series.Add(series6);
-            this.chartMonthly.Size = new System.Drawing.Size(1380, 421);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartMonthly.Series.Add(series4);
+            this.chartMonthly.Size = new System.Drawing.Size(1324, 421);
             this.chartMonthly.TabIndex = 8;
             this.chartMonthly.Text = "chartMonthly";
+            // 
+            // gunaPanel1
+            // 
+            this.gunaPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(204)))), ((int)(((byte)(113)))));
+            this.gunaPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.gunaPanel1.Controls.Add(this.gunaLabel4);
+            this.gunaPanel1.Controls.Add(this.lblGreating);
+            this.gunaPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gunaPanel1.ForeColor = System.Drawing.Color.White;
+            this.gunaPanel1.Location = new System.Drawing.Point(0, 72);
+            this.gunaPanel1.Name = "gunaPanel1";
+            this.gunaPanel1.Size = new System.Drawing.Size(1924, 97);
+            this.gunaPanel1.TabIndex = 6;
+            // 
+            // lblGreating
+            // 
+            this.lblGreating.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGreating.ForeColor = System.Drawing.Color.Black;
+            this.lblGreating.Location = new System.Drawing.Point(10, 10);
+            this.lblGreating.Name = "lblGreating";
+            this.lblGreating.Size = new System.Drawing.Size(532, 32);
+            this.lblGreating.TabIndex = 4;
+            this.lblGreating.Text = "Good morning,";
+            this.lblGreating.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // gunaLabel4
+            // 
+            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel4.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel4.Location = new System.Drawing.Point(10, 49);
+            this.gunaLabel4.Name = "gunaLabel4";
+            this.gunaLabel4.Size = new System.Drawing.Size(532, 32);
+            this.gunaLabel4.TabIndex = 5;
+            this.gunaLabel4.Text = "Welcome back to Gestion Assurances System ";
+            this.gunaLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmMain";
             this.Text = "frmMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -799,6 +843,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartStatus)).EndInit();
             this.gunaShadowPanel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartMonthly)).EndInit();
+            this.gunaPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -858,5 +903,8 @@
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem profileToolStripMenuItem;
+        private Guna.UI.WinForms.GunaPanel gunaPanel1;
+        private Guna.UI.WinForms.GunaLabel lblGreating;
+        private Guna.UI.WinForms.GunaLabel gunaLabel4;
     }
 }

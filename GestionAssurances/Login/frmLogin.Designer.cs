@@ -34,8 +34,8 @@
             this.btnLogin = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaPictureBox2 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
-            this.ctrlTextBox2 = new GestionAssurances.Controls.ctrlTextBox();
-            this.ctrlTextBox1 = new GestionAssurances.Controls.ctrlTextBox();
+            this.txtPassword = new GestionAssurances.Controls.ctrlTextBox();
+            this.txtUsername = new GestionAssurances.Controls.ctrlTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -124,31 +124,31 @@
             this.gunaPictureBox1.TabIndex = 0;
             this.gunaPictureBox1.TabStop = false;
             // 
-            // ctrlTextBox2
+            // txtPassword
             // 
-            this.ctrlTextBox2.FieldIcon = global::GestionAssurances.Properties.Resources.password_green_24;
-            this.ctrlTextBox2.FieldIconAccept = null;
-            this.ctrlTextBox2.FieldName = "Password";
-            this.ctrlTextBox2.FieldValue = "";
-            this.ctrlTextBox2.IsPassword = true;
-            this.ctrlTextBox2.IsVisibleIconAccept = false;
-            this.ctrlTextBox2.Location = new System.Drawing.Point(644, 320);
-            this.ctrlTextBox2.Name = "ctrlTextBox2";
-            this.ctrlTextBox2.Size = new System.Drawing.Size(633, 46);
-            this.ctrlTextBox2.TabIndex = 4;
+            this.txtPassword.FieldIcon = global::GestionAssurances.Properties.Resources.password_green_24;
+            this.txtPassword.FieldIconAccept = null;
+            this.txtPassword.FieldName = "Password";
+            this.txtPassword.FieldValue = "";
+            this.txtPassword.IsPassword = true;
+            this.txtPassword.IsVisibleIconAccept = false;
+            this.txtPassword.Location = new System.Drawing.Point(644, 320);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(633, 46);
+            this.txtPassword.TabIndex = 4;
             // 
-            // ctrlTextBox1
+            // txtUsername
             // 
-            this.ctrlTextBox1.FieldIcon = global::GestionAssurances.Properties.Resources.user_green_24;
-            this.ctrlTextBox1.FieldIconAccept = null;
-            this.ctrlTextBox1.FieldName = "Username";
-            this.ctrlTextBox1.FieldValue = "";
-            this.ctrlTextBox1.IsPassword = false;
-            this.ctrlTextBox1.IsVisibleIconAccept = false;
-            this.ctrlTextBox1.Location = new System.Drawing.Point(644, 242);
-            this.ctrlTextBox1.Name = "ctrlTextBox1";
-            this.ctrlTextBox1.Size = new System.Drawing.Size(633, 46);
-            this.ctrlTextBox1.TabIndex = 3;
+            this.txtUsername.FieldIcon = global::GestionAssurances.Properties.Resources.user_green_24;
+            this.txtUsername.FieldIconAccept = null;
+            this.txtUsername.FieldName = "Username";
+            this.txtUsername.FieldValue = "";
+            this.txtUsername.IsPassword = false;
+            this.txtUsername.IsVisibleIconAccept = false;
+            this.txtUsername.Location = new System.Drawing.Point(644, 242);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(633, 46);
+            this.txtUsername.TabIndex = 3;
             // 
             // frmLogin
             // 
@@ -158,8 +158,8 @@
             this.ClientSize = new System.Drawing.Size(1327, 584);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.chkRememberMe);
-            this.Controls.Add(this.ctrlTextBox2);
-            this.Controls.Add(this.ctrlTextBox1);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.gunaPictureBox2);
             this.Controls.Add(this.gunaLabel1);
             this.Controls.Add(this.gunaPictureBox1);
@@ -168,6 +168,7 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -180,8 +181,8 @@
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox2;
-        private Controls.ctrlTextBox ctrlTextBox1;
-        private Controls.ctrlTextBox ctrlTextBox2;
+        private Controls.ctrlTextBox txtUsername;
+        private Controls.ctrlTextBox txtPassword;
         private Guna.UI.WinForms.GunaCheckBox chkRememberMe;
         private Guna.UI.WinForms.GunaAdvenceButton btnLogin;
     }
