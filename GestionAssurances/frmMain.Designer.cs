@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.voituresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listDesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -252,6 +252,7 @@
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
             this.profileToolStripMenuItem.Size = new System.Drawing.Size(287, 42);
             this.profileToolStripMenuItem.Text = "Profile";
+            this.profileToolStripMenuItem.Click += new System.EventHandler(this.profileToolStripMenuItem_Click);
             // 
             // historiquesToolStripMenuItem
             // 
@@ -720,16 +721,16 @@
             // chartStatus
             // 
             this.chartStatus.BackColor = System.Drawing.Color.Transparent;
-            chartArea3.Name = "ChartArea1";
-            this.chartStatus.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartStatus.Legends.Add(legend3);
+            chartArea5.Name = "ChartArea1";
+            this.chartStatus.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chartStatus.Legends.Add(legend5);
             this.chartStatus.Location = new System.Drawing.Point(20, 13);
             this.chartStatus.Name = "chartStatus";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartStatus.Series.Add(series3);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chartStatus.Series.Add(series5);
             this.chartStatus.Size = new System.Drawing.Size(414, 421);
             this.chartStatus.TabIndex = 8;
             this.chartStatus.Text = "chart1";
@@ -752,16 +753,16 @@
             // chartMonthly
             // 
             this.chartMonthly.BackColor = System.Drawing.Color.Transparent;
-            chartArea4.Name = "ChartArea1";
-            this.chartMonthly.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartMonthly.Legends.Add(legend4);
+            chartArea6.Name = "ChartArea1";
+            this.chartMonthly.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chartMonthly.Legends.Add(legend6);
             this.chartMonthly.Location = new System.Drawing.Point(20, 13);
             this.chartMonthly.Name = "chartMonthly";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chartMonthly.Series.Add(series4);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chartMonthly.Series.Add(series6);
             this.chartMonthly.Size = new System.Drawing.Size(1324, 421);
             this.chartMonthly.TabIndex = 8;
             this.chartMonthly.Text = "chartMonthly";

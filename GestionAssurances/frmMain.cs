@@ -25,7 +25,7 @@ namespace GestionAssurances
         {
             InitializeComponent();
 
-                _frmLogin = frmLogin;
+            _frmLogin = frmLogin;
         }
 
         private int unreadCount = 0;
@@ -336,6 +336,13 @@ namespace GestionAssurances
             clsGlobal.CurrentUser = null;
             clsGlobal.RememberUsernameAndPassword("", "");
             this.Close();
+        }
+
+        private void profileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUserInfo frmUserInfo = new frmUserInfo(clsGlobal.CurrentUser.UserID);
+            frmUserInfo.ShowDialog();
+            frmMain_Load(null, null);
         }
     }
 }
